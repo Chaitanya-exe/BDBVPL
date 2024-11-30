@@ -18,10 +18,10 @@ export default function Home() {
           width={900}
           height={800}
           alt="rect"
-          className="w-full block min-h-[380px] max-h-[600px] lg:w-screen"
+          className="w-full block min-h-[380px] max-h-[640px] lg:w-screen"
         />
       </div>
-      <div className="text-white max-w-[650px] my-20 md:my-28 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
+      <div className="text-white max-w-[650px] my-20 md:my-36 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
         <h1 className="h1Text md:h1TextLg">
           <span className="text-solarYellow">Power </span>
           Your Home,
@@ -60,13 +60,13 @@ export default function Home() {
       </div>
 
 
-      <div className=" *:my-20 *:px-6 *:lg:px-20">
+      <div className=" *:my-20 *:px-6 *:lg:px-24">
         <ServicesSec />
         <WorkFlow />
         <Testimonials />
         <Projects />
-        <QuerySec />
       </div>
+        <QuerySec />
     </section>
   );
 }
