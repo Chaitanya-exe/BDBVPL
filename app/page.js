@@ -12,7 +12,7 @@ import QuerySec from "@/components/sections/QuerySec";
 export default function Home() {
   return (
     <section className="my- py-2 relative overflow-hidden">
-      <div className="absolute -top-[60px] -left-6 right-0 -z-10">
+      {/* <div className="absolute -top-[60px] -left-6 right-0 -z-10">
         <Image
           src={"/images/toprect.png"}
           width={900}
@@ -20,7 +20,7 @@ export default function Home() {
           alt="rect"
           className="w-full"
         />
-      </div>
+      </div> */}
       <div className="absolute -top-6 -z-20">
         <Image
           src={"/images/herobg.png"}

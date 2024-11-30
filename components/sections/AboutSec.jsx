@@ -2,6 +2,7 @@ import React from "react";
 import Conatiner from "../Conatiner";
 import Button from "../Button";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 const AboutSec = () => {
   return (
@@ -33,12 +34,15 @@ const AboutSec = () => {
           solutions tailored to your needs
         </li>
       </ul>
+      <Link href={"/aboutus"}>
+
       <Button
         text={"More about us"}
         icon={
           <FaArrowRightLong className="text-white inline-flex ml-2 size-5" />
         }
       />
+      </Link>
     </div>
   );
 };
