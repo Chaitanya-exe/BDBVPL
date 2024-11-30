@@ -12,62 +12,60 @@ import QuerySec from "@/components/sections/QuerySec";
 export default function Home() {
   return (
     <section className="my- py-2 relative overflow-hidden">
-      {/* <div className="absolute -top-[60px] -left-6 right-0 -z-10">
-        <Image
-          src={"/images/toprect.png"}
-          width={900}
-          height={150}
-          alt="rect"
-          className="w-full"
-        />
-      </div> */}
       <div className="absolute -top-6 -z-20">
         <Image
-          src={"/images/herobg.png"}
-          width={550}
-          height={300}
+          src={"/images/herobgl.png"}
+          width={900}
+          height={800}
           alt="rect"
-          className=""
+          className="w-full block min-h-[380px] max-h-[600px] lg:w-screen"
         />
       </div>
-      <div className="text-white my-20 mx-8 border-l-4 pl-2 border-solarYellow">
-        <h1 className="h1Text">
+      <div className="text-white max-w-[650px] my-20 md:my-28 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
+        <h1 className="h1Text md:h1TextLg">
           <span className="text-solarYellow">Power </span>
           Your Home,
           <span className="text-solarYellow"> Empower </span>
           the planet.
         </h1>
-        <h2 className="h2Text mt-1">
+        <h2 className="h2Text md:h2TextLg mt-1">
           Switch to solar panels and start saving the planet and your wallet
         </h2>
-        <div className="flex items-center gap-3 my-4">
+        <div className="flex items-center gap-3 md:gap-5 my-4">
           <Button text={"let's talk"} />
           <button className="text-solarYellow hover:animate-pulse border border-solarYellow rounded-full p-2.5">
             <FaPlay />
           </button>
         </div>
       </div>
-
-      <div className="aboutImgContainer mt-36 py-12 mx-10 relative">
+      <div className="md:flex my-28 py-10 lg:pt-24 items-center gap-10">
+      <div className="aboutImgContainer lg:w-[350px] lg:h-[400px]  mx-10 relative">
         <Image
           src={"/images/aboutsectionimg.png"}
           width={240}
           height={263}
           alt="img"
-          className=""
+          className="w-full h-fit"
         />
-        <div className="absolute top-24 -left-20 w-[293px] h-[233px] bg-deepTeal/60 -z-10" />
+        <div className="absolute -bottom-12 -right-8  bg-[#FAFAFA] rounded-full w-30 h-30 p-1 *:pt-4 capitalize text-wrap shadow text-center text-white">
+          <div className="bg-solarYellow rounded-full w-28 h-28">
+            <p className="font-bold text-4xl">3+</p>
+            <p className="text-sm">years experience</p>
+          </div>
+        </div>
+        <div className="absolute -bottom-12 -left-20 w-[296px] lg:w-[400px] lg:h-[300px] h-[233px] bg-deepTeal/60 -z-10" />
       </div>
-      <div className="absolute top-[643px] left-56">
-        <Image src={"/images/Frame.png"} width={126} height={120} alt="oval" />
-      </div>
-      <div className=" *:my-20 *:px-6">
         <AboutSec />
+        
+      </div>
+
+
+      <div className=" *:my-20 *:px-6 *:lg:px-20">
         <ServicesSec />
         <WorkFlow />
-        <Testimonials/>
-        <Projects/>
-        <QuerySec/>
+        <Testimonials />
+        <Projects />
+        <QuerySec />
       </div>
     </section>
   );

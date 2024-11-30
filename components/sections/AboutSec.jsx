@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const AboutSec = () => {
   return (
-    <div className="">
+    <div className="mt-20 px-6 lg:px-20 max-w-[890px]">
       <Conatiner
         title={"About us"}
         h2={
@@ -19,7 +19,7 @@ const AboutSec = () => {
           </span>
         }
       />
-      <ul className="list-disc mb-4 list-inside  mt-3">
+      <ul className="list-disc pText space-y-2 mb-6 lg:mb-10 list-inside  mt-3 lg:mt-5">
         <li>
           At BDV, we aim to reduce carbon footprints, empower energy
           independence, and create a brighter future through sustainable
