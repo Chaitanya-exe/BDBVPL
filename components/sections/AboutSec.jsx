@@ -19,7 +19,7 @@ const AboutSec = () => {
           </span>
         }
       />
-      <ul className="list-disc pText space-y-2 mb-6 lg:mb-10 list-inside  mt-3 lg:mt-5">
+      <ul className="list-disc pText md:pTextLg space-y-2 mb-6 lg:mb-10 list-inside  mt-3 lg:mt-5">
         <li>
           At BDV, we aim to reduce carbon footprints, empower energy
           independence, and create a brighter future through sustainable
