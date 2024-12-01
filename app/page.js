@@ -65,9 +65,9 @@ export default function Home() {
         <AboutSec />
         <ServicesSec />
         <WorkFlow />
-        <Testimonials/>
-        <Projects/>
-        <QuerySec/>
+        <Testimonials />
+        <Projects />
+        <QuerySec />
       </div>
     </section>
   );
