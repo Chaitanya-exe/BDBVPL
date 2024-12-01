@@ -12,9 +12,9 @@ const Projects = () => {
         h2={"Powering Communities, One Panel at a Time"}
         textAllign={"text-center"}
       />
-      <div className='flex flex-wrap justify-center md:gap-4 gap-2.5 my-6 lg:my-10'>
+      <div className='flex flex-wrap justify-center md:gap-4 gap-2.5 my-6 lg:my-10 motion-preset-expand motion-duration-2000'>
       {projectsdetail.map((project)=>(
-        <Image key={project.id} src={`/images/p${project.id}.png`} width={373} height={200} alt='img' className={`${project.id === 2 || project.id=== 3 ? "lg:w-[600px] " : "lg:w-[420px]" }`} />
+          <Image key={project.id} src={`/images/p${project.id}.png`} width={373} height={200} alt='img' className={`hover:shadow-lg hover:shadow-text/100 hover:motion-preset-pulse hover:motion-duration-2000 ${project.id === 2 || project.id=== 3 ? "lg:w-[600px] " : "lg:w-[420px]" }`} />
       ))}
 
       </div>
