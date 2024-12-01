@@ -2,10 +2,11 @@ import React from "react";
 import Conatiner from "../Conatiner";
 import Button from "../Button";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 const AboutSec = () => {
   return (
-    <div className="">
+    <div className="mt-20 px-6 lg:px-20 max-w-[890px]">
       <Conatiner
         title={"About us"}
         h2={
@@ -18,7 +19,7 @@ const AboutSec = () => {
           </span>
         }
       />
-      <ul className="list-disc mb-4 list-inside  mt-3">
+      <ul className="list-disc pText md:pTextLg space-y-2 mb-6 lg:mb-10 list-inside  mt-3 lg:mt-5">
         <li>
           At BDV, we aim to reduce carbon footprints, empower energy
           independence, and create a brighter future through sustainable
@@ -33,12 +34,15 @@ const AboutSec = () => {
           solutions tailored to your needs
         </li>
       </ul>
+      <Link href={"/aboutus"}>
+
       <Button
         text={"More about us"}
         icon={
           <FaArrowRightLong className="text-white inline-flex ml-2 size-5" />
         }
       />
+      </Link>
     </div>
   );
 };
