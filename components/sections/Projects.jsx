@@ -5,16 +5,16 @@ import Image from 'next/image';
 
 const Projects = () => {
   return (
-    <div className='bg-skyBlue py-10'>
+    <div className='bg-skyBlue py-10 lg:py-14'>
       <Conatiner
         title={"Our projects"}
         h1={"Our Brightest Achievements"}
         h2={"Powering Communities, One Panel at a Time"}
         textAllign={"text-center"}
       />
-      <div className='flex flex-wrap gap-2.5 my-6'>
+      <div className='flex flex-wrap justify-center md:gap-4 gap-2.5 my-6 lg:my-10'>
       {projectsdetail.map((project)=>(
-        <Image src={`/images/p${project.id}.png`} width={373} height={200} alt='img' className='' />
+        <Image key={project.id} src={`/images/p${project.id}.png`} width={373} height={200} alt='img' className={`${project.id === 2 || project.id=== 3 ? "lg:w-[600px] " : "lg:w-[420px]" }`} />
       ))}
 
       </div>

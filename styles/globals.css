@@ -21,21 +21,20 @@ body {
   color: #333333;
 }
 
+@layer utilities{
 
   .logoText{
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 22px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
 line-height: 26px;
 letter-spacing: 0.01em;
 text-transform: capitalize;
 /* color: #4CAF50; */
-  }
+}
 
-  .h1Text{
-    
-/* Power Your Home, Empower the planet. */
+.h1Text{
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
@@ -43,15 +42,19 @@ font-size: 26px;
 line-height: 28px;
 letter-spacing: 0.012em;
 text-transform: capitalize;
-/* color: #FFC107; */
+}
+
+.h1TextLg{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 52px;
+line-height: 63px;
+letter-spacing: 0.02em;
+text-transform: capitalize;
 }
 
 .h2Text{
-  /* Switch to solar panels and start saving the planet and your wallet */
-/* 
-width: 325px;
-height: 66px; */
-
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 600;
@@ -60,29 +63,28 @@ line-height: 24px;
 letter-spacing: 0.01em;
 text-transform: capitalize;
 }
+.h2TextLg{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 34px;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+}
 
 .aboutImgContainer{
-/* box-sizing: border-box; */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 10px;
 gap: 10px;
-
-/* position: absolute; */
 width: 258.78px;
 height: 283.29px;
-/* left: 37.17px;
-top: 526px; */
-
 background: #FFFFFF;
 box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2);
-
 }
 .pText{
-  /* Our experts will evaluate your property to design the most efficient solar solution. */
-
-
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
@@ -90,4 +92,15 @@ font-size: 15px;
 line-height: 18px;
 letter-spacing: 0.03em;
 text-transform: capitalize;
+}
+.pTextLg{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+letter-spacing: 0.03em;
+text-transform: capitalize;
+}
+
 }
