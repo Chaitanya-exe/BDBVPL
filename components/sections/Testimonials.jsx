@@ -37,7 +37,7 @@ const Testimonials = () => {
         <Conatiner
           title={"Testimonials"}
           h1={"Shining Light on Our Happy Clients"}
-          textAllign={"my-8"}
+          textAllign={"my-8 text-start"}
         />
         <div className="relative space-y-3">
         <Image src={"/icons/quoteillus.svg"} width={46} height={35} alt='quote' className='absolute top-0 -left-2' />

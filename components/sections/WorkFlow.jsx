@@ -15,11 +15,11 @@ const WorkFlow = () => {
         textAllign={"text-center md:px-24 mx-auto"}
       />
 
-      <div className="mt-7 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12 ">
-        <div className="flex flex-col justify-center lg:gap-28 gap-4">
+      <div className="mt-9 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12 ">
+        <div className="flex flex-col justify-center lg:gap-28 gap-10">
           {workFlowStep.slice(0, 2).map((step) => (
             <div key={step.id} className="flex items-start gap-3.5 md:gap-5">
-              <span className="text-solarYellow border border-solarYellow rounded-full px-[16px] py-3 text-3xl font-semibold">
+              <span className="text-solarYellow border border-solarYellow rounded-xl px-[16px] py-3 text-3xl font-semibold">
                 0{step.id}
               </span>
               <div className="flex flex-col md:gap-2.5">
@@ -30,7 +30,7 @@ const WorkFlow = () => {
           ))}
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="flex my-4 items-center justify-center">
           <Image
             src={"/images/services.png"}
             width={285}
@@ -47,10 +47,10 @@ const WorkFlow = () => {
           />
         </div>
 
-        <div className="flex flex-col lg:gap-28 justify-center gap-4">
+        <div className="flex flex-col lg:gap-28 justify-center gap-10">
           {workFlowStep.slice(2).map((step) => (
             <div key={step.id} className="flex items-start gap-3.5 md:gap-5">
-              <span className="text-solarYellow border border-solarYellow rounded-full px-[16px] py-3 text-3xl font-semibold">
+              <span className="text-solarYellow border border-solarYellow rounded-xl px-[16px] py-3 text-3xl font-semibold">
                 0{step.id}
               </span>
               <div className="flex flex-col md:gap-2.5">

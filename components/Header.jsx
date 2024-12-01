@@ -7,14 +7,10 @@ import Link from "next/link";
 const Header = () => {
   return (
     <div className="capitalize relative">
-      <div className="absolute -top-2 md:-top-16 sm:-top-10 lg:-top-40 -left-6 right-0 -z-10">
-        <Image
-          src={"/images/toprect.png"}
-          width={900}
-          height={150}
-          alt="rect"
-          className="w-full"
-        />
+      <div className="absolute lg:-top-16 -bottom-4  -left-6 right-0 -z-10">
+        <div className="bg-[#FAFAFA] relative h-44 -rotate-[4deg] min-w-[500px]">
+        <div className="bg-[#FAFAFA] absolute lg:bottom-0 lg:left-24 bottom-1 rotate-[42deg] h-28 lg:w-56 w-36 rounded-xl -z-10" />
+        </div>
       </div>
       <div className="flex py-1.5 px-2 lg:mx-20 items-center justify-between gap-1.5 md:gap-2.5">
         <div className="flex items-center flex-">
