@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { useState } from "react";
 import Conatiner from "../Conatiner";
 import Image from "next/image";
 import { FaPhone, FaUser } from "react-icons/fa6";
@@ -7,6 +10,18 @@ import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import Button from "../Button";
 
 const QuerySec = () => {
+  const [query, setQuery] = useState({
+    name:"",
+    number:"",
+    email:"",
+    type:"",
+    userQuery:""
+  });
+
+  const handleClick = async (request)=>{
+    console.log(request);
+  }
+
   return (
     <div className="relative flex justify-end lg:px-24  my-4">
       <Image
@@ -36,6 +51,8 @@ const QuerySec = () => {
               type="text"
               id="fullname"
               name="fullName"
+              value={query.name}
+              onChange={(e)=>(setQuery({...query, name:e.target.value}))}
               placeholder="Full Name"
               className="capitalize w-full outline-none bg-transparent px-2"
             />
@@ -43,9 +60,11 @@ const QuerySec = () => {
           <div className="focus-within:border-text/50">
             <FaPhone className="size-5 text-text/90" />
             <input
-              type="text"
+              type="number"
               id="ph"
               name="ph"
+              value={query.number}
+              onChange={(e)=>(setQuery({...query, number:e.target.value}))}
               placeholder="Phone Number"
               className="w-full outline-none bg-transparent px-2"
             />
@@ -58,6 +77,8 @@ const QuerySec = () => {
               type="email"
               id="email"
               name="email"
+              value={query.email}
+              onChange={(e)=>(setQuery({...query, email:e.target.value}))}
               placeholder="Email"
               className="w-full outline-none bg-transparent px-2"
             />
@@ -69,7 +90,10 @@ const QuerySec = () => {
               defaultValue=""
               className="w-full capitalize bg-transparent p-2.5 h-full focus:outline-none"
             >
-              <option value="" disabled hidden>
+              <option 
+              value={query.type}
+              onChange={(e)=>(setQuery({...query, type:e.target.value.toUpper()}))}
+               disabled hidden>
                 Type of inquiry
               </option>
               <option value="consultation" className="bg-white">
@@ -92,12 +116,20 @@ const QuerySec = () => {
             rows={5}
             id="query"
             name="query"
+            value={query.userQuery}
+            onChange={(e)=>{
+              console.log(query);
+              setQuery({...query, userQuery:e.target.value})
+            }}
             placeholder="Tell us more about your needs or questions.."
             className="w-full  outline-none bg-transparent px-2"
           />
         </div>
         <div className="float-right md:py-3 py-2  px-10 md:px-28">
-          <Button text={"Send Query"} handleClick={() => {}} />
+          <Button text={"Send Query"} handleClick={(e) => {
+            e.preventDefault();           
+            handleClick(query)
+          }} />
         </div>
       </form>
     </div>

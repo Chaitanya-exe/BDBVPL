@@ -37,7 +37,7 @@ const ServicesSec = () => {
           className="md:block hidden"
         />
         {services.slice(3).map((service) => (
-          <Card service={service} />
+          <Card service={service}/>
         ))}
       </div>
     </div>
@@ -48,7 +48,7 @@ export default ServicesSec;
 
 const Card = ({ service }) => {
   return (
-    <div className="bg-white flex flex-col items-start mt-2 pb-1 w-[345px] lg:w-[380px]">
+    <div className="bg-white flex flex-col items-start mt-2 pb-1 w-[345px] lg:w-[380px]" >
       <Image src={service.src} width={345} height={215} alt="s1" className="w-full" />
       <p className="pText flex-1 lg:pTextLg text-wrap px-3 mt-2">{service.desc}</p>
 
