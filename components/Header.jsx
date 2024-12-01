@@ -32,7 +32,7 @@ const Header = () => {
         </div>
         <div className=" *:capitalize hidden md:flex items-center md:gap-4 lg:gap-9">
           <span className="hover:text-green lg:text-[18px]  pTex">Home</span>
-          <span className="hover:text-green lg:text-[18px] hover:font-semibol pTex">About us</span>
+          <span className="hover:text-green lg:text-[18px] hover:font-semibol pTex ">About us</span>
           <span className="hover:text-green lg:text-[18px] hover:font-semibol pTex">Pricing</span>
           <span className="hover:text-green lg:text-[18px] hover:font-semibol pTex">Services</span>
           <span className="hover:text-green lg:text-[18px] hover:font-semibol pTex">Projects</span>
