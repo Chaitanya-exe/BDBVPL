@@ -9,11 +9,11 @@ const ContactUs = () => {
       <Image
         src={"/images/herobg2.png"}
         width={720}
-        height={400}
+        height={450}
         alt="img"
-        className="-z-30 absolute -top-7 h-[230px]"
+        className="-z-30 absolute -top-7 w-full md:h-[550px] min-h-[250px]"
       />
-      <div className="w-[420px] h-14 bg-[#FAFAFA] absolute -left-2 z-20 top-44 -rotate-[4deg]" />
+      <div className="w-full h-14 bg-[#FAFAFA] absolute -left-2 z-20 top-44 -rotate-[4deg]" />
       <div className="flex flex-col pt-14 justify-center items-center gap-2">
         <h1 className="h1Text text-solarYellow">About us</h1>
         <div className="flex divide-x-4 divide-solarYellow *:px-3 h2Text">
