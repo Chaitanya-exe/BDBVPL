@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Projects = () => {
   return (
-    <div className='bg-skyBlue py-10 lg:py-14'>
+    <div id="Projects" className='bg-skyBlue py-10 lg:py-14'>
       <Conatiner
         title={"Our projects"}
         h1={"Our Brightest Achievements"}
