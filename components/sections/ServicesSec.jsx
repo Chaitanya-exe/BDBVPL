@@ -27,7 +27,7 @@ const ServicesSec = () => {
       />
       <div className="mt-5 *:mx-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10 lg:gap-8 lg:px-16">
         {services.slice(0, 3).map((service) => (
-          <Card service={service} />
+          <Card service={service} key={service.id} />
         ))}
         <Image
           src={"/images/homeimg.png"}
@@ -46,9 +46,9 @@ const ServicesSec = () => {
 
 export default ServicesSec;
 
-const Card = ({ service }) => {
+const Card = ({ service,key }) => {
   return (
-    <div className="bg-white flex flex-col items-start mt-2 pb-1 w-[345px] lg:w-[380px]" >
+    <div key={key} className="bg-white flex flex-col items-start mt-2 pb-1 w-[345px] lg:w-[380px]" >
       <Image src={service.src} width={345} height={215} alt="s1" className="w-full" />
       <p className="pText flex-1 lg:pTextLg text-wrap px-3 mt-2">{service.desc}</p>
 

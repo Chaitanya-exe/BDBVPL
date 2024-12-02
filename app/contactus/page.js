@@ -86,18 +86,10 @@ const ContactUs = () => {
           </span>
         </div>
       </div>
-
-      <div
-        className="w-full min-h-[600px] bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/images/abgimg.png')",
-        }}
-      >
-
+      
       <QueryForm />
 
 
-      </div>
     </div>
   );
 };
