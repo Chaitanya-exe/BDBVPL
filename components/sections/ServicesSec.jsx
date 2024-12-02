@@ -7,7 +7,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const ServicesSec = () => {
   return (
-    <div className="relative bg-deepTeal py-12 md:py-20">
+    <div id="Services" className="relative bg-deepTeal py-12 md:py-20">
       <Conatiner 
         textAllign={"text-center text-white md:px-24 mx-auto"}
         title={"Our services"}

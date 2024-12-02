@@ -71,7 +71,7 @@ const ContactUs = () => {
           <div className="mx-14 -mt-16 pText p-2 border-4 border-white bg-deepTeal text-white">
             <p>
               Focus on who you are, what you do, and why you do it in 2-3
-              sentences. Example: "At [Your Company Name], we’re passionate
+              sentences. Example:"At [Your Company Name], we’re passionate
               about harnessing the power of the sun to create sustainable energy
               solutions. With years of expertise in solar technology, we’re
               dedicated to helping homes and businesses reduce their carbon

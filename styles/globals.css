@@ -14,11 +14,16 @@
     --foreground: #ededed;
   }
 } */
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
   background: #FAFAFA;
   color: #333333;
+  scroll-behavior: smooth;
 }
 
 @layer utilities{
