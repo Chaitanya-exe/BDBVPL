@@ -25,7 +25,7 @@ const ServicesSec = () => {
         alt="illus"
         className="absolute -right-5 md:hidden -top-16"
       />
-      <div className="mt-5 *:mx-auto md:grid md:grid-cols-3 lg:gap-4 lg:px-16">
+      <div className="mt-5 *:mx-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10 lg:gap-8 lg:px-16">
         {services.slice(0, 3).map((service) => (
           <Card service={service} />
         ))}

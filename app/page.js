@@ -11,7 +11,7 @@ import QuerySec from "@/components/sections/QuerySec";
 
 export default function Home() {
   return (
-    <section className="my- py-2 relative overflow-hidden">
+    <section className="py-2 relative overflow-hidden">
       <div className="absolute -top-6 -z-20">
         <Image
           src={"/images/herobgl.png"}
