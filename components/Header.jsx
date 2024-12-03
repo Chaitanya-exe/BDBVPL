@@ -77,7 +77,7 @@ const Header = () => {
             Home
           </li>
           <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex ">
-          <Link href={"#About"}>About us</Link>
+          <Link href={"aboutus"}>About us</Link>
           </li>
           <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
             Pricing
