@@ -1,10 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import ContactUs from "../contactus/page";
-import Conatiner from "@/components/Conatiner";
+import Conatiner from '@/components/Conatiner';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react'
 
-const AboutUs = () => {
+const page = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
       <Image
@@ -86,7 +85,6 @@ const AboutUs = () => {
       </div>
     </div>
   );
+}
 
-};
-
-export default AboutUs;
+export default page

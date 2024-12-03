@@ -83,15 +83,12 @@ const ContactUs = () => {
             />
             <h1 className="h1Text">Timings</h1>
             <p className="pText">Monday to Friday: 9 AM - 6 PM.</p>
-          </span>
+            </span>
+          </div>
         </div>
+      <QueryForm />
       </div>
       
-      <QueryForm />
-
-
-    </div>
   );
-};
-
+}
 export default ContactUs;

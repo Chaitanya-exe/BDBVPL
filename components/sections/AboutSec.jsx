@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const AboutSec = () => {
   return (
-    <div className="mt-20 px-6 lg:px-20 max-w-[890px]">
+    <div id="About" className="mt-20 px-6 lg:px-20 max-w-[890px]">
       <Conatiner
         title={"About us"}
         h2={
