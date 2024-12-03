@@ -8,6 +8,7 @@ import { FiPhoneCall } from "react-icons/fi";
 const ContactUs = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
+      {/* Hero sectioin */}
       <Image
         src={"/images/herobg2.png"}
         width={720}
@@ -25,6 +26,8 @@ const ContactUs = () => {
           <button className="text-solarYellow">Contact</button>
         </div>
       </div>
+
+      {/* Contact Information Section */}
       <div className="mt-32 md:mt-44 mb-20 mx-8 md:mx-20 lg:mx-32 z-20 *:py-6 relative">
         <FiPhoneCall className="absolute -right-5 md:right-36 -rotate-12 size-32 md:size-48 text-deepTeal/20 -top-10 md:-top-12" />
         <Conatiner
@@ -81,28 +84,14 @@ const ContactUs = () => {
               alt="add"
               className=""
             />
-          </div>
-          <div className="mx-14 -mt-16 pText p-2 border-4 border-white bg-deepTeal text-white">
-            <p>
-              Focus on who you are, what you do, and why you do it in 2-3
-              sentences. Example:"At [Your Company Name], we’re passionate
-              about harnessing the power of the sun to create sustainable energy
-              solutions. With years of expertise in solar technology, we’re
-              dedicated to helping homes and businesses reduce their carbon
-              footprint and save on energy costs. We strive to make renewable
-              energy accessible, affordable, and impactful for everyone,
-              contributing to a brighter and greener tomorrow
-            </p>
-          </div>
             <h1 className="h1Text">Timings</h1>
             <p className="pText">Monday to Friday: 9 AM - 6 PM.</p>
           </span>
         </div>
       </div>
-      
+
+    {/* Query Form Section */}
       <QueryForm />
-
-
     </div>
   );
 };
