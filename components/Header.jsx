@@ -63,6 +63,7 @@ const Header = () => {
                 width={24}
                 height={24}
                 alt="menu"
+                className="text-white"
               />
             </button>
           </div>
