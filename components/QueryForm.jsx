@@ -77,7 +77,7 @@ const QueryForm = () => {
             />
           </div>
 
-          <div className="focus-within:border-white/50 backdrop-blur-md">
+          <div className="focus-within:border-white/50 backdrop-blur-md md:w-[795px]">
             <select
               name="dropdown"
               defaultValue=""

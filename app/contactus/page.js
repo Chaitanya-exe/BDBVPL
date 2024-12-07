@@ -8,6 +8,7 @@ import { FiPhoneCall } from "react-icons/fi";
 const ContactUs = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
+      {/* Hero sectioin */}
       <Image
         src={"/images/herobg2.png"}
         width={720}
@@ -25,6 +26,8 @@ const ContactUs = () => {
           <button className="text-solarYellow">Contact</button>
         </div>
       </div>
+
+      {/* Contact Information Section */}
       <div className="mt-32 md:mt-44 mb-20 mx-8 md:mx-20 lg:mx-32 z-20 *:py-6 relative">
         <FiPhoneCall className="absolute -right-5 md:right-36 -rotate-12 size-32 md:size-48 text-deepTeal/20 -top-10 md:-top-12" />
         <Conatiner
@@ -83,11 +86,11 @@ const ContactUs = () => {
             />
             <h1 className="h1Text">Timings</h1>
             <p className="pText">Monday to Friday: 9 AM - 6 PM.</p>
-            </span>
-          </div>
+          </span>
         </div>
       <QueryForm />
       </div>
+</div>
       
   );
 }

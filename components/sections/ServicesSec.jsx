@@ -48,7 +48,7 @@ export default ServicesSec;
 
 const Card = ({ service,key }) => {
   return (
-    <div className="group bg-white flex flex-col items-start mt-2 pb-1 w-[345px] lg:w-[380px] hover:shadow-lg hover:shadow-text/100 " >
+    <div key={key} className="group bg-white flex flex-col items-start mt-2 pb-1 w-[345px] lg:w-[380px] hover:shadow-lg hover:shadow-text/100 " >
       <Image src={service.src} width={345} height={215} alt="s1" className="w-full" />
       <p className="pText flex-1 lg:pTextLg text-wrap px-3 mt-2">{service.desc}</p>
 
