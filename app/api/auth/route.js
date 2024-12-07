@@ -11,7 +11,7 @@ async function handler(){
             }, process.env.JWT_SECRET,{
                 expiresIn:"5 days"
             });
-            const response = NextResponse.json({ok:true});
+            const response = NextResponse.json({ok:true},{status:204});
             response.cookies.set('Authorization',`Bearer ${token}`,{
                 httpOnly: true,
                 secure: false,
