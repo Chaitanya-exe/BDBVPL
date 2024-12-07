@@ -5,7 +5,6 @@ import ContactUs from "../contactus/page";
 import Conatiner from "@/components/Conatiner";
 import Footer from "@/components/Footer";
 import QueryForm from "@/components/QueryForm";
-import Conatiner from '@/components/Conatiner';
 
 const page = () => {
   return (
@@ -236,7 +235,7 @@ const page = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-10 mx-[50px] lg:px-[50px] min-h-[200px]">
         {/* Card 1 */}
-        <div className="border-green rounded-xl border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[100px] min-h-[150px]">
+        <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[100px] min-h-[150px]">
           <div className="flex justify-center mb-4">
             <Image
               src={"/icons/Group.png"}
@@ -256,7 +255,7 @@ const page = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="border-green rounded-xl border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="border-green  border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex justify-center mb-4">
             <Image
               src={"/icons/Group (1).png"}
@@ -276,7 +275,7 @@ const page = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="border-green rounded-xl border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="border-green  border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex justify-center mb-4">
             <Image
               src={"/icons/Group (2).png"}
