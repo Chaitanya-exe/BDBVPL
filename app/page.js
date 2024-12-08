@@ -23,7 +23,7 @@ export default function Home() {
           className="w-full block min-h-[380px] max-h-[650px] lg:w-screen"
         />
       </div>
-      <div className="text-white max-w-[650px] my-20 md:my-40 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
+      <div  className="text-white max-w-[650px] my-20 md:my-40 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
         <h1 className="h1Text  md:h1TextLg motion-preset-slide-left">
           <span className="text-solarYellow hover:motion-preset-pop motion-duration-2000">
             Power{" "}

@@ -27,8 +27,8 @@ const Header = () => {
   };
 
   return (
-    <div className="capitalize relative">
-      <div className="absolute lg:-top-16 -bottom-4  -left-6 right-0 -z-10">
+    <div className="capitalize relative ">
+      <div className="absolute lg:-top-8 -bottom-4  -left-6 -right-5 -z-10">
         <div className="bg-[#FAFAFA] relative h-44 -rotate-[4deg] min-w-[500px]">
           <div className="bg-[#FAFAFA] absolute lg:bottom-0 lg:left-24 bottom-1 rotate-[42deg] h-28 lg:w-56 w-36 rounded-xl -z-10" />
         </div>
