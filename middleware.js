@@ -5,13 +5,13 @@ export function middleware(req) {
     const url = req.nextUrl;
     const host = req.headers.get('host').split('.')[0];
 
-    if (url.pathname.startsWith("/_next") || url.pathname.startsWith("/static")) {
+    if (url.pathname.startsWith("/_next") || url.pathname.startsWith("/static") || url.pathname.startsWith("/api")) {
         return NextResponse.next();
     }
 
     try {
         if (host == 'admin') {
-            const token = req.headers.get('cookie').split(" ")[1];
+            const token = req.headers.get('cookie')?.split(" ")[1];
             console.log(token)
             if (!token) {
                 url.pathname = '/admin/login'

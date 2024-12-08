@@ -21,11 +21,11 @@ async function handler(req){
             console.log('Token was assigned')
             return response;
         } else{
-            return Response.json({msg:"invalid credentials", ok:false},{status:409});
+            return NextResponse.json({msg:"invalid credentials", ok:false},{status:409});
         }
     } catch (err) {
         console.log(err);
-        return Response.json({success:false, error: "some error occured"});
+        return NextResponse.json({success:false, error: "some error occured"});
     }
 }
 
