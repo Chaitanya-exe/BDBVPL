@@ -8,22 +8,29 @@ import { FiPhoneCall } from "react-icons/fi";
 const ContactUs = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Hero sectioin */}
+      {/* Hero Section */}
       <Image
         src={"/images/herobg2.png"}
         width={720}
         height={400}
         alt="img"
-        className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[490px]"
+        className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[550px]"
       />
-      <div className="h-28 bg-[#FAFAFA] absolute -left-2 -right-5 z-10 top-[290px] md:top-[415px] -rotate-[4deg]" />
-      <div className="flex flex-col pt-32 md:pt-36 justify-center items-center gap-4 md:gap-8">
+
+      <div className="absolute lg:-top-[78px] -top-[140px]  -left-6 -right-5 z-10">
+        <div className="bg-[#FAFAFA] relative h-52 -rotate-[3deg] min-w-[500px]">
+          <div className="bg-[#FAFAFA] absolute lg:bottom-0 lg:left-24 bottom-1 rotate-[42deg] h-28 lg:w-56 w-36 rounded-xl -z-10" />
+        </div>
+      </div>
+
+      <div className="h-28 bg-[#FAFAFA] absolute -left-2 -right-5 z-10 top-[290px] md:top-[475px] -rotate-[4deg]" />
+      <div className="flex flex-col pt-32 md:pt-56 justify-center items-center gap-4 md:gap-8">
         <h1 className="h1Text md:h1TextLg text-solarYellow">Contact Us</h1>
         <div className="flex divide-x-4 divide-solarYellow *:px-3 md:h2TextLg h2Text">
           <Link href={"/"} className="text-white">
             Home
           </Link>
-          <button className="text-solarYellow">Contact</button>
+          <button className="text-solarYellow">About</button>
         </div>
       </div>
 
@@ -88,10 +95,9 @@ const ContactUs = () => {
             <p className="pText">Monday to Friday: 9 AM - 6 PM.</p>
           </span>
         </div>
-      <QueryForm />
       </div>
-</div>
-      
+      <QueryForm />
+    </div>
   );
 }
 export default ContactUs;

@@ -41,10 +41,17 @@ const page = () => {
         width={720}
         height={400}
         alt="img"
-        className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[490px]"
+        className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[550px]"
       />
-      <div className="h-28 bg-[#FAFAFA] absolute -left-2 -right-5 z-10 top-[290px] md:top-[415px] -rotate-[4deg]" />
-      <div className="flex flex-col pt-32 md:pt-36 justify-center items-center gap-4 md:gap-8">
+
+      <div className="absolute lg:-top-[78px] -top-[140px]  -left-6 -right-5 z-10">
+        <div className="bg-[#FAFAFA] relative h-52 -rotate-[3deg] min-w-[500px]">
+          <div className="bg-[#FAFAFA] absolute lg:bottom-0 lg:left-24 bottom-1 rotate-[42deg] h-28 lg:w-56 w-36 rounded-xl -z-10" />
+        </div>
+      </div>
+
+      <div className="h-28 bg-[#FAFAFA] absolute -left-2 -right-5 z-10 top-[290px] md:top-[475px] -rotate-[4deg]" />
+      <div className="flex flex-col pt-32 md:pt-56 justify-center items-center gap-4 md:gap-8">
         <h1 className="h1Text md:h1TextLg text-solarYellow">About Us</h1>
         <div className="flex divide-x-4 divide-solarYellow *:px-3 md:h2TextLg h2Text">
           <Link href={"/"} className="text-white">
@@ -130,6 +137,7 @@ const page = () => {
       {/* Mission And Values Section */}
       {/* Content */}
       <section
+        id="Mission"
         style={{ backgroundImage: "url('/images/abgimg.png')" }}
         className="relative py-10 sm:py-14 lg:py-20 min-h-[600px] my-[50px] md:my-[100px]  bg-cover bg-center bg-no-repeat  z-10  mx-auto text-center px-4 sm:px-6 lg:px-8 text-white"
       >
@@ -153,19 +161,6 @@ const page = () => {
           textAllign={"text-center"}
         />
 
-        {/* <div className="mb-12">
-          <h3 className="text-yellow-400 text-sm sm:text-base lg:text-lg uppercase tracking-widest mb-2">
-            Our Mission & Values
-          </h3>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
-            Driven By Purpose, Guided By Principles.
-          </h1>
-          <p className="mt-4 text-sm sm:text-base lg:text-lg text-gray-200">
-            At The Heart Of Our Work Lies A Commitment To Creating A Sustainable
-            Future Powered By Innovation, Integrity, And A Customer-First
-            Approach.
-          </p>
-        </div> */}
         {/* Values Section */}
         <div className="flex flex-col md:absolute md:mt-28 md:left-28 z-50  items-center justify-center md:flex-row  gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[260px] *:w-[300px] bg-cyan-100 sm:bg-transparent">
           {/* Card 1 */}
@@ -275,7 +270,10 @@ const page = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <div className="my-[50px] md:my-48 px-6 md:px-[50px] lg:px-[150px]">
+      <section
+        id="WhyUs"
+        className="my-[50px] md:my-48 px-6 md:px-[50px] lg:px-[150px]"
+      >
         <Conatiner
           title={"Why Choose Us"}
           h1={
@@ -347,7 +345,7 @@ const page = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* leaders section */}
       <section className="md:-mt-20 flex flex-col items-center bg-skyBlue py-8 md:py-20 px-6 md:px-[50px] lg:px-[150px]">
@@ -357,20 +355,38 @@ const page = () => {
           textAllign={"text-center md:px-36"}
         />
         <div className="flex flex-col md:flex-row items-center justify-center gap-8  md:gap-28 my-16">
+         
           <div className="group flex flex-col justify-center items-center">
-            <div className="group-hover:py-4 group-hover:bg-deepTeal items-center flex border rounded-full  border-deepTeal p-1">
-              <Image
-                src={"/images/persona.png"}
-                width={215}
-                height={215}
-                alt="user"
-                className="rounded-full group-hover:w-[185px] group-hover:h-[198px]"
-              />
-              <div className="space-y-7 text-white pr-1 *:size-6 hidden group-hover:block">
-                <FaFacebook className="-ml-1" />
-                <FaFacebook className="ml-3" />
-                <FaFacebook className="-ml-1" />
-              </div>
+            {/* Fixed size container to avoid layout shifting */}
+            <div className="relative flex items-center justify-center w-[230px] md:w-[250px] md:h-[250px] h-[230px] border rounded-full border-deepTeal group-hover:bg-deepTeal bg-skyBlue p-1 overflow-hidden">
+              {/* Animated Image */}
+              <motion.div
+                className="rounded-full overflow-hidden"
+                initial={{ width: 200, height: 200 }}
+                whileHover={{ width: 185, height: 198 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image
+                  src={"/images/persona.png"}
+                  width={215}
+                  height={215}
+                  alt="user"
+                  className="rounded-full"
+                />
+              </motion.div>
+
+              {/* Animated Icon Div */}
+              <motion.div
+                className="absolute right-2 space-y-7 text-white hidden group-hover:block"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <FaFacebook className="-ml-1 size-6" />
+                <FaFacebook className="ml-3 size-6" />
+                <FaFacebook className="-ml-1 size-6" />
+              </motion.div>
             </div>
             <div className="text-center mt-2">
               <h5 className="font-semibold">John Smith</h5>
@@ -378,19 +394,36 @@ const page = () => {
             </div>
           </div>
           <div className="group flex flex-col justify-center items-center">
-            <div className="group-hover:py-4 group-hover:bg-deepTeal items-center flex border rounded-full  border-deepTeal p-1">
-              <Image
-                src={"/images/persona.png"}
-                width={215}
-                height={215}
-                alt="user"
-                className="rounded-full group-hover:w-[185px] group-hover:h-[198px]"
-              />
-              <div className="space-y-7 text-white pr-1 *:size-6 hidden group-hover:block">
-                <FaFacebook className="-ml-1" />
-                <FaFacebook className="ml-3" />
-                <FaFacebook className="-ml-1" />
-              </div>
+            {/* Fixed size container to avoid layout shifting */}
+            <div className="relative flex items-center justify-center w-[250px] h-[250px] border rounded-full border-deepTeal group-hover:bg-deepTeal bg-skyBlue p-1 overflow-hidden">
+              {/* Animated Image */}
+              <motion.div
+                className="rounded-full overflow-hidden"
+                initial={{ width: 200, height: 200 }}
+                whileHover={{ width: 185, height: 198 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image
+                  src={"/images/persona.png"}
+                  width={215}
+                  height={215}
+                  alt="user"
+                  className="rounded-full"
+                />
+              </motion.div>
+
+              {/* Animated Icon Div */}
+              <motion.div
+                className="absolute right-2 space-y-7 text-white hidden group-hover:block"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <FaFacebook className="-ml-1 size-6" />
+                <FaFacebook className="ml-3 size-6" />
+                <FaFacebook className="-ml-1 size-6" />
+              </motion.div>
             </div>
             <div className="text-center mt-2">
               <h5 className="font-semibold">John Smith</h5>
@@ -398,30 +431,49 @@ const page = () => {
             </div>
           </div>
           <div className="group flex flex-col justify-center items-center">
-            <div className="group-hover:py-4 group-hover:bg-deepTeal items-center flex border rounded-full border-deepTeal p-1">
-              <Image
-                src={"/images/persona.png"}
-                width={215}
-                height={215}
-                alt="user"
-                className="rounded-full group-hover:w-[185px] group-hover:h-[198px]"
-              />
-              <div className="space-y-7 text-white pr-1 *:size-6 hidden group-hover:block">
-                <FaFacebook className="-ml-1" />
-                <FaFacebook className="ml-3" />
-                <FaFacebook className="-ml-1" />
-              </div>
+            {/* Fixed size container to avoid layout shifting */}
+            <div className="relative flex items-center justify-center w-[250px] h-[250px] border rounded-full border-deepTeal group-hover:bg-deepTeal bg-skyBlue p-1 overflow-hidden">
+              {/* Animated Image */}
+              <motion.div
+                className="rounded-full overflow-hidden"
+                initial={{ width: 200, height: 200 }}
+                whileHover={{ width: 185, height: 198 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image
+                  src={"/images/persona.png"}
+                  width={215}
+                  height={215}
+                  alt="user"
+                  className="rounded-full"
+                />
+              </motion.div>
+
+              {/* Animated Icon Div */}
+              <motion.div
+                className="absolute right-2 space-y-7 text-white hidden group-hover:block"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <FaFacebook className="-ml-1 size-6" />
+                <FaFacebook className="ml-3 size-6" />
+                <FaFacebook className="-ml-1 size-6" />
+              </motion.div>
             </div>
             <div className="text-center mt-2">
               <h5 className="font-semibold">John Smith</h5>
               <h6 className="font-thin">Chief Engineer</h6>
             </div>
           </div>
+
+        
         </div>
       </section>
 
       {/* Statistics */}
-      <section className="mt-8 relative flex flex-col gap-6 md:items-end md:flex-row items-center px-8 md:px-28  py-8 md:py-16 ">
+      <section className="my-8 relative flex flex-col gap-6 md:items-end md:flex-row items-center px-8 md:px-28  py-8 md:py-16 ">
         <Image
           src={"/icons/sun-svg.svg"}
           width={480}
@@ -501,7 +553,9 @@ const page = () => {
             </div>
           </div>
           <div>
-            <h4 className="md:h2Text  md:mb-3 mb-1 text-lg">Carbon Footprint Reduced</h4>
+            <h4 className="md:h2Text  md:mb-3 mb-1 text-lg">
+              Carbon Footprint Reduced
+            </h4>
             <div className="flex gap-4 items-center text-lg font-semibold">
               <AnimatedDiv
                 width="50%"
