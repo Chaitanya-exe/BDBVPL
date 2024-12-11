@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
-import Conatiner from "../Conatiner";
+import Button from "./Button";
+import Conatiner from "./Conatiner";
 import { FaPhone, FaUser } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import Button from "../Button";
+import { usePathname } from "next/navigation";
+import { FiPhoneCall } from "react-icons/fi";
 
-const QuerySec = () => {
+const QueryForm = () => {
   const [query, setQuery] = useState({
     name: "",
     number: "",
@@ -15,51 +16,42 @@ const QuerySec = () => {
     type: "",
     userQuery: "",
   });
-
-
+  
+  const pathName = usePathname();
   const handleClick = async (request) => {
     console.log(request);
   };
-  return (
-    <div id="HomeQuery" className="relative flex justify-end lg:px-24  my-4">
-      <Image
-        src={"/icons/queryillus.svg"}
-        width={120}
-        height={112}
-        alt=""
-        className="absolute md:w-[300px] -right-3 md:left-28 md:top-4 -top-14 z-10"
-      />
-      <Image
-        src={"/images/queryimg.png"}
-        width={210}
-        height={265}
-        alt=""
-        className="absolute -left-8 md:left-0 lg:-bottom-6 md:w-[580px]  -bottom-6 -z-10"
-      />
 
+  return (
+    <div id="Query"
+      className="w-full min-h-[650px] bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/images/abgimg.png')",
+      }}
+    >
       <form
-        className={`*:my-2 md:max-w-[1000px] *:bg-[#FAFAFA`}
+        className={`*:my-2 pt-14 pb-36 md:max-w-[1000px] mx-auto text-white  `}
       >
         <Conatiner
           title={"Query section"}
           h1={"Got Questions? We’re Here to Help You Go Solar!"}
-          textAllign={"text-center px-20"}
+          textAllign={"text-center px-20 pb-8"}
         />
-        <div className="md:flex items-center px-10 md:px-28 *:my-2 *:md:my-0 *:w-full gap-4 *:border *:rounded *:flex *:items-center *:p-2.5 *:gap-2 *:border-text/20 ">
-          <div className="focus-within:border-text/50">
-            <FaUser className="size-5 text-text/90" />
+        <div className="md:flex items-center px-10 md:px-28 *:my-2 *:md:my-0 *:w-full gap-4 *:border *:rounded *:flex *:items-center *:p-2.5 *:gap-2 *:border-white/50 ">
+          <div className="focus-within:border-white/80 backdrop-blur-md">
+            <FaUser className="size-5 text-white/90" />
             <input
               type="text"
               id="fullname"
               name="fullName"
               value={query.name}
-              onChange={(e) => setQuery({ ...query, name: e.target.value })}
+              onChange={(e) => setQuery({...query, name: e.target.value })}
               placeholder="Full Name"
               className="capitalize w-full outline-none bg-transparent px-2"
             />
           </div>
-          <div className="focus-within:border-text/50">
-            <FaPhone className="size-5 text-text/90" />
+          <div className="focus-within:border-white/50 backdrop-blur-md">
+            <FaPhone className="size-5 text-white/90" />
             <input
               type="text"
               id="ph"
@@ -71,9 +63,9 @@ const QuerySec = () => {
             />
           </div>
         </div>
-        <div className="md:flex items-center px-10 md:px-28 *:my-2 *:md:my-0 *:w-full gap-4 *:border *:rounded *:flex *:items-center  *:gap-2 *:border-text/20 ">
-          <div className="p-2.5 focus-within:border-text/50 ">
-            <MdEmail className="size-6 text-text/90" />
+        <div className="md:flex items-center px-10 md:px-28 *:my-2 *:md:my-0 *:w-full gap-4 *:border *:rounded *:flex *:items-center  *:gap-2 *:border-white/50 ">
+          <div className="p-2.5 focus-within:border-white/50 backdrop-blur-md ">
+            <MdEmail className="size-6 text-white/90" />
             <input
               type="email"
               id="email"
@@ -85,11 +77,11 @@ const QuerySec = () => {
             />
           </div>
 
-          <div className="focus-within:border-text/50">
+          <div className="focus-within:border-white/50 backdrop-blur-md md:w-[795px]">
             <select
               name="dropdown"
               defaultValue=""
-              className="w-full capitalize bg-transparent p-2.5 h-full focus:outline-none"
+              className="w-full capitalize bg-transparent *:text-text *:border-b *:border-text p-2.5 h-full focus:outline-none"
             >
               <option
                 value={query.type}
@@ -98,28 +90,29 @@ const QuerySec = () => {
                 }
                 disabled
                 hidden
+                className="text-white/20"
               >
                 Type of inquiry
               </option>
-              <option value="consultation" className="bg-white">
+              <option value="consultation" className="  *:hover:font-semibold">
                 Consultation
               </option>
-              <option value="design" className="bg-white">
+              <option value="design" className=" *:hover:font-semibold">
                 Design
               </option>
-              <option value="maintanence" className="bg-white">
+              <option value="maintanence" className=" *:hover:font-semibold">
                 Maintanence
               </option>
-              <option value="installation" className="bg-white">
+              <option value="installation" className=" *:hover:font-semibold">
                 Installation
               </option>
-              <option value="other" className="bg-white">
+              <option value="other" className=" *:hover:font-semibold">
                 Other
               </option>
             </select>
           </div>
         </div>
-        <div className="border backdrop-blur-md rounded mx-10 md:mx-28 flex items-center p-2 gap-2 border-text/20 focus-within:border-text/50">
+        <div className="border backdrop-blur-md rounded mx-10 md:mx-28 flex items-center p-2 gap-2 border-white/50 focus-within:border-white/80">
           <textarea
             rows={5}
             id="query"
@@ -133,7 +126,11 @@ const QuerySec = () => {
             className="w-full  outline-none bg-transparent px-2"
           />
         </div>
-        <div className="float-right md:py-3 py-2  px-10 md:px-28">
+        <div className="float-right flex items-center gap-6 md:py-3 py-2  px-10 md:px-28">
+          <button>
+            <FiPhoneCall className="inline-flex size-5 md:size-6 mr-2" />
+            <span className="text-lg">9312644140</span>
+          </button>
           <Button
             text={"Send Query"}
             handleClick={(e) => {
@@ -147,4 +144,4 @@ const QuerySec = () => {
   );
 };
 
-export default QuerySec;
+export default QueryForm;
