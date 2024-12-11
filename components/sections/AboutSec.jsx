@@ -6,42 +6,53 @@ import Link from "next/link";
 
 const AboutSec = () => {
   return (
-    <div id="About" className="mt-20 px-6 lg:px-20 max-w-[890px]">
+    <div id="About" className="mt-20 px-6 lg:px-20 max-w-[920px]">
       <Conatiner
         title={"About us"}
         h2={
-          "We are committed to revolutionizing energy through innovative solar solutions that make sustainability accessible for everyone."
+          <span>
+            At <Link href={"/aboutus"}>BDB Ventures Pvt. Ltd.</Link>, our mission is to make{" "}
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Solar_energy"
+            >
+              renewable solar energy
+            </a>{" "}
+            the standard for homes and businesses. We transform energy
+            consumption with innovative and affordable solar solutions
+            tailored to your needs.
+          </span>
         }
         h1={
           <span>
-            Our Mission - Powering a{" "}
-            <span className="text-green">Greener Future</span>
+            Powering a <span className="text-green">Greener, </span>
+            Brighter Tomorrow
           </span>
         }
+        textAllign={"text-center md:text-start"}
       />
       <ul className="list-disc pText md:pTextLg space-y-2 mb-6 lg:mb-10 list-inside  mt-3 lg:mt-5">
         <li>
-          At BDV, we aim to reduce carbon footprints, empower energy
-          independence, and create a brighter future through sustainable
-          technology
+          Significantly reduce carbon footprints and contribute to a more
+          sustainable and eco-friendly environment for future generations.
         </li>
         <li>
-          With over 2 years of experience, we’ve installed 100+ solar panels
-          across various locations, saving tons of CO₂ emissions annually
+          Enable individuals and businesses to achieve energy independence by
+          harnessing the limitless power of solar energy.
         </li>
         <li>
-          Our team of experts is dedicated to providing the best solar energy
-          solutions tailored to your needs
+          Provide cutting-edge, customized solar solutions designed to meet the
+          unique energy needs of our clients, ensuring optimal efficiency,
+          savings, and long-term reliability.
         </li>
       </ul>
       <Link href={"/aboutus"}>
-
-      <Button
-        text={"More about us"}
-        icon={
-          <FaArrowRightLong className="text-white inline-flex ml-2 size-5" />
-        }
-      />
+        <Button
+          text={"More about us"}
+          icon={
+            <FaArrowRightLong className="text-white inline-flex ml-2 size-5" />
+          }
+        />
       </Link>
     </div>
   );
