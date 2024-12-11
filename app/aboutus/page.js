@@ -13,28 +13,36 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const settings = {
+  dots: true,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  //  speed: 500,
+  slidesToShow: 3, // Show 3 slides on larger screens
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 768, // For screens smaller than 768px (md and below)
+      settings: {
+        slidesToShow: 1, // Show 1 slide
+        slidesToScroll: 1, // Scroll 1 slide
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000, // Disable infinite scrolling
+        arrows: false, // Hide arrows
+      },
+    },
+  ],
+};
 
 const page = () => {
   return (
     <div className="min-h-screen w-screen relative overflow-hidden">
-      {/* <Image
-        src={"/images/herobg2.png"}
-        width={720}
-        height={400}
-        alt="img"
-        className="-z-30 absolute -top-7 h-[230px] md:min-h-[490px]"
-      />
-      <div className="w-[420px] h-14 bg-[#FAFAFA] absolute -left-2 z-20 top-44 -rotate-[4deg] md:top-[415px]" />
-      <div className="flex flex-col pt-14 justify-center items-center gap-2">
-        <h1 className="h1Text text-solarYellow">About us</h1>
-        <div className="flex divide-x-4 divide-solarYellow *:px-3 h2Text">
-          <Link href={"/"} className="text-white">
-            Home
-          </Link>
-          <button className="text-solarYellow">About</button>
-        </div>
-      </div> */}
-
       {/* Hero Section */}
       <Image
         src={"/images/herobg2.png"}
@@ -44,6 +52,7 @@ const page = () => {
         className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[550px]"
       />
 
+      {/* upper divs */}
       <div className="absolute lg:-top-[78px] -top-[140px]  -left-6 -right-5 z-10">
         <div className="bg-[#FAFAFA] relative h-52 -rotate-[3deg] min-w-[500px]">
           <div className="bg-[#FAFAFA] absolute lg:bottom-0 lg:left-24 bottom-1 rotate-[42deg] h-28 lg:w-56 w-36 rounded-xl -z-10" />
@@ -121,14 +130,14 @@ const page = () => {
           </div>
           <div className="md:min-w-[630px] z-10  w-[300px] pText p-2 md:p-3 border-4 border-white bg-deepTeal text-white">
             <p>
-              Focus on who you are, what you do, and why you do it in 2-3
-              sentences. Example:"At [Your Company Name], we’re passionate about
-              harnessing the power of the sun to create sustainable energy
-              solutions. With years of expertise in solar technology, we’re
-              dedicated to helping homes and businesses reduce their carbon
-              footprint and save on energy costs. We strive to make renewable
-              energy accessible, affordable, and impactful for everyone,
-              contributing to a brighter and greener tomorrow
+              Founded in 2012, BDB Ventures Pvt. Ltd. has been a pioneer in
+              providing innovative solar solutions to our customers. From
+              revolutionizing irrigation with solar-powered pumps to enabling
+              homes and industries to harness the power of the sun, we have been
+              committed to making renewable energy accessible and affordable.
+              With a strong focus on sustainability, customer satisfaction, and
+              technical excellence, we strive to create a greener tomorrow for
+              generations to come.
             </p>
           </div>
         </div>
@@ -156,13 +165,13 @@ const page = () => {
           title={"Our Mission and Values"}
           h1={<span>Driven By Purpose, Guided By Principles.</span>}
           h2={
-            "At The Heart Of Our Work Lies A Commitment To Creating A Sustainable Future Powered By Innovation, Integrity, And A Customer-First Approach."
+            "To be the leading provider of innovative solar solutions that empower communities and industries to transition to renewable energy seamlessly."
           }
           textAllign={"text-center"}
         />
 
         {/* Values Section */}
-        <div className="flex flex-col md:absolute md:mt-28 md:left-28 z-50  items-center justify-center md:flex-row  gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[260px] *:w-[300px] bg-cyan-100 sm:bg-transparent">
+        <div className="flex flex-wrap flex-col md:absolute md:mt-28 md:left-28 z-50  items-center justify-center md:flex-row  gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[260px] *:w-[300px] bg-cyan-100 sm:bg-transparent">
           {/* Card 1 */}
           <div className="group lg:motion-preset-oscillate motion-duration-2000   hover:bg-green hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ">
             <div className="flex justify-center mb-4">
@@ -185,7 +194,7 @@ const page = () => {
               Sustainability
             </h3>
             <p className=" group-hover:text-white pText">
-              Protecting Our Planet Through Renewable Energy Solutions.
+              Driving solutions that prioritize environmental well-being.
             </p>
           </div>
 
@@ -211,7 +220,7 @@ const page = () => {
               Innovation
             </h3>
             <p className="text-sm sm:text-base text-gray-600 group-hover:text-white pText">
-              Leveraging Cutting-Edge Technology For Efficient Solar Systems.
+              Constantly evolving to offer state-of-the-art solar technologies.
             </p>
           </div>
 
@@ -237,7 +246,8 @@ const page = () => {
               Customer-Centric Approach
             </h3>
             <p className="text-sm sm:text-base text-gray-600 group-hover:text-white pText">
-              Focusing On Your Needs Every Step Of The Way.
+              Ensuring customer satisfaction through dedicated support and
+              quality solutions.{" "}
             </p>
           </div>
 
@@ -263,9 +273,36 @@ const page = () => {
               Integrity
             </h3>
             <p className="text-sm sm:text-base text-gray-600 group-hover:text-white pText">
-              Transparent Practices, Delivering What We Promise.
+              Building trust through transparent practices and reliable services
             </p>
           </div>
+
+          {/* Card 5 */}
+          {/* <div className="group lg:motion-preset-oscillate motion-duration-2000  hover:bg-teal-500 hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ">
+            <div className="flex justify-center mb-4">
+              <Image
+                src={"/icons/integrity-icon.svg"}
+                width={80}
+                height={80}
+                alt="Sustainability"
+                className="group-hover:hidden"
+              />
+              <Image
+                src={"/icons/integrityWhite-icon.svg"}
+                width={80}
+                height={80}
+                alt="Sustainability"
+                className="group-hover:block hidden"
+              />
+            </div>
+            <h3 className="text-base sm:text-2xl font-bold mb-2 h1Text mt-2">
+              Integrity
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 group-hover:text-white pText">
+              Partnering with customers and stakeholders to achieve shared
+              goals
+            </p>
+          </div> */}
         </div>
       </section>
 
@@ -284,9 +321,72 @@ const page = () => {
           h2={"Discover How We Stand Out In The World Of Renewable Energy"}
           textAllign={"text-center "}
         />
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-10 mx-[50px] lg:px-[50px] min-h-[200px]">
-          {/* Card 1 */}
-          <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[100px] min-h-[150px]">
+        <div className="slider-container">
+          <Slider className="py-10" {...settings}>
+            {/* Card 1 */}
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[260px]">
+              <div className="flex justify-center mb-4">
+                <Image
+                  src={"/icons/Group.png"}
+                  width={100}
+                  height={100}
+                  alt="Integrity"
+                  className="w-[100px] h-[100px] "
+                />
+              </div>
+              <h3 className="text-base sm:text-xl font-bold mb-2">
+                100% Customizable Solar Plans
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 ">
+                Tailored Solutions Designed To Meet Your Energy Needs, Ensuring
+                Maximum Efficiency
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[260px]">
+              <div className="flex justify-center mb-4">
+                <Image
+                  src={"/icons/Group (1).png"}
+                  width={100}
+                  height={100}
+                  alt="Integrity"
+                  className="w-[100px] h-[100px] "
+                />
+              </div>
+              <h3 className="text-base sm:text-xl font-bold mb-2">
+                Certified Solar Experts
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600">
+                Our Team Comprises Experienced And Accredited Professionals
+                Dedicated To Excellence.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[260px]">
+              <div className="flex justify-center mb-4">
+                <Image
+                  src={"/icons/Group (2).png"}
+                  width={100}
+                  height={100}
+                  alt="Integrity"
+                  className="w-[100px] h-[100px] "
+                />
+              </div>
+              <h3 className="text-base sm:text-xl font-bold mb-2">
+                24/7 Customer Support
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600">
+                We're Here To Assist You Anytime, Ensuring A smooth And
+                Hassle-Free Experience.
+              </p>
+            </div>
+          </Slider>
+        </div>
+        {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-10 mx-[50px] lg:px-[50px] min-h-[200px]"> */}
+        {/* Card 1 */}
+        {/* <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[100px] min-h-[150px]">
             <div className="flex justify-center mb-4">
               <Image
                 src={"/icons/Group.png"}
@@ -303,10 +403,10 @@ const page = () => {
               Tailored Solutions Designed To Meet Your Energy Needs, Ensuring
               Maximum Efficiency
             </p>
-          </div>
+          </div> */}
 
-          {/* Card 2 */}
-          <div className="border-green  border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        {/* Card 2 */}
+        {/* <div className="border-green  border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="flex justify-center mb-4">
               <Image
                 src={"/icons/Group (1).png"}
@@ -323,10 +423,10 @@ const page = () => {
               Our Team Comprises Experienced And Accredited Professionals
               Dedicated To Excellence.
             </p>
-          </div>
+          </div> */}
 
-          {/* Card 3 */}
-          <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        {/* Card 3 */}
+        {/* <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="flex justify-center mb-4">
               <Image
                 src={"/icons/Group (2).png"}
@@ -344,7 +444,7 @@ const page = () => {
               Hassle-Free Experience.
             </p>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* leaders section */}
@@ -355,7 +455,6 @@ const page = () => {
           textAllign={"text-center md:px-36"}
         />
         <div className="flex flex-col md:flex-row items-center justify-center gap-8  md:gap-28 my-16">
-         
           <div className="group flex flex-col justify-center items-center">
             {/* Fixed size container to avoid layout shifting */}
             <div className="relative flex items-center justify-center w-[230px] md:w-[250px] md:h-[250px] h-[230px] border rounded-full border-deepTeal group-hover:bg-deepTeal bg-skyBlue p-1 overflow-hidden">
@@ -467,8 +566,6 @@ const page = () => {
               <h6 className="font-thin">Chief Engineer</h6>
             </div>
           </div>
-
-        
         </div>
       </section>
 
@@ -575,7 +672,12 @@ const page = () => {
 
 export default page;
 
-const AnimatedDiv = ({ width, duration = 1.5, delay = 0.3, bgColor = "bg-deepTeal" }) => {
+const AnimatedDiv = ({
+  width,
+  duration = 1.5,
+  delay = 0.3,
+  bgColor = "bg-deepTeal",
+}) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.5 });
 
@@ -599,6 +701,3 @@ const AnimatedDiv = ({ width, duration = 1.5, delay = 0.3, bgColor = "bg-deepTea
     </div>
   );
 };
-
-
-

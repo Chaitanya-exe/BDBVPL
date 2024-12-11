@@ -20,11 +20,12 @@ export default function Home() {
           width={900}
           height={800}
           alt="rect"
-          className="w-full block min-h-[380px] max-h-[700px] lg:w-screen"
+          className="block min-h-[410px] max-h-[700px] w-screen"
         />
 
         {/* try */}
-        <div className="absolute lg:-top-14 -bottom-4  -left-6 -right-5 z-10">
+       
+        <div className="absolute lg:-top-[78px] -top-[120px]  -left-6 -right-5 z-10">
           <div className="bg-[#FAFAFA] relative h-52 -rotate-[3deg] min-w-[500px]">
             <div className="bg-[#FAFAFA] absolute lg:bottom-0 lg:left-24 bottom-1 rotate-[42deg] h-28 lg:w-56 w-36 rounded-xl -z-10" />
           </div>
@@ -55,7 +56,8 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="md:flex my-28 py-10 lg:pt-24 items-center gap-10 ">
+
+      <div className="md:flex my-24 items-center gap-10 ">
         <div className="aboutImgContainer lg:w-[350px] lg:h-[400px]  mx-10 relative motion-preset-slide-right ">
           <Image
             src={"/images/aboutsectionimg.png"}
