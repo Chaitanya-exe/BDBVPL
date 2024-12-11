@@ -46,7 +46,7 @@ const Header = () => {
             />
             <div className="">
               <h1 className="logoText uppercase text-green">
-                BDV<span className="text-text">VPL</span>
+                BDB<span className="text-text">VPL</span>
               </h1>
               <h5 className="text-[12px] font-bold text-text/80 font-roboto tracking-wide capitalize">
                 solar Solutions
@@ -77,19 +77,19 @@ const Header = () => {
             Home
           </li>
           <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex ">
-          <Link href={"aboutus"}>About us</Link>
+            <Link href={"aboutus"}>About us</Link>
           </li>
           <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
             Pricing
           </li>
           <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
-            <Link href={"#Services"}>Services</Link>  
+            <Link href={"#Services"}>Services</Link>
           </li>
           <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
-          <Link href={"#Projects"}>Projects</Link> 
+            <Link href={"#Projects"}>Projects</Link>
           </li>
           <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
-          <Link href={"/contactus"}>Contact Us</Link>
+            <Link href={"/contactus"}>Contact Us</Link>
           </li>
         </ul>
         <div className="hidden md:flex items-center gap-1.5 md:gap-3">
