@@ -51,9 +51,28 @@ export default ServicesSec;
 
 const Card = ({ service,key }) => {
   return (
-    <div key={key} className="group bg-white flex flex-col items-start mt-2 pb-1 w-[345px] lg:w-[380px] hover:shadow-lg hover:shadow-text/100 " >
-      <Image src={service.src} width={345} height={215} alt="s1" className="w-full" />
-      <p className="pText flex-1 lg:pTextLg text-wrap px-3 mt-2">{service.desc}</p>
+    <div
+      key={key}
+      className="group relative overflow-hidden bg-white flex flex-col items-start mt-2 pb-1 w-[345px] lg:w-[380px] lg:h-[350px] hover:shadow-md hover:shadow-text/70 "
+    >
+        <motion.div
+          initial={{ y: -80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1, transition: { duration: 0.2 } }}
+          className="absolute hidden group-hover:flex -top-20 -left-5 -right-5 h-[190px] bg-gradient-to-b from-green to-deepTeal px-14 text-center items-center justify-center pt-12 h2Text rounded-b-full text-solarYellow"
+        >
+          {" "}
+          {service.name}
+        </motion.div>
+      <Image
+        src={service.src}
+        width={345}
+        height={215}
+        alt="s1"
+        className="w-full"
+      />
+      <p className="pText flex-1 lg:pTextLg text-wrap px-3 mt-2">
+        {service.desc}
+      </p>
 
       <Button
         variant={"sec"}
