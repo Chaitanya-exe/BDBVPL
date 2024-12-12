@@ -83,13 +83,12 @@ const page = () => {
           title={"About us"}
           h1={
             <span>
-              Your <span className="text-green">Trusted</span> Partner in{" "}
-              <span className="text-solarYellow">Solar Energy</span>
+              Switch to <span className="text-solarYellow"> Solar</span> Save
+              the
+              <span className="text-green"> Planet</span>
             </span>
           }
-          h2={
-            "Learn about our journey and how we bring solar solutions to life."
-          }
+          h2={"Empowering your home with clean energy and long-term savings."}
           textAllign={"text-center md:max-w-[700px] mx-auto"}
         />
         <div
@@ -99,9 +98,13 @@ const page = () => {
           <div className="flex  gap-1 items-start md:gap-2 relative">
             <div className="absolute -top-5 -left-6 w-[320px] rounded-lg hidden md:block pText p-2 md:p-5 border-8 border-white bg-green text-white">
               <p>
-                Founded in [Year]. [Milestone 1]: Installed [X] solar panels in
-                the first year. [Milestone 2]: Partnered with [Organization
-                Name].
+                1. Founded in 2012.
+                <br />
+                2. We offer customized solar energy solutions that help homes
+                and businesses reduce energy costs
+                <br />
+                3. Partnered with Leading Companies in the sector like Oswal
+                Pumps Ltd. Shakti Pumps Ltd. CRI Pumps Ltd and Cropmton Pumps
               </p>
             </div>
             <Image
@@ -130,14 +133,34 @@ const page = () => {
           </div>
           <div className="md:min-w-[630px] z-10  w-[300px] pText p-2 md:p-3 border-4 border-white bg-deepTeal text-white">
             <p>
-              Founded in 2012, BDB Ventures Pvt. Ltd. has been a pioneer in
-              providing innovative solar solutions to our customers. From
-              revolutionizing irrigation with solar-powered pumps to enabling
-              homes and industries to harness the power of the sun, we have been
-              committed to making renewable energy accessible and affordable.
-              With a strong focus on sustainability, customer satisfaction, and
-              technical excellence, we strive to create a greener tomorrow for
-              generations to come.
+              <span className="font-bold">
+                Leading Solar Solutions in Faridabad, Delhi NCR, and Palwal
+              </span>
+              <br></br>
+              <span>
+                1. Founded in 2012, BDB Ventures Pvt. Ltd. has been at the
+                forefront of providing innovative solar solutions to homes,
+                industries, and agricultural sectors.
+              </span>
+              <br></br>
+              <span>
+                2. We specialize in solar panel installations and solar-powered
+                irrigation systems designed to reduce energy costs, enhance
+                sustainability, and empower communities in Faridabad, Delhi NCR,
+                and Palwal.
+              </span>
+              <span></span>Our mission is to make renewable energy accessible,
+              affordable, and effective. We provide comprehensive solar energy
+              solutions that include solar pump installations, grid-connected
+              rooftop solar systems, and customized systems tailored to meet the
+              unique needs of our clients. At BDB Ventures, we prioritize
+              sustainability, customer satisfaction, and technical excellence in
+              all our projects. By harnessing the power of the sun, we help our
+              clients reduce their carbon footprint, lower electricity bills,
+              and contribute to a greener future. With a passion for clean,
+              eco-friendly energy, we aim to create lasting positive impacts for
+              generations to come. Join us in switching to solar and taking the
+              first step towards a sustainable and energy-efficient tomorrow.
             </p>
           </div>
         </div>
@@ -163,29 +186,29 @@ const page = () => {
 
         <Conatiner
           title={"Our Mission and Values"}
-          h1={<span>Driven By Purpose, Guided By Principles.</span>}
+          h1={<span>Empowering Communities with Seamless Solar Solutions</span>}
           h2={
-            "To be the leading provider of innovative solar solutions that empower communities and industries to transition to renewable energy seamlessly."
+            "Leading the Transition to Renewable Energy with Customized Solar Solutions for Homes and Industries."
           }
           textAllign={"text-center"}
         />
 
         {/* Values Section */}
-        <div className="flex flex-wrap flex-col md:absolute md:mt-28 md:left-28 z-50  items-center justify-center md:flex-row  gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[260px] *:w-[300px] bg-cyan-100 sm:bg-transparent">
+        <div className="flex flex-wrap flex-col md:absolute md:mt-28 md:left-28 z-50  items-center justify-center md:flex-row  gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[260px] *:w-[300px] bg-cyan-100 md:bg-transparent">
           {/* Card 1 */}
           <div className="group lg:motion-preset-oscillate motion-duration-2000   hover:bg-green hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ">
             <div className="flex justify-center mb-4">
               <Image
                 src={"/icons/sustainability-icon.svg"}
-                width={80}
-                height={80}
+                width={75}
+                height={75}
                 alt="Sustainability"
                 className="group-hover:hidden"
               />
               <Image
                 src={"/icons/sustainabilityWhite-icon.svg"}
-                width={80}
-                height={80}
+                width={75}
+                height={75}
                 alt="Sustainability"
                 className="group-hover:block hidden"
               />
@@ -193,8 +216,9 @@ const page = () => {
             <h3 className="text-base sm:text-2xl font-bold mb-2 h1Text mt-2">
               Sustainability
             </h3>
-            <p className=" group-hover:text-white pText">
-              Driving solutions that prioritize environmental well-being.
+            <p className=" text-sm sm:text-base text-gray-600 group-hover:text-white pText">
+              Delivering eco-friendly solar solutions that reduce carbon
+              footprints and promote a greener future.
             </p>
           </div>
 
@@ -220,7 +244,8 @@ const page = () => {
               Innovation
             </h3>
             <p className="text-sm sm:text-base text-gray-600 group-hover:text-white pText">
-              Constantly evolving to offer state-of-the-art solar technologies.
+              Providing cutting-edge solar technologies for maximum energy
+              efficiency and cost savings.
             </p>
           </div>
 
@@ -243,11 +268,11 @@ const page = () => {
               />
             </div>
             <h3 className="text-base sm:text-2xl font-bold mb-2 h1Text mt-2">
-              Customer-Centric Approach
+              Customer-Centricity
             </h3>
             <p className="text-sm sm:text-base text-gray-600 group-hover:text-white pText">
-              Ensuring customer satisfaction through dedicated support and
-              quality solutions.{" "}
+              Offering personalized solar solutions with dedicated support for
+              complete customer satisfaction.{" "}
             </p>
           </div>
 
@@ -273,12 +298,13 @@ const page = () => {
               Integrity
             </h3>
             <p className="text-sm sm:text-base text-gray-600 group-hover:text-white pText">
-              Building trust through transparent practices and reliable services
+              Building trust with transparent, reliable solar services and
+              quality solutions.
             </p>
           </div>
 
           {/* Card 5 */}
-          {/* <div className="group lg:motion-preset-oscillate motion-duration-2000  hover:bg-teal-500 hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ">
+          <div className="group lg:motion-preset-oscillate motion-duration-2000  hover:bg-teal-500 hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ">
             <div className="flex justify-center mb-4">
               <Image
                 src={"/icons/integrity-icon.svg"}
@@ -296,13 +322,12 @@ const page = () => {
               />
             </div>
             <h3 className="text-base sm:text-2xl font-bold mb-2 h1Text mt-2">
-              Integrity
+              Collaboration
             </h3>
             <p className="text-sm sm:text-base text-gray-600 group-hover:text-white pText">
-              Partnering with customers and stakeholders to achieve shared
-              goals
+            Partnering with clients to create customized solar solutions for shared success.
             </p>
-          </div> */}
+          </div>
         </div>
       </section>
 
