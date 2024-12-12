@@ -31,8 +31,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="text-white max-w-[650px] my-24 md:my-56 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
+      <div  className="text-white max-w-[650px] my-20 md:my-40 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
         <h1 className="h1Text  md:h1TextLg motion-preset-slide-left">
           <span className="text-solarYellow hover:motion-preset-pop motion-duration-2000">
             Power{" "}
