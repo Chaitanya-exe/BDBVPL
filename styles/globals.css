@@ -26,6 +26,25 @@ body {
   scroll-behavior: smooth;
 }
 
+
+
+.slick-slide > div {
+    margin: 0 10px;
+}
+
+
+.slick-slider .slick-arrow {
+    scale: 1.7;
+    /* margin: 5px; */
+    color: #0bf3ef;
+    background-color: #333333; 
+    border-radius: 50%;
+  }
+.slick-slider .slick-arrow:hover {
+   
+    background-color: #121010;
+  }
+
 @layer utilities{
 
   .logoText{
