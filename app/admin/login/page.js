@@ -47,7 +47,7 @@ const page = () => {
               width={60}
               height={60}
               alt="logo"
-              className="mx-auto h-15 w-auto"
+              className="mx-auto w-auto"
             />
             {/* <img
               alt="Your Company"
@@ -61,7 +61,7 @@ const page = () => {
           </div>
 
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form action="#" method="POST" className="space-y-6">
+            <div className="space-y-6">
               <div>
                 <label
                   htmlFor="email"
@@ -142,7 +142,7 @@ const page = () => {
                 </button>
                 {error && <p>Invalid credentials</p>}
               </div>
-            </form>
+            </div>
 
             <p className="mt-10 text-center text-sm/6 text-gray-500">
               Forgot Password?{" "}
