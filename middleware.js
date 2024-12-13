@@ -15,16 +15,8 @@ export function middleware(req) {
             url.pathname = '/admin/login'
             return NextResponse.rewrite(url);
         }
-        try {
-            jwt.verify(token, process.env.JWT_SECRET)
-            return NextResponse.next();
-
-        } catch (err) {
-            console.log(err)
-            console.log('the code failed')
-            url.pathname = '/admin/login'
-            return NextResponse.rewrite(url);
-        }
+        url.pathname = '/admin/dashboard'
+        return NextResponse.rewrite(url);
     }
 
     return NextResponse.next();
