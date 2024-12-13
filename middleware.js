@@ -14,9 +14,11 @@ export function middleware(req) {
         if (!token) {
             url.pathname = '/admin/login'
             return NextResponse.rewrite(url);
+        } else{
+            url.pathname = '/admin/dashboard'
+            return NextResponse.rewrite(url);
         }
-        url.pathname = '/admin/dashboard'
-        return NextResponse.rewrite(url);
+            
     }
 
     return NextResponse.next();
