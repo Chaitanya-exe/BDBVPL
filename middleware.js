@@ -15,7 +15,7 @@ export function middleware(req) {
             url.pathname = '/admin/login'
             return NextResponse.rewrite(url);
         } else{
-            url.pathname = '/admin/dashboard'
+            url.pathname = '/admin/dashboardPanel'
             return NextResponse.rewrite(url);
         }
             
