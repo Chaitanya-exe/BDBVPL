@@ -28,7 +28,7 @@ const page = () => {
       const result = data.ok;
       console.log(result);
       if (result === true) {
-        window.location.href(`http://admin.localhost:3000/admin/dashboard`);
+        router.push('/admin/dashboard');
       } else {
         setError(true);
       }
