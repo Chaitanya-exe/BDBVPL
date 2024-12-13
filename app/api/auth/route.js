@@ -8,7 +8,6 @@ async function handler(req){
         if(email == process.env.ADMIN_EMAIL && password == process.env.ADMIN_PASSWORD){
             const token = jwt.sign({
                 email,
-                password
             }, process.env.JWT_SECRET,{
                 expiresIn:"5 days"
             });

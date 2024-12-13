@@ -9,22 +9,22 @@ export function middleware(req) {
         return NextResponse.next();
     }
 
-    try {
-        if (host == 'admin') {
-            const token = req.headers.get('cookie')?.split(" ")[1];
-            console.log(token)
-            if (!token) {
-                url.pathname = '/admin/login'
-                return NextResponse.rewrite(url);
-            } else {
-                const verified = jwt.verify(token, process.env.JWT_SECRET);
-                console.log(verified)
-                url.pathname = '/admin/dashboard'
-                return NextResponse.rewrite(url);
-            }
+    if (host === 'admin') {
+        const token = req.headers.get('cookie')?.split("%20")[1];
+        if (!token) {
+            url.pathname = '/admin/login'
+            return NextResponse.rewrite(url);
         }
-    } catch (err) {
-        console.log(err)
+        try {
+            jwt.verify(token, process.env.JWT_SECRET)
+            return NextResponse.next();
+
+        } catch (err) {
+            console.log(err)
+            console.log('the code failed')
+            url.pathname = '/admin/login'
+            return NextResponse.rewrite(url);
+        }
     }
 
     return NextResponse.next();

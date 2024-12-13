@@ -19,7 +19,6 @@ const page = () => {
       const response = await fetch("/api/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        redirect: "follow",
         body: JSON.stringify({
           email: credentials.email,
           password: credentials.password,
@@ -29,7 +28,7 @@ const page = () => {
       const result = data.ok;
       console.log(result);
       if (result === true) {
-        router.replace("/admin/dashboard");
+        router.push("/admin/dashboard");
       } else {
         setError(true);
       }
@@ -43,10 +42,10 @@ const page = () => {
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-white">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <Image
-              src={"/images/logo.jpg"}
+              src="/images/logo.jpg"
               width={60}
               height={60}
-              alt="logo"
+              alt="bdbvpl pvt ltd"
               className="mx-auto h-15 w-auto"
             />
             {/* <img
