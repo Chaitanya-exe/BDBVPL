@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from "@/components/layout";
+import Layout from "../components/layout";
 import { Typography } from "@mui/material";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import { Line, Circle } from "rc-progress";
