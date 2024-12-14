@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import Layout from "../components/layout";
-import PieChart from "../components/pieChart";
-import BarChart from "../components/barChart";
-import LineChart from "../components/lineChart"
+import Layout from "@/components/layout";
+import PieChart from "@/components/pieChart";
+import BarChart from "@/components/barChart";
+import LineChart from "@/components/lineChart"
 function Analytics() {
   return (
     <div className="px-10 bg-slate-100">
