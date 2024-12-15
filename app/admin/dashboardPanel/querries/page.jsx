@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Layout from "../components/layout";
-import QuerryList from "../components/querryList";
+import Layout from "@/components/layout";
+import QuerryList from "@/components/querryList";
 
 function Querries() {
   return (
