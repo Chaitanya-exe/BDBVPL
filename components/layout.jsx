@@ -22,7 +22,7 @@ import { useState } from "react";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Image from "next/image";
-import logo from "./logo.jpg";
+import logo from "@/public/images/logo.jpg";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import InsightsIcon from "@mui/icons-material/Insights";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -79,7 +79,7 @@ function Layout(props) {
             disablePadding
             className={
               Pathname.startsWith("/" + text.toLocaleLowerCase())
-                ? "text-green-600 bg-slate-100"
+                ? "text-green bg-slate-100"
                 : "text-slate-700"
             }
             onClick={() => {

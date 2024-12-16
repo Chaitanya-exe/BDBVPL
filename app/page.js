@@ -9,6 +9,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import Projects from "@/components/sections/Projects";
 import QuerySec from "@/components/sections/QuerySec";
 import Link from "next/link";
+import { ClientCarousel } from "@/components/clientCarousel";
 
 
 export default function Home() {
@@ -80,6 +81,7 @@ export default function Home() {
       </div>
 
       <div className=" *:my-20 *:px-6 *:lg:px-20">
+        {/* <ClientCarousel/> */}
         <ServicesSec />
         <WorkFlow />
         {/* <Testimonials />
