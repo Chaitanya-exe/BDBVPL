@@ -107,3 +107,39 @@ export const projectsdetail=[
         list:[],
     }
 ]
+
+export const solarSolutionsData = [
+  {
+    title: "Leading Solar Solutions in Faridabad, Delhi NCR, and Palwal",
+    content: [
+      {
+        heading: "Founded in 2012",
+        description: "BDB Ventures Pvt. Ltd. has been at the forefront of providing innovative solar solutions to homes, industries, and agricultural sectors."
+      },
+      {
+        heading: "Our Expertise",
+        description: "We specialize in solar panel installations and solar-powered irrigation systems."
+      },
+      {
+        heading: "Our Mission",
+        description: "To make renewable energy accessible, affordable, and effective."
+      },
+      {
+        heading: "Our Values",
+        description: "At BDB Ventures, we prioritize sustainability, customer satisfaction, and technical excellence in all our projects."
+      },
+      {
+        heading: "Our Commitment",
+        description: "By harnessing the power of the sun, we help our clients reduce their carbon footprint, lower electricity bills, and contribute to a greener future."
+      },
+      {
+        heading: "Our Vision",
+        description: "With a passion for clean, eco-friendly energy, we aim to create lasting positive impacts for generations to come."
+      },
+      {
+        heading: "Join Us",
+        description: "Join us in switching to solar and taking the first step towards a sustainable and energy-efficient tomorrow."
+      }
+    ]
+  }
+];
