@@ -73,17 +73,17 @@ function Layout(props) {
       </Toolbar>
       <Divider />
       <List>
-        {["Dashboard", "Analytics", "Querries"].map((text, index) => (
+        {["Dashboard", "Analytics", "Queries"].map((text, index) => (
           <ListItem
             key={text}
             disablePadding
             className={
-              Pathname.startsWith("/" + text.toLocaleLowerCase())
+              Pathname.startsWith(`/admin/${text.toLowerCase()}`)
                 ? "text-green bg-slate-100"
                 : "text-slate-700"
             }
             onClick={() => {
-              Router.push("/" + text.toLocaleLowerCase());
+              Router.push(`/admin/${text.toLowerCase()}`);
             }}
           >
             <ListItemButton>
@@ -96,6 +96,30 @@ function Layout(props) {
             </ListItemButton>
           </ListItem>
         ))}
+
+        {/* {["Dashboard", "Analytics", "Queries"].map((text, index) => (
+          <ListItem
+            key={text}
+            disablePadding
+            className={
+              Pathname.startsWith("/" + text.toLocaleLowerCase())
+                ? "text-green bg-slate-100"
+                : "text-slate-700"
+            }
+            onClick={() => {
+              Router.push("/admin/" + text.toLocaleLowerCase());
+            }}
+          >
+            <ListItemButton>
+              <ListItemIcon>
+                {index === 0 && <DashboardIcon />}
+                {index === 1 && <InsightsIcon />}
+                {index === 2 && <QueryStatsIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))} */}
         <Divider />
         <ListItem
           disablePadding
@@ -115,15 +139,18 @@ function Layout(props) {
 
       <Collapse in={isCollapse} timeout="auto" unamountOnExit="true">
         <List className="ml-4">
-          {["Sales", "Help"].map((text, index) => (
+          {["Logout","Sales", "Help"].map((text, index) => (
             <ListItem
               key={text}
               disablePadding
               className={
-                Pathname.startsWith("/" + text.toLocaleLowerCase())
+                Pathname.startsWith(`/admin/${text.toLowerCase()}`)
                   ? "text-green-600 bg-slate-100"
                   : "text-slate-700"
               }
+              onClick={() => {
+                Router.push(`/admin/${text.toLowerCase()}`);
+              }}
             >
               <ListItemButton>
                 <ListItemIcon>
