@@ -9,7 +9,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import Projects from "@/components/sections/Projects";
 import QuerySec from "@/components/sections/QuerySec";
 import Link from "next/link";
-
+import { ClientCarousel } from "@/components/clientCarousel";
 
 export default function Home() {
   return (
@@ -20,31 +20,46 @@ export default function Home() {
           width={900}
           height={800}
           alt="rect"
-          className="w-full block min-h-[380px] max-h-[650px] lg:w-screen"
+          className="block min-h-[410px] max-h-[700px] w-screen"
         />
+
+        {/* try */}
+
+        <div className="absolute md:-top-[57px] -top-[120px]  -left-6 -right-5 z-10">
+          <div className="bg-[#FAFAFA] relative h-52 -rotate-[3deg] min-w-[500px]">
+            <div className="bg-[#FAFAFA] absolute lg:bottom-0 lg:left-24 bottom-1 rotate-[42deg] h-28 lg:w-56 w-36 rounded-xl -z-10" />
+          </div>
+        </div>
       </div>
-      <div className="text-white max-w-[650px] my-20 md:my-40 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
+
+      <div className="text-white max-w-[780px] my-24 md:my-56 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
         <h1 className="h1Text  md:h1TextLg motion-preset-slide-left">
+          Harness the Sun, {""}
+          <br />
           <span className="text-solarYellow hover:motion-preset-pop motion-duration-2000">
             Power{" "}
           </span>
-          Your Home,
-          <span className="text-solarYellow hover:motion-preset-pop motion-duration-2000"> Empower </span>
-          the planet.
+          Your
+          <span className="text-solarYellow hover:motion-preset-pop motion-duration-2000">
+            {" "}
+            Future!{" "}
+          </span>
         </h1>
         <h2 className="h2Text md:h2TextLg mt-1 motion-preset-blur-right motion-duration-2000">
-          Switch to solar panels and start saving the planet and your wallet
+          Let the Sun Work for You <br className="hidden md:block" />
+          Sustainable Power, Everyday Savings!{" "}
         </h2>
         <div className="flex items-center gap-3 md:gap-5 my-4">
-        <Link href={"/contactus"}>
-          <Button text={"let's talk"} />
-        </Link>  
+          <Link href={"/contactus"}>
+            <Button text={"let's talk"} />
+          </Link>
           <button className=" text-solarYellow hover:animate-pulse border border-solarYellow rounded-full p-2.5">
             <FaPlay />
           </button>
         </div>
       </div>
-      <div className="md:flex my-28 py-10 lg:pt-24 items-center gap-10 ">
+
+      <div className="md:flex my-24 items-center gap-10 ">
         <div className="aboutImgContainer lg:w-[350px] lg:h-[400px]  mx-10 relative motion-preset-slide-right ">
           <Image
             src={"/images/aboutsectionimg.png"}
@@ -64,11 +79,20 @@ export default function Home() {
         <AboutSec />
       </div>
 
-      <div className=" *:my-20 *:px-6 *:lg:px-24">
+      <div className=" *:my-20 *:px-6 *:lg:px-20">
+        <Conatiner
+          title={"Our Client Companies"}
+          h1={"Trusted Solar Solutions Backed by Leading Pump Brands"}
+          h2={
+            "Powering Sustainability with Top-Tier Solar Panels and Pumps from Industry Giants like Oswal, CRI, Shakti, and Crompton."
+          }
+          textAllign={"text-center md:mx-40"}
+        />
+        <ClientCarousel />
         <ServicesSec />
         <WorkFlow />
-        <Testimonials />
-        <Projects />
+        {/* <Testimonials />
+        <Projects /> */}
       </div>
       <QuerySec />
     </section>

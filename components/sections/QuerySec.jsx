@@ -21,7 +21,7 @@ const QuerySec = () => {
     console.log(request);
   };
   return (
-    <div className="relative flex justify-end lg:px-24  my-4">
+    <div id="HomeQuery" className="relative flex justify-end lg:px-24  my-4">
       <Image
         src={"/icons/queryillus.svg"}
         width={120}

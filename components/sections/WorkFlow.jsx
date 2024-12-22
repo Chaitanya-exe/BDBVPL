@@ -1,14 +1,17 @@
+"use client";
+
 import React from "react";
 import Conatiner from "../Conatiner";
 import { workFlowStep } from "@/constants/dummy";
 import Image from "next/image";
+import {motion} from "framer-motion"
 
 const WorkFlow = () => {
   return (
     <div className="">
       <Conatiner
         title={"How we work"}
-        h1 ={"Our Solar Panel Installation Work Flow."}
+        h1={"Our Solar Panel Installation Work Flow."}
         h2={
           "From consultation to installation and maintenance, we provide comprehensive solar energy solutions designed to meet your unique needs."
         }
@@ -16,15 +19,21 @@ const WorkFlow = () => {
       />
 
       <div className="mt-9 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12">
-        <div className="flex flex-col justify-center lg:gap-28 gap-10  ">
+        <div whileInView={{x:0}} viewport={{once:true}} initial={{x:"-120%"}} transition={{duration:0.8,type:"spring",delay:0.8,damping:30}} className="flex flex-col justify-center lg:gap-28 gap-10  ">
           {workFlowStep.slice(0, 2).map((step) => (
-            <div key={step.id} className="group motion-scale-in-[0.79] motion-translate-x-in-[-59%] motion-translate-y-in-[-39%] motion-opacity-in-[0%] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-ease-spring-bouncier hover:shadow-lg hover:shadow-text/100 hover:bg-gradient-to-r hover:from-deepTeal hover:to-solarYellow hover:text-white rounded-xl p-3 flex items-start gap-3.5 md:gap-5">
+            <div
+              key={step.id}
+              className="group  hover:shadow-lg hover:shadow-text/50 hover:bg-gradient-to-r hover:from-deepTeal hover:via-green hover:to-solarYellow hover:text-white rounded-xl p-3 flex items-start gap-3.5 md:gap-5"
+              // className="group motion-scale-in-[0.79] motion-translate-x-in-[-59%] motion-translate-y-in-[-39%] motion-opacity-in-[0%] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-ease-spring-bouncier hover:shadow-lg hover:shadow-text/50 hover:bg-gradient-to-r hover:from-deepTeal hover:via-green hover:to-solarYellow hover:text-white rounded-xl p-3 flex items-start gap-3.5 md:gap-5"
+            >
               <span className="text-solarYellow border border-solarYellow rounded-xl px-[16px] py-3 text-3xl font-semibold">
                 0{step.id}
               </span>
               <div className="flex flex-col md:gap-2.5">
                 <h1 className="h1Text md:text-[28px]">{step.label}</h1>
-                <p className="pText md:pTextLg text-text/85 group-hover:text-white">{step.content}</p>
+                <p className="pText md:pTextLg text-text/85 group-hover:text-white">
+                  {step.content}
+                </p>
               </div>
             </div>
           ))}
@@ -38,6 +47,8 @@ const WorkFlow = () => {
             alt="Workflow"
             className="h-full w-full md:hidden object-cover motion-preset-slide-left"
           />
+          <motion.div whileHover={{y:-10 , transition:{duration:0.5}}}>
+
           <Image
             src={"/images/servicesLg.png"}
             width={355}
@@ -45,17 +56,23 @@ const WorkFlow = () => {
             alt="Workflow"
             className="md:block -mt-24 hidden object-cover motion-scale-in-[0.79] motion-translate-x-in-[0%] motion-translate-y-in-[1%] motion-opacity-in-[0%] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-ease-spring-bounciest"
           />
+          </motion.div>
         </div>
 
-        <div className="flex flex-col lg:gap-28 justify-center gap-10">
+        <div whileInView={{x:0}} viewport={{once:true}} initial={{x:"120%"}} transition={{duration:0.8,type:"spring",delay:0.8,damping:30}} className="flex flex-col lg:gap-28 justify-center gap-10">
           {workFlowStep.slice(2).map((step) => (
-            <div key={step.id} className="group motion-scale-in-[0.79] motion-translate-x-in-[56%] motion-translate-y-in-[-39%] motion-opacity-in-[0%] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-ease-spring-bouncier hover:shadow-lg hover:shadow-text/100 hover:bg-gradient-to-r hover:from-deepTeal hover:to-solarYellow hover:text-white rounded-xl p-3 flex items-start gap-3.5 md:gap-5">
+            <div
+              key={step.id}
+              className="group motion-scale-in-[0.79] motion-translate-x-in-[-59%] motion-translate-y-in-[-39%] motion-opacity-in-[0%] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-ease-spring-bouncier hover:shadow-lg hover:shadow-text/50 hover:bg-gradient-to-r hover:from-deepTeal hover:via-green hover:to-solarYellow hover:text-white rounded-xl p-3 flex items-start gap-3.5 md:gap-5"
+            >
               <span className="text-solarYellow border border-solarYellow rounded-xl px-[16px] py-3 text-3xl font-semibold">
                 0{step.id}
               </span>
               <div className="flex flex-col md:gap-2.5">
                 <h1 className="h1Text md:text-[28px]">{step.label}</h1>
-                <p className="pText md:pTextLg text-text/85 group-hover:text-white">{step.content}</p>
+                <p className="pText md:pTextLg text-text/85 group-hover:text-white">
+                  {step.content}
+                </p>
               </div>
             </div>
           ))}

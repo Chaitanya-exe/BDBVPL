@@ -40,7 +40,7 @@ const Testimonials = () => {
           textAllign={"my-8 text-start"}
         />
         <div className="relative space-y-3 ">
-        <Image src={"/icons/quoteillus.svg"} width={46} height={35} alt='quote' className='absolute top-0 -left-2' />
+        <Image src={"/icons/quoteillus.svg"} width={46} height={35} alt='quote' className='absolute z-20 top-0 -left-2' />
           {testimonials.map((user) => (
             <div className="text-center group  max-w-[600px]  bg-gradient-to-b from-solarYellow to-deepTeal p-0.5 bg-opacity-50 rounded-md hover:p-1 hover:motion-preset-slide-right">
               <div className="bg-white rounded-md md:flex-row flex-col flex items-center p-1 group-hover:bg-deepTeal">

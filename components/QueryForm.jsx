@@ -23,14 +23,14 @@ const QueryForm = () => {
   };
 
   return (
-    <div
-      className="w-full min-h-[600px] bg-cover bg-center"
+    <div id="Query"
+      className="w-full min-h-[650px] bg-cover bg-center"
       style={{
         backgroundImage: "url('/images/abgimg.png')",
       }}
     >
       <form
-        className={`*:my-2 pt-12 pb-32 md:max-w-[1000px] mx-auto text-white  `}
+        className={`*:my-2 pt-14 pb-36 md:max-w-[1000px] mx-auto text-white  `}
       >
         <Conatiner
           title={"Query section"}
@@ -77,7 +77,7 @@ const QueryForm = () => {
             />
           </div>
 
-          <div className="focus-within:border-white/50 backdrop-blur-md">
+          <div className="focus-within:border-white/50 backdrop-blur-md md:w-[795px]">
             <select
               name="dropdown"
               defaultValue=""
