@@ -116,7 +116,7 @@ function Layout(props) {
 
       <Collapse in={isCollapse} timeout="auto" unamountOnExit="true">
         <List className="ml-4">
-          {["Sales","Help","Logout"].map((text, index) => (
+          {["Sales", "Help", "Logout"].map((text, index) => (
             <ListItem
               key={text}
               disablePadding
