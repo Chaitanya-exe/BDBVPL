@@ -11,7 +11,6 @@ async function handler(req){
                 phone_number: body.number
             }
         });
-        console.log(dbRes);
         if(dbRes){
             const response = await userClient.query.update({
                 where:{
@@ -30,8 +29,8 @@ async function handler(req){
                     customer_name: body.name,
                     phone_number: body.number,
                     email: body.email,
-                    query: [body.query],
-                    type: body.type
+                    query: [body.userQuery],
+                    type: `${body.type.toUpperCase()}`
                 }
             });
             return Response.json({response, success: true, msg:"query submitted"})

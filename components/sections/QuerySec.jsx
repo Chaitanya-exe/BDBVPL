@@ -17,8 +17,22 @@ const QuerySec = () => {
   });
 
 
-  const handleClick = async (request) => {
-    console.log(request);
+  const handleClick = async () => {
+    try {
+      const response = await fetch("api/query/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ ...query })
+      });
+      const data = await response.json();
+      if (data.success) {
+        alert(data.msg)
+      }
+    } catch (err) {
+      alert("some error occured, Try again later")
+    }
   };
   return (
     <div id="HomeQuery" className="relative flex justify-end lg:px-24  my-4">
@@ -87,15 +101,20 @@ const QuerySec = () => {
 
           <div className="focus-within:border-text/50">
             <select
+              onChange={(e) => {
+                console.log(query)
+                setQuery({ ...query, type: e.target.value.toUpper() })
+              }}
               name="dropdown"
               defaultValue=""
               className="w-full capitalize bg-transparent p-2.5 h-full focus:outline-none"
             >
               <option
                 value={query.type}
-                onChange={(e) =>
+                onChange={(e) => {
+                  console.log(query)
                   setQuery({ ...query, type: e.target.value.toUpper() })
-                }
+                }}
                 disabled
                 hidden
               >
@@ -126,7 +145,6 @@ const QuerySec = () => {
             name="query"
             value={query.userQuery}
             onChange={(e) => {
-              console.log(query);
               setQuery({ ...query, userQuery: e.target.value });
             }}
             placeholder="Tell us more about your needs or questions.."
@@ -138,7 +156,7 @@ const QuerySec = () => {
             text={"Send Query"}
             handleClick={(e) => {
               e.preventDefault();
-              handleClick(query);
+              handleClick();
             }}
           />
         </div>

@@ -12,15 +12,15 @@ function createData(id, name, phone, email, query) {
   return { id, name, phone, email, query };
 }
 
-const rows = [
-  createData("1", "Mr. Popo", "1234567890", "popo@gmail.com", "Need help"),
-  createData("2", "Mr. Lolo", "1234567890", "lolo@gmail.com", "Follow-up"),
-  createData("3", "Jonny English", "1234567890", "jonny@gmail.com", "Report issue"),
-  createData("4", "Tin Tin", "1234567890", "tintin@gmail.com", "Request info"),
-  createData("5", "Optimus Prime", "1234567890", "prime@transformers.com", "Urgent query"),
-];
+// const rows = [
+//   createData("1", "Mr. Popo", "1234567890", "popo@gmail.com", "Need help"),
+//   createData("2", "Mr. Lolo", "1234567890", "lolo@gmail.com", "Follow-up"),
+//   createData("3", "Jonny English", "1234567890", "jonny@gmail.com", "Report issue"),
+//   createData("4", "Tin Tin", "1234567890", "tintin@gmail.com", "Request info"),
+//   createData("5", "Optimus Prime", "1234567890", "prime@transformers.com", "Urgent query"),
+// ];
 
-export default function StickyHeadTable() {
+export default function StickyHeadTable({ rows }) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -39,19 +39,19 @@ export default function StickyHeadTable() {
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              <TableCell align="right" style={{ minWidth: 170 }}>
-                ID
-              </TableCell>
-              <TableCell align="right" style={{ minWidth: 170 }}>
+              <TableCell align="center" style={{ minWidth: 170 }}>
                 Name
               </TableCell>
-              <TableCell align="right" style={{ minWidth: 170 }}>
+              <TableCell align="center" style={{ minWidth: 170 }}>
                 Phone
               </TableCell>
-              <TableCell align="right" style={{ minWidth: 170 }}>
+              <TableCell align="center" style={{ minWidth: 170 }}>
                 Email
               </TableCell>
-              <TableCell align="right" style={{ minWidth: 170 }}>
+              <TableCell align="center" style={{ minWidth: 170 }}>
+                Date (mm/dd/yy)
+              </TableCell>
+              <TableCell align="center" style={{ minWidth: 170 }}>
                 Query
               </TableCell>
             </TableRow>
@@ -62,11 +62,11 @@ export default function StickyHeadTable() {
               .map((row) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
-                    <TableCell align="right">{row.id}</TableCell>
-                    <TableCell align="right">{row.name}</TableCell>
-                    <TableCell align="right">{row.phone}</TableCell>
-                    <TableCell align="right">{row.email}</TableCell>
-                    <TableCell align="right">{row.query}</TableCell>
+                    <TableCell align="center">{row.customer_name}</TableCell>
+                    <TableCell align="center">{row.phone_number}</TableCell>
+                    <TableCell align="center">{row.email}</TableCell>
+                    <TableCell align="center">{row.date}</TableCell>
+                    <TableCell align="center">{row.query.pop()}</TableCell>
                   </TableRow>
                 );
               })}
