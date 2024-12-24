@@ -1,6 +1,6 @@
-"use client"
+'use client'
 import React from 'react'
-import Layout from "@/components/layout";
+import Layout from '../layout';
 import { Typography } from "@mui/material";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import { Line, Circle } from "rc-progress";
@@ -124,6 +124,16 @@ const dashboardPanel = () => {
     </div>
   )
 }
+
+// const dashboardPanel = () => {
+//   return (
+//     <>
+//       <div>
+//         <button className='rounded-lg bg-blue-600'>Click this button</button>
+//       </div>
+//     </>
+//   )
+// }
 
 export default dashboardPanel
 // import React from "react";

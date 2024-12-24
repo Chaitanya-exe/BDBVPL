@@ -9,7 +9,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import Projects from "@/components/sections/Projects";
 import QuerySec from "@/components/sections/QuerySec";
 import Link from "next/link";
-
+import { ClientCarousel } from "@/components/clientCarousel";
 
 export default function Home() {
   return (
@@ -46,8 +46,8 @@ export default function Home() {
           </span>
         </h1>
         <h2 className="h2Text md:h2TextLg mt-1 motion-preset-blur-right motion-duration-2000">
-          Let the Sun Work for You <br className="hidden md:block"/>
-           Sustainable Power, Everyday Savings!{" "}
+          Let the Sun Work for You <br className="hidden md:block" />
+          Sustainable Power, Everyday Savings!{" "}
         </h2>
         <div className="flex items-center gap-3 md:gap-5 my-4">
           <Link href={"/contactus"}>
@@ -80,6 +80,15 @@ export default function Home() {
       </div>
 
       <div className=" *:my-20 *:px-6 *:lg:px-20">
+        <Conatiner
+          title={"Our Client Companies"}
+          h1={"Trusted Solar Solutions Backed by Leading Pump Brands"}
+          h2={
+            "Powering Sustainability with Top-Tier Solar Panels and Pumps from Industry Giants like Oswal, CRI, Shakti, and Crompton."
+          }
+          textAllign={"text-center md:mx-40"}
+        />
+        <ClientCarousel />
         <ServicesSec />
         <WorkFlow />
         {/* <Testimonials />

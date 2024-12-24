@@ -7,6 +7,7 @@ import ContactUs from "../contactus/page";
 import Conatiner from "@/components/Conatiner";
 import Footer from "@/components/Footer";
 import QueryForm from "@/components/QueryForm";
+import { solarSolutionsData } from "@/constants/dummy";
 import { FaFacebook } from "react-icons/fa6";
 
 import { motion, useAnimation } from "framer-motion";
@@ -16,6 +17,7 @@ import { useInView } from "react-intersection-observer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import QuerySec from "@/components/sections/QuerySec";
 
 const settings = {
   dots: true,
@@ -96,7 +98,7 @@ const page = () => {
           className="flex flex-col items-center mx-auto md:-space-y-32 -space-y-12 md:my-2 "
         >
           <div className="flex  gap-1 items-start md:gap-2 relative">
-            <div className="absolute -top-5 -left-6 w-[320px] rounded-lg hidden md:block pText p-2 md:p-5 border-8 border-white bg-green text-white">
+            <div className="motion-translate-x-in-[-164%] motion-translate-y-in-[-122%] absolute -top-5 -left-6 w-[320px] rounded-3xl hidden md:block pText p-2 md:p-5 border-8 border-white bg-green text-white">
               <p>
                 1. Founded in 2012.
                 <br />
@@ -112,7 +114,7 @@ const page = () => {
               width={175}
               height={220}
               alt="img"
-              className="h-[220px] lg:min-w-[550px] md:h-[400px]"
+              className="h-[220px] lg:min-w-[550px] md:h-[400px] "
             />
             <div className="flex flex-col md:gap-2 gap-1">
               <Image
@@ -120,48 +122,31 @@ const page = () => {
                 width={175}
                 height={110}
                 alt="img"
-                className="lg:min-w-[400px] md:h-[200px] h-[110px]"
+                className="motion-translate-x-in-[133%] motion-translate-y-in-[-25%] lg:min-w-[400px] md:h-[200px] h-[110px]"
               />
               <Image
                 src={"/images/apic3.png"}
                 width={175}
                 height={110}
                 alt="img"
-                className="lg:min-w-[400px] md:h-[200px] h-[110px]"
+                className="motion-translate-x-in-[135%] motion-translate-y-in-[23%] lg:min-w-[400px] md:h-[200px] h-[110px]"
               />
             </div>
           </div>
-          <div className="md:min-w-[630px] z-10  w-[300px] pText p-2 md:p-3 border-4 border-white bg-deepTeal text-white">
-            <p>
-              <span className="font-bold">
-                Leading Solar Solutions in Faridabad, Delhi NCR, and Palwal
-              </span>
-              <br></br>
-              <span>
-                1. Founded in 2012, BDB Ventures Pvt. Ltd. has been at the
-                forefront of providing innovative solar solutions to homes,
-                industries, and agricultural sectors.
-              </span>
-              <br></br>
-              <span>
-                2. We specialize in solar panel installations and solar-powered
-                irrigation systems designed to reduce energy costs, enhance
-                sustainability, and empower communities in Faridabad, Delhi NCR,
-                and Palwal.
-              </span>
-              <span></span>Our mission is to make renewable energy accessible,
-              affordable, and effective. We provide comprehensive solar energy
-              solutions that include solar pump installations, grid-connected
-              rooftop solar systems, and customized systems tailored to meet the
-              unique needs of our clients. At BDB Ventures, we prioritize
-              sustainability, customer satisfaction, and technical excellence in
-              all our projects. By harnessing the power of the sun, we help our
-              clients reduce their carbon footprint, lower electricity bills,
-              and contribute to a greener future. With a passion for clean,
-              eco-friendly energy, we aim to create lasting positive impacts for
-              generations to come. Join us in switching to solar and taking the
-              first step towards a sustainable and energy-efficient tomorrow.
-            </p>
+          <div className="motion-translate-x-in-[-1%] motion-translate-y-in-[200%] rounded-3xl md:min-w-[630px] z-10  w-[300px] pText p-2 md:p-3 border-4 border-white bg-deepTeal text-white">
+            <div>
+              <h1 className="font-bold text-2xl">
+                {solarSolutionsData[0].title}
+              </h1>
+              <ul>
+                {solarSolutionsData[0].content.map((item, index) => (
+                  <li key={index}>
+                    <h2 className="font-semibold text-xl">{item.heading}</h2>
+                    <p>{item.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -171,7 +156,7 @@ const page = () => {
       <section
         id="Mission"
         style={{ backgroundImage: "url('/images/abgimg.png')" }}
-        className="relative py-10 sm:py-14 lg:py-20 min-h-[600px] my-[50px] md:my-[100px]  bg-cover bg-center bg-no-repeat  z-10  mx-auto text-center px-4 sm:px-6 lg:px-8 text-white"
+        className="relative py-10 sm:py-14 lg:py-20 min-h-[700px] my-[50px] md:my-[100px]  bg-cover bg-center bg-no-repeat  z-10  mx-auto text-center px-4 sm:px-6 lg:px-8 text-white"
       >
         {/* Overlay */}
         <div className="bg-black/50 hidden md:block absolute inset-0"></div>
@@ -192,11 +177,11 @@ const page = () => {
           }
           textAllign={"text-center"}
         />
-
+        {/* flex flex-wrap flex-col md:absolute md:mt-28 md:left-28 z-50 items-center justify-center md:flex-row  gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[260px] *:w-[300px] bg-cyan-100 md:bg-transparent */}
         {/* Values Section */}
-        <div className="flex flex-wrap flex-col md:absolute md:mt-28 md:left-28 z-50  items-center justify-center md:flex-row  gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[260px] *:w-[300px] bg-cyan-100 md:bg-transparent">
+        <div className="flex justify-center flex-wrap flex-col lg:absolute lg:left-[5%] md:mt-28 lg:z-50 items-center  md:flex-row gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[300px] *:w-[300px] bg-cyan-100 lg:bg-transparent">
           {/* Card 1 */}
-          <div className="group lg:motion-preset-oscillate motion-duration-2000   hover:bg-green hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ">
+          <div className="group lg:motion-preset-oscillate motion-duration-2000   hover:bg-green hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105">
             <div className="flex justify-center mb-4">
               <Image
                 src={"/icons/sustainability-icon.svg"}
@@ -223,7 +208,7 @@ const page = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="group lg:motion-preset-oscillate motion-duration-2000  hover:bg-teal-500 hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ">
+          <div className="group lg:motion-preset-oscillate motion-duration-2000  hover:bg-teal-500 hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105">
             <div className="flex justify-center mb-4">
               <Image
                 src={"/icons/innovation-icon.svg"}
@@ -236,7 +221,7 @@ const page = () => {
                 src={"/icons/innovationWhite-icon.svg"}
                 width={80}
                 height={80}
-                alt="Sustainability"
+                alt="Innovation"
                 className="group-hover:block hidden"
               />
             </div>
@@ -250,7 +235,7 @@ const page = () => {
           </div>
 
           {/* Card 3 */}
-          <div className=" group lg:motion-preset-oscillate motion-duration-2000 hover:bg-green hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ">
+          <div className=" group lg:motion-preset-oscillate motion-duration-2000 hover:bg-green hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105">
             <div className="flex justify-center mb-4">
               <Image
                 src={"/icons/customer-centric-icon.svg"}
@@ -263,7 +248,7 @@ const page = () => {
                 src={"/icons/customer-centricWhite-icon.svg"}
                 width={80}
                 height={80}
-                alt="Sustainability"
+                alt="Customer-Centricity"
                 className="group-hover:block hidden"
               />
             </div>
@@ -277,7 +262,7 @@ const page = () => {
           </div>
 
           {/* Card 4 */}
-          <div className="group lg:motion-preset-oscillate motion-duration-2000  hover:bg-teal-500 hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ">
+          <div className="group lg:motion-preset-oscillate motion-duration-2000  hover:bg-teal-500 hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105">
             <div className="flex justify-center mb-4">
               <Image
                 src={"/icons/integrity-icon.svg"}
@@ -290,7 +275,7 @@ const page = () => {
                 src={"/icons/integrityWhite-icon.svg"}
                 width={80}
                 height={80}
-                alt="Sustainability"
+                alt="Integrity"
                 className="group-hover:block hidden"
               />
             </div>
@@ -304,10 +289,10 @@ const page = () => {
           </div>
 
           {/* Card 5 */}
-          <div className="group lg:motion-preset-oscillate motion-duration-2000  hover:bg-teal-500 hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ">
+          <div className="group lg:motion-preset-oscillate motion-duration-2000  hover:bg-green hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105">
             <div className="flex justify-center mb-4">
               <Image
-                src={"/icons/integrity-icon.svg"}
+                src={"/icons/customer-centric-icon.svg"}
                 width={80}
                 height={80}
                 alt="Sustainability"
@@ -317,7 +302,7 @@ const page = () => {
                 src={"/icons/integrityWhite-icon.svg"}
                 width={80}
                 height={80}
-                alt="Sustainability"
+                alt="Collaboration"
                 className="group-hover:block hidden"
               />
             </div>
@@ -325,11 +310,14 @@ const page = () => {
               Collaboration
             </h3>
             <p className="text-sm sm:text-base text-gray-600 group-hover:text-white pText">
-            Partnering with clients to create customized solar solutions for shared success.
+              Partnering with clients to create customized solar solutions for
+              shared success.
             </p>
           </div>
         </div>
       </section>
+
+      <div className="min-h-0 lg:min-h-[200px] bg-gradient-to-r from-green to-teal-600"></div>
 
       {/* Why Choose Us Section */}
       <section
@@ -482,7 +470,7 @@ const page = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8  md:gap-28 my-16">
           <div className="group flex flex-col justify-center items-center">
             {/* Fixed size container to avoid layout shifting */}
-            <div className="relative flex items-center justify-center w-[230px] md:w-[250px] md:h-[250px] h-[230px] border rounded-full border-deepTeal group-hover:bg-deepTeal bg-skyBlue p-1 overflow-hidden">
+            <div className="relative flex items-center justify-center w-[250px] md:w-[250px] md:h-[250px] h-[230px] border rounded-full border-deepTeal group-hover:bg-deepTeal bg-skyBlue p-1 overflow-hidden">
               {/* Animated Image */}
               <motion.div
                 className="rounded-full overflow-hidden"
@@ -491,7 +479,7 @@ const page = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Image
-                  src={"/images/persona.png"}
+                  src={"/images/Sumit.jpeg"}
                   width={215}
                   height={215}
                   alt="user"
@@ -513,8 +501,8 @@ const page = () => {
               </motion.div>
             </div>
             <div className="text-center mt-2">
-              <h5 className="font-semibold">John Smith</h5>
-              <h6 className="font-thin">Chief Engineer</h6>
+              <h5 className="font-semibold">Mr. Sumit</h5>
+              <h6 className="font-thin">District Sales Manager</h6>
             </div>
           </div>
           <div className="group flex flex-col justify-center items-center">
@@ -528,7 +516,7 @@ const page = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Image
-                  src={"/images/persona.png"}
+                  src={"/images/VivekKumarSuhasaria.jpg"}
                   width={215}
                   height={215}
                   alt="user"
@@ -550,8 +538,8 @@ const page = () => {
               </motion.div>
             </div>
             <div className="text-center mt-2">
-              <h5 className="font-semibold">John Smith</h5>
-              <h6 className="font-thin">Chief Engineer</h6>
+              <h5 className="font-bold">Mr. Vivek Kumar Suhasaria</h5>
+              <h6 className="font-thin">Managing Director</h6>
             </div>
           </div>
           <div className="group flex flex-col justify-center items-center">
@@ -565,7 +553,7 @@ const page = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Image
-                  src={"/images/persona.png"}
+                  src={"/images/mohit.jpeg"}
                   width={215}
                   height={215}
                   alt="user"
@@ -587,8 +575,8 @@ const page = () => {
               </motion.div>
             </div>
             <div className="text-center mt-2">
-              <h5 className="font-semibold">John Smith</h5>
-              <h6 className="font-thin">Chief Engineer</h6>
+              <h5 className="font-semibold">Mr. Mohit</h5>
+              <h6 className="font-thin">Resource Manager</h6>
             </div>
           </div>
         </div>
@@ -690,7 +678,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <QueryForm />
+      <QuerySec />
     </div>
   );
 };

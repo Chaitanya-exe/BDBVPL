@@ -28,7 +28,7 @@ const page = () => {
       const result = data.ok;
       console.log(result);
       if (result === true) {
-        router.push("/admin/dashboardPanel");
+        router.replace('/admin/dashboard');
       } else {
         setError(true);
       }
