@@ -20,7 +20,7 @@ export function ClientCarousel() {
       className="min-h-[100px] min-width-[300px]"
     >
       <CarouselContent>
-        <CarouselItem className="hover:scale-110 duration:300 ease-in-out md:basis-1/2 lg:basis-1/4">
+        <CarouselItem className="transform transition-transform duration-300 ease-in-out hover:scale-110 md:basis-1/2 lg:basis-1/4">
           <div className="p-1">
             <Card className="min-h-[100px] min-width-[300px]">
               <CardContent className="flex aspect-square items-center justify-center p-6">
@@ -37,7 +37,7 @@ export function ClientCarousel() {
             </Card>
           </div>
         </CarouselItem>
-        <CarouselItem className="hover:scale-110 duration:300 ease-in-out md:basis-1/2 lg:basis-1/4">
+        <CarouselItem className="transform transition-transform duration-300 ease-in-out hover:scale-110 md:basis-1/2 lg:basis-1/4">
           <div className="p-1">
             <Card>
               <CardContent className="flex aspect-square items-center justify-center p-6">
@@ -54,7 +54,7 @@ export function ClientCarousel() {
             </Card>
           </div>
         </CarouselItem>
-        <CarouselItem className="hover:scale-110 duration:300 ease-in-out md:basis-1/2 lg:basis-1/4">
+        <CarouselItem className="transform transition-transform duration-300 ease-in-out hover:scale-110 md:basis-1/2 lg:basis-1/4">
           <div className="p-1">
             <Card>
               <CardContent className="flex aspect-square items-center justify-center p-6 rounded-xl">
@@ -72,7 +72,7 @@ export function ClientCarousel() {
             </Card>
           </div>
         </CarouselItem>
-        <CarouselItem className="hover:scale-110 duration:300 ease-in-out md:basis-1/2 lg:basis-1/4">
+        <CarouselItem className="transform transition-transform duration-300 ease-in-out hover:scale-110 md:basis-1/2 lg:basis-1/4">
           <div className="p-1">
             <Card>
               <CardContent className="flex aspect-square items-center justify-center p-6">

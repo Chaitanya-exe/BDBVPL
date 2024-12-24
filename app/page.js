@@ -67,10 +67,10 @@ export default function Home() {
             width={240}
             height={263}
             alt="img"
-            className="w-full h-fit "
+            className="w-full h-fit transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg  hover:shadow-text/50"
           />
           <div className="absolute -bottom-12 -right-8  bg-[#FAFAFA] rounded-full w-30 h-30 p-1 *:pt-4 capitalize text-wrap shadow text-center text-white">
-            <div className="bg-solarYellow rounded-full w-28 h-28">
+            <div className="transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg  hover:shadow-text/50 bg-solarYellow rounded-full w-28 h-28">
               <p className="font-bold text-4xl">3+</p>
               <p className="text-sm">years experience</p>
             </div>

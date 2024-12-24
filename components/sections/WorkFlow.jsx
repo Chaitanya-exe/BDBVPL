@@ -23,7 +23,7 @@ const WorkFlow = () => {
           {workFlowStep.slice(0, 2).map((step) => (
             <div
               key={step.id}
-              className="group  hover:shadow-lg hover:shadow-text/50 hover:bg-gradient-to-r hover:from-deepTeal hover:via-green hover:to-solarYellow hover:text-white rounded-xl p-3 flex items-start gap-3.5 md:gap-5"
+              className="group transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg  hover:shadow-text/50 hover:bg-gradient-to-r hover:from-deepTeal hover:via-green hover:to-solarYellow hover:text-white rounded-xl p-3 flex items-start gap-3.5 md:gap-5"
               // className="group motion-scale-in-[0.79] motion-translate-x-in-[-59%] motion-translate-y-in-[-39%] motion-opacity-in-[0%] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-ease-spring-bouncier hover:shadow-lg hover:shadow-text/50 hover:bg-gradient-to-r hover:from-deepTeal hover:via-green hover:to-solarYellow hover:text-white rounded-xl p-3 flex items-start gap-3.5 md:gap-5"
             >
               <span className="text-solarYellow border border-solarYellow rounded-xl px-[16px] py-3 text-3xl font-semibold">
@@ -63,7 +63,7 @@ const WorkFlow = () => {
           {workFlowStep.slice(2).map((step) => (
             <div
               key={step.id}
-              className="group motion-scale-in-[0.79] motion-translate-x-in-[-59%] motion-translate-y-in-[-39%] motion-opacity-in-[0%] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-ease-spring-bouncier hover:shadow-lg hover:shadow-text/50 hover:bg-gradient-to-r hover:from-deepTeal hover:via-green hover:to-solarYellow hover:text-white rounded-xl p-3 flex items-start gap-3.5 md:gap-5"
+              className="group transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg hover:shadow-text/50 hover:bg-gradient-to-r hover:from-deepTeal hover:via-green hover:to-solarYellow hover:text-white rounded-xl p-3 flex items-start gap-3.5 md:gap-5"
             >
               <span className="text-solarYellow border border-solarYellow rounded-xl px-[16px] py-3 text-3xl font-semibold">
                 0{step.id}

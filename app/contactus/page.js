@@ -31,7 +31,7 @@ const ContactUs = () => {
           <Link href={"/"} className="text-white">
             Home
           </Link>
-          <button className="text-solarYellow">About</button>
+          <button className="text-solarYellow">Contact Us</button>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ const ContactUs = () => {
         />
 
         <div className="flex flex-col text-white md:grid md:grid-cols-2  md:gap-6 gap-3 *:flex *:flex-col *:gap-2 *:items-center *:justify-center px-16 md:px-36 w-fit mx-auto *:md:w-[400px] text-center *:p-5 *:h-[220px]">
-          <span className="bg-deepTeal hover:scale-110 rounded-md">
+          <span className="bg-deepTeal rounded-md transform transition-transform duration-300 ease-in-out hover:scale-110">
             <Image
               src={"/icons/addresssvg.svg"}
               width={40}
@@ -62,7 +62,7 @@ const ContactUs = () => {
               F-12 Ground floorviswakarma colony,new delhi 110044(India)
             </span>
           </span>
-          <span className="bg-green hover:scale-110 rounded-md">
+          <span className="bg-green rounded-md transform transition-transform duration-300 ease-in-out hover:scale-110">
             <Image
               src={"/icons/Phone.svg"}
               width={40}
@@ -71,9 +71,10 @@ const ContactUs = () => {
               className=""
             />
             <h1 className="h1Text mt-2">Phone Number</h1>
-            <p className="pText">9312644140</p>
+            <p className="pText">Enquiry: 9312644140</p>
+            <p className="pTxet">Customer support: 9289013290, 9289014204</p>
           </span>
-          <span className="bg-deepTeal md:bg-green hover:scale-110 rounded-md">
+          <span className="bg-deepTeal md:bg-green rounded-md transform transition-transform duration-300 ease-in-out hover:scale-110">
             <Image
               src={"/icons/emailsvg.svg"}
               width={40}
@@ -84,7 +85,7 @@ const ContactUs = () => {
             <h1 className="h1Text mt-2">Email</h1>
             <p className="pText">contactbdbvpl@gmail.com</p>
           </span>
-          <span className="bg-green md:bg-deepTeal hover:scale-110 rounded-md">
+          <span className="bg-green md:bg-deepTeal rounded-md transform transition-transform duration-300 ease-in-out hover:scale-110">
             <Image
               src={"/icons/timingsvg.svg"}
               width={50}

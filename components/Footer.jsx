@@ -20,7 +20,7 @@ const Footer = () => {
           green credentials with a 35% reduction in carbon footprint
         </p>
         <p className="pt-3 text-white/80">
-          Copyright © 2024 BVB All rights reserved.
+          Copyright © 2024 BDBVPL All rights reserved.
         </p>
       </div>
       <div>
@@ -29,7 +29,7 @@ const Footer = () => {
           <li className="pText md:pTextLg hover:text-white">Home</li>
           <li className="pText md:pTextLg hover:text-white">about us</li>
           <li className="pText md:pTextLg hover:text-white">services</li>
-          <li className="pText md:pTextLg hover:text-white">projects</li>
+          <li className="pText md:pTextLg hover:text-white">gallery</li>
           <li className="pText md:pTextLg hover:text-white">Contact us</li>
         </ul>
       </div>

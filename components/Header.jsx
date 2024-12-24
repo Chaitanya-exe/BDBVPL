@@ -75,7 +75,7 @@ const Header = () => {
                     <Link href={"#Services"}>Services</Link>
                   </li>
                   <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
-                    <Link href={"#Projects"}>Gallery</Link>
+                    <Link href={"gallery"}>Gallery</Link>
                   </li>
                   <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
                     <Link href={"#HomeQuery"}>Query</Link>
@@ -91,14 +91,30 @@ const Header = () => {
                     <Link href={"#WhyUs"}>Why Us</Link>
                   </li>
                   <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
-                    <Link href={"#Query"}>Query</Link>
+                    <Link href={"/gallery"}>Gallery</Link>
+                  </li>
+                  <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
+                    <Link href={"#HomeQuery"}>Query</Link>
                   </li>
                 </>
               )}
               {pathName === "/contactus" && (
                 <>
                   <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
+                    <Link href={"/gallery"}>Gallery</Link>
+                  </li>
+                  <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
                     <Link href={"#Query"}>Query</Link>
+                  </li>
+                </>
+              )}
+              {pathName === "/gallery" && (
+                <>
+                  <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
+                    <Link href={"/gallery"}>Gallery</Link>
+                  </li>
+                  <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
+                    <Link href={"contactus"}>Query</Link>
                   </li>
                 </>
               )}
