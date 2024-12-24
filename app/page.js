@@ -10,6 +10,7 @@ import Projects from "@/components/sections/Projects";
 import QuerySec from "@/components/sections/QuerySec";
 import Link from "next/link";
 import { ClientCarousel } from "@/components/clientCarousel";
+import PdfDownload from "@/components/pdfDownload";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
           width={900}
           height={800}
           alt="rect"
-          className="block min-h-[410px] max-h-[700px] w-screen"
+          className="block min-h-[410px] max-h-[700px] w-screen blur-sm opacity-95"
         />
 
         {/* try */}
@@ -89,6 +90,7 @@ export default function Home() {
           textAllign={"text-center md:mx-40"}
         />
         <ClientCarousel />
+        <PdfDownload />
         <ServicesSec />
         <WorkFlow />
         {/* <Testimonials />

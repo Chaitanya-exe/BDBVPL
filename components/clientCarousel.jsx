@@ -20,7 +20,7 @@ export function ClientCarousel() {
       className="min-h-[100px] min-width-[300px]"
     >
       <CarouselContent>
-        <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+        <CarouselItem className="hover:scale-110 duration:300 ease-in-out md:basis-1/2 lg:basis-1/4">
           <div className="p-1">
             <Card className="min-h-[100px] min-width-[300px]">
               <CardContent className="flex aspect-square items-center justify-center p-6">
@@ -37,7 +37,7 @@ export function ClientCarousel() {
             </Card>
           </div>
         </CarouselItem>
-        <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+        <CarouselItem className="hover:scale-110 duration:300 ease-in-out md:basis-1/2 lg:basis-1/4">
           <div className="p-1">
             <Card>
               <CardContent className="flex aspect-square items-center justify-center p-6">
@@ -49,23 +49,22 @@ export function ClientCarousel() {
                     alt="img"
                     className="rounded-2xl"
                   />
-                  {/* <span className="text-3xl font-semibold">Shakti Pumps</span> */}
                 </Link>
               </CardContent>
             </Card>
           </div>
         </CarouselItem>
-        <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+        <CarouselItem className="hover:scale-110 duration:300 ease-in-out md:basis-1/2 lg:basis-1/4">
           <div className="p-1">
             <Card>
-              <CardContent className="flex aspect-square items-center justify-center p-6 bg-red-600">
+              <CardContent className="flex aspect-square items-center justify-center p-6 rounded-xl">
                 <Link href={"https://www.crigroups.com/"}>
                   <Image
                     src={"/images/cri_logo.png"}
                     width={500}
                     height={500}
                     alt="img"
-                    className="rounded-2xl"
+                    className="rounded-2xl border-red-600 border-2"
                   />
                   {/* <span className="text-3xl font-semibold">CRI Pumps</span> */}
                 </Link>
@@ -73,7 +72,7 @@ export function ClientCarousel() {
             </Card>
           </div>
         </CarouselItem>
-        <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+        <CarouselItem className="hover:scale-110 duration:300 ease-in-out md:basis-1/2 lg:basis-1/4">
           <div className="p-1">
             <Card>
               <CardContent className="flex aspect-square items-center justify-center p-6">

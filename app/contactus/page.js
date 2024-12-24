@@ -15,7 +15,7 @@ const ContactUs = () => {
         width={720}
         height={400}
         alt="img"
-        className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[550px]"
+        className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[550px] blur-sm opacity-95"
       />
 
       <div className="absolute lg:-top-[78px] -top-[140px]  -left-6 -right-5 z-10">
@@ -48,7 +48,7 @@ const ContactUs = () => {
         />
 
         <div className="flex flex-col text-white md:grid md:grid-cols-2  md:gap-6 gap-3 *:flex *:flex-col *:gap-2 *:items-center *:justify-center px-16 md:px-36 w-fit mx-auto *:md:w-[400px] text-center *:p-5 *:h-[220px]">
-          <span className="bg-deepTeal">
+          <span className="bg-deepTeal hover:scale-110 rounded-md">
             <Image
               src={"/icons/addresssvg.svg"}
               width={40}
@@ -62,7 +62,7 @@ const ContactUs = () => {
               F-12 Ground floorviswakarma colony,new delhi 110044(India)
             </span>
           </span>
-          <span className="bg-green">
+          <span className="bg-green hover:scale-110 rounded-md">
             <Image
               src={"/icons/Phone.svg"}
               width={40}
@@ -73,7 +73,7 @@ const ContactUs = () => {
             <h1 className="h1Text mt-2">Phone Number</h1>
             <p className="pText">9312644140</p>
           </span>
-          <span className="bg-deepTeal md:bg-green">
+          <span className="bg-deepTeal md:bg-green hover:scale-110 rounded-md">
             <Image
               src={"/icons/emailsvg.svg"}
               width={40}
@@ -84,7 +84,7 @@ const ContactUs = () => {
             <h1 className="h1Text mt-2">Email</h1>
             <p className="pText">contactbdbvpl@gmail.com</p>
           </span>
-          <span className="bg-green md:bg-deepTeal">
+          <span className="bg-green md:bg-deepTeal hover:scale-110 rounded-md">
             <Image
               src={"/icons/timingsvg.svg"}
               width={50}

@@ -51,7 +51,7 @@ const page = () => {
         width={720}
         height={400}
         alt="img"
-        className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[550px]"
+        className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[550px] blur-sm opacity-95"
       />
 
       {/* upper divs */}
@@ -63,8 +63,10 @@ const page = () => {
 
       <div className="h-28 bg-[#FAFAFA] absolute -left-2 -right-5 z-10 top-[290px] md:top-[475px] -rotate-[4deg]" />
       <div className="flex flex-col pt-32 md:pt-56 justify-center items-center gap-4 md:gap-8">
-        <h1 className="h1Text md:h1TextLg text-solarYellow">About Us</h1>
-        <div className="flex divide-x-4 divide-solarYellow *:px-3 md:h2TextLg h2Text">
+        <h1 className="h1Text md:h1TextLg text-solarYellow motion-duration-2000 motion-preset-typewriter-[8]">
+          About Us
+        </h1>
+        <div className="flex divide-x-4 divide-solarYellow *:px-3 md:h2TextLg h2Text motion-translate-x-in-[102%] motion-duration-2000">
           <Link href={"/"} className="text-white">
             Home
           </Link>
