@@ -23,7 +23,7 @@ const Header = () => {
           <div className="flex justify-between items-center ">
             <div className="flex flex-1">
               <Image
-                src={"/images/logo.jpg"}
+                src={"/images/logo.png"}
                 width={50}
                 height={45}
                 alt="logo"
