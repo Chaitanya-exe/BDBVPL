@@ -81,6 +81,136 @@ const page = () => {
           width={533}
           height={430}
           alt="img"
+          className="-z-30 absolute w-full max-h-[780px] md:-top-10 bottom-0 right-8"
+        />
+
+        <Conatiner
+          title={"About us"}
+          h1={
+            <span>
+              Switch to <span className="text-solarYellow"> Solar</span> Save
+              the <span className="text-green"> Planet</span>
+            </span>
+          }
+          h2={"Empowering your home with clean energy and long-term savings."}
+          textAllign={"text-center md:max-w-[700px] mx-auto"}
+        />
+
+        <div
+          style={{ backgroundImage: "url('/images/bgspot.png')" }}
+          className="flex flex-col items-center mx-auto md:-space-y-32 -space-y-12 md:my-2"
+        >
+          <div className="flex gap-1 items-start md:gap-2 relative">
+            <div className="motion-translate-x-in-[-164%] motion-translate-y-in-[-122%] absolute -top-5 -left-6 w-[320px] rounded-3xl hidden md:block pText p-2 md:p-5 border-8 border-white bg-green text-white">
+              <p>
+                1. Founded in{" "}
+                <span className="font-bold transition-transform duration-300 hover:scale-105 hover:text-solarYellow">
+                  2012
+                </span>{" "}
+                .
+                <br />
+                2. We offer{" "}
+                <span className="font-bold transition-transform duration-300 hover:scale-105  hover:text-solarYellow">
+                  customized solar energy solutions
+                </span>{" "}
+                that help homes and businesses reduce energy costs
+                <br />
+                3. Partnered with Leading Companies in the sector like{" "}
+                <span className="font-bold transition-transform duration-300 hover:scale-105  hover:text-solarYellow">
+                  Oswal Pumps Ltd. Shakti Pumps Ltd. CRI Pumps Ltd and Crompton
+                  Pumps
+                </span>
+              </p>
+            </div>
+            <Image
+              src={"/images/apic1.png"}
+              width={175}
+              height={220}
+              alt="img"
+              className="h-[220px] lg:min-w-[550px] md:h-[400px]"
+            />
+            <div className="flex flex-col md:gap-2 gap-1">
+              <Image
+                src={"/images/apic2.png"}
+                width={175}
+                height={110}
+                alt="img"
+                className="motion-translate-x-in-[133%] motion-translate-y-in-[-25%] lg:min-w-[400px] md:h-[200px] h-[110px]"
+              />
+              <Image
+                src={"/images/apic3.png"}
+                width={175}
+                height={110}
+                alt="img"
+                className="motion-translate-x-in-[135%] motion-translate-y-in-[23%] lg:min-w-[400px] md:h-[200px] h-[110px]"
+              />
+            </div>
+          </div>
+          <div className="motion-translate-x-in-[-1%] motion-translate-y-in-[200%] rounded-3xl md:min-w-[630px] z-10 w-[300px] pText p-2 md:p-3 border-4 border-white bg-deepTeal text-white">
+            <div>
+              <h1 className="font-bold text-2xl text-white mb-4">
+                Leading Solar Solutions In Faridabad, Delhi NCR, And Palwal
+              </h1>
+              <ul className="mt-4">
+                <li className="mb-4">
+                  <h2 className="font-semibold text-xl text-solarYellow mb-2">
+                    Founded In 2012
+                  </h2>
+                  <p className="text-text/85 text-gray-100">
+                    BDB Ventures Pvt. Ltd. has been at the forefront of
+                    providing innovative solar solutions to homes, industries,
+                    and agricultural sectors.
+                  </p>
+                </li>
+                <li className="mb-4">
+                  <h2 className="font-semibold text-xl text-solarYellow mb-2">
+                    Our Expertise
+                  </h2>
+                  <p className="text-text/85 text-gray-100">
+                    We specialize in solar panel installations and solar-powered
+                    irrigation systems.
+                  </p>
+                </li>
+                <li className="mb-4">
+                  <h2 className="font-semibold text-xl text-solarYellow mb-2">
+                    Our Commitment
+                  </h2>
+                  <p className="text-text/85 text-gray-100">
+                    By harnessing the power of the sun, we help our clients
+                    reduce their carbon footprint, lower electricity bills, and
+                    contribute to a greener future.
+                  </p>
+                </li>
+                <li className="mb-4">
+                  <h2 className="font-semibold text-xl text-solarYellow mb-2">
+                    Our Vision
+                  </h2>
+                  <p className="text-text/85 text-gray-100">
+                    With a passion for clean, eco-friendly energy, we aim to
+                    create lasting positive impacts for generations to come.
+                  </p>
+                </li>
+                <li>
+                  <h2 className="font-semibold text-xl text-solarYellow mb-2">
+                    Join Us
+                  </h2>
+                  <p className="text-text/85 text-gray-100">
+                    Join us in switching to solar and taking the first step
+                    towards a sustainable and energy-efficient tomorrow.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="my-24 mt-32 md:mt-44 mb-20 mx-8 md:mx-20 lg:mx-32 z-20 *:py-6 relative">
+        <Image
+          src={"/images/bgspot.png"}
+          width={533}
+          height={430}
+          alt="img"
           className="-z-30 absolute w-full max-h-[780px] md:-top-10 bottom-0  right-8"
         />
         <Conatiner
@@ -151,7 +281,7 @@ const page = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Mission And Values Section */}
       {/* Content */}
@@ -336,69 +466,114 @@ const page = () => {
           h2={"Discover How We Stand Out In The World Of Renewable Energy"}
           textAllign={"text-center "}
         />
+
+        {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
+
         <div className="slider-container">
-          <Slider className="py-10" {...settings}>
+          <Slider
+            className="py-10"
+            {...settings}
+            responsive={[
+              {
+                breakpoint: 1024, // For smaller laptops
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                },
+              },
+              {
+                breakpoint: 768, // For tablets
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: true,
+                },
+              },
+            ]}
+          >
             {/* Card 1 */}
-            <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[260px]">
-              <div className="flex justify-center mb-4">
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[280px]">
+              <div className="flex justify-center mb-3 sm:mb-4">
                 <Image
                   src={"/icons/Group.png"}
-                  width={100}
-                  height={100}
-                  alt="Integrity"
-                  className="w-[100px] h-[100px] "
+                  width={80}
+                  height={80}
+                  alt="Customizable Solar Plans"
+                  className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]"
                 />
               </div>
-              <h3 className="text-base sm:text-xl font-bold mb-2">
+              <h3 className="text-sm sm:text-lg font-bold mb-2 text-center">
                 100% Customizable Solar Plans
               </h3>
-              <p className="text-sm sm:text-base text-gray-600 ">
-                Tailored Solutions Designed To Meet Your Energy Needs, Ensuring
-                Maximum Efficiency
+              <p className="text-xs sm:text-sm text-gray-600 text-center leading-tight sm:leading-normal">
+                Tailored solutions to meet your energy needs, ensuring maximum
+                efficiency.
               </p>
             </div>
 
             {/* Card 2 */}
-            <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[260px]">
-              <div className="flex justify-center mb-4">
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[280px]">
+              <div className="flex justify-center mb-3 sm:mb-4">
                 <Image
                   src={"/icons/Group (1).png"}
-                  width={100}
-                  height={100}
-                  alt="Integrity"
-                  className="w-[100px] h-[100px] "
+                  width={80}
+                  height={80}
+                  alt="Certified Solar Experts"
+                  className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]"
                 />
               </div>
-              <h3 className="text-base sm:text-xl font-bold mb-2">
+              <h3 className="text-sm sm:text-lg font-bold mb-2 text-center">
                 Certified Solar Experts
               </h3>
-              <p className="text-sm sm:text-base text-gray-600">
-                Our Team Comprises Experienced And Accredited Professionals
-                Dedicated To Excellence.
+              <p className="text-xs sm:text-sm text-gray-600 text-center leading-tight sm:leading-normal">
+                Experienced and accredited professionals committed to
+                excellence.
               </p>
             </div>
 
             {/* Card 3 */}
-            <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[260px]">
-              <div className="flex justify-center mb-4">
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[280px]">
+              <div className="flex justify-center mb-3 sm:mb-4">
                 <Image
                   src={"/icons/Group (2).png"}
-                  width={100}
-                  height={100}
-                  alt="Integrity"
-                  className="w-[100px] h-[100px] "
+                  width={80}
+                  height={80}
+                  alt="24/7 Customer Support"
+                  className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]"
                 />
               </div>
-              <h3 className="text-base sm:text-xl font-bold mb-2">
+              <h3 className="text-sm sm:text-lg font-bold mb-2 text-center">
                 24/7 Customer Support
               </h3>
-              <p className="text-sm sm:text-base text-gray-600">
-                We're Here To Assist You Anytime, Ensuring A smooth And
-                Hassle-Free Experience.
+              <p className="text-xs sm:text-sm text-gray-600 text-center leading-tight sm:leading-normal">
+                Always available to assist you for a hassle-free experience.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[280px]">
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <Image
+                  src={"/icons/experience.svg"}
+                  width={80}
+                  height={80}
+                  alt="Industry Experience"
+                  className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]"
+                />
+              </div>
+              <h3 className="text-sm sm:text-lg font-bold mb-2 text-center">
+                12+ Years of Industry Experience
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600 text-center leading-tight sm:leading-normal">
+                Proven expertise in delivering reliable solar solutions.
               </p>
             </div>
           </Slider>
         </div>
+
+        {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
+
         {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-10 mx-[50px] lg:px-[50px] min-h-[200px]"> */}
         {/* Card 1 */}
         {/* <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[100px] min-h-[150px]">
@@ -540,7 +715,7 @@ const page = () => {
               </motion.div>
             </div>
             <div className="text-center mt-2">
-              <h5 className="font-semibold">Mr. Sumit</h5>
+              <h5 className="font-bold">Mr. Sumit</h5>
               <h6 className="font-thin">District Sales Manager</h6>
             </div>
           </div>
@@ -577,8 +752,8 @@ const page = () => {
               </motion.div>
             </div>
             <div className="text-center mt-2">
-              <h5 className="font-bold">Mr. Budhram</h5>
-              <h6 className="font-thin">Site Engineer</h6>
+              <h5 className="font-bold">Mr. Nirmohit</h5>
+              <h6 className="font-thin">Resource Manager</h6>
             </div>
           </div>
           <div className="group flex flex-col justify-center items-center">
@@ -592,7 +767,7 @@ const page = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Image
-                  src={"/images/mohit.jpeg"}
+                  src={"/images/budhram1.jpg"}
                   width={215}
                   height={215}
                   alt="user"
@@ -614,8 +789,8 @@ const page = () => {
               </motion.div>
             </div>
             <div className="text-center mt-2">
-              <h5 className="font-semibold">NIR Mohit</h5>
-              <h6 className="font-thin">Resource Manager</h6>
+              <h5 className="font-bold">Mr. Budhram</h5>
+              <h6 className="font-thin">Site Engineer</h6>
             </div>
           </div>
         </div>

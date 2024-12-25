@@ -12,7 +12,7 @@ import {
 import Link from "next/link";
 
 export function ClientCarousel() {
-  return (
+  return (<div id="Client">
     <Carousel
       opts={{
         align: "start",
@@ -93,6 +93,6 @@ export function ClientCarousel() {
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />
-    </Carousel>
+    </Carousel></div>
   );
 }

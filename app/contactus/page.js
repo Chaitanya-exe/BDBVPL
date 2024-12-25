@@ -36,6 +36,7 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Information Section */}
+
       <div className="mt-32 md:mt-44 mb-20 mx-8 md:mx-20 lg:mx-32 z-20 *:py-6 relative">
         <FiPhoneCall className="absolute -right-5 md:right-36 -rotate-12 size-32 md:size-48 text-deepTeal/20 -top-10 md:-top-12" />
         <Conatiner
@@ -101,5 +102,5 @@ const ContactUs = () => {
       <QuerySec />
     </div>
   );
-}
+};
 export default ContactUs;

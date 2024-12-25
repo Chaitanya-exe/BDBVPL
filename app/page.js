@@ -71,8 +71,8 @@ export default function Home() {
           />
           <div className="absolute -bottom-12 -right-8  bg-[#FAFAFA] rounded-full w-30 h-30 p-1 *:pt-4 capitalize text-wrap shadow text-center text-white">
             <div className="transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg  hover:shadow-text/50 bg-solarYellow rounded-full w-28 h-28">
-              <p className="font-bold text-4xl">3+</p>
-              <p className="text-sm">years experience</p>
+              <p className="font-bold text-4xl">12+</p>
+              <p className="text-sm">years Experience</p>
             </div>
           </div>
           <div className="absolute -bottom-12 -left-20 w-[296px] lg:w-[400px] lg:h-[300px] h-[233px] bg-deepTeal/60 -z-10" />

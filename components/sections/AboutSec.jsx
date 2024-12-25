@@ -9,8 +9,8 @@ const AboutSec = () => {
     <div id="About" className="mt-20 px-6 lg:px-20 max-w-[920px]">
       <Conatiner
         title={"About us"}
-        h2={
-          <span>
+        h2={<ul>
+          <li className="my-3">
             At <Link href={"/aboutus"}>BDB Ventures Pvt. Ltd.</Link>, our mission is to make{" "}
             <a
               target="_blank"
@@ -18,10 +18,11 @@ const AboutSec = () => {
             >
               renewable solar energy
             </a>{" "}
-            the standard for homes and businesses. We transform energy
-            consumption with innovative and affordable solar solutions
-            tailored to your needs.
-          </span>
+            the standard for homes and businesses. 
+          </li>
+          <li className="mb-3">We transform energy
+          consumption with innovative and affordable solar solutions
+          tailored to your needs.</li></ul>
         }
         h1={
           <span>
@@ -31,7 +32,7 @@ const AboutSec = () => {
         }
         textAllign={"text-center md:text-start"}
       />
-      <ul className="list-disc pText md:pTextLg space-y-2 mb-6 lg:mb-10 list-inside  mt-3 lg:mt-5">
+      {/* <ul className="list-disc pText md:pTextLg space-y-2 mb-6 lg:mb-10 list-inside  mt-3 lg:mt-5">
         <li>
           Significantly reduce carbon footprints and contribute to a more
           sustainable and eco-friendly environment for future generations.
@@ -45,7 +46,7 @@ const AboutSec = () => {
           unique energy needs of our clients, ensuring optimal efficiency,
           savings, and long-term reliability.
         </li>
-      </ul>
+      </ul> */}
       <Link href={"/aboutus"}>
         <Button
           text={"More about us"}
