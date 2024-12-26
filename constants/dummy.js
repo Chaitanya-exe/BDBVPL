@@ -60,7 +60,7 @@ export const workFlowStep = [
   },
   {
     id: 4,
-    label: "Quality Assurance & Ongoing Support",
+    label: "Quality Assurance",
     content:
       "We conduct thorough quality checks to ensure optimal system performance and provide continuous maintenance and support to keep your solar system running efficiently for long-term savings.",
   },
@@ -120,16 +120,16 @@ export const solarSolutionsData = [
         description:
           "We specialize in solar panel installations and solar-powered irrigation systems.",
       },
-      {
-        heading: "Our Mission",
-        description:
-          "To make renewable energy accessible, affordable, and effective.",
-      },
-      {
-        heading: "Our Values",
-        description:
-          "At BDB Ventures, we prioritize sustainability, customer satisfaction, and technical excellence in all our projects.",
-      },
+      // {
+      //   heading: "Our Mission",
+      //   description:
+      //     "To make renewable energy accessible, affordable, and effective.",
+      // },
+      // {
+      //   heading: "Our Values",
+      //   description:
+      //     "At BDB Ventures, we prioritize sustainability, customer satisfaction, and technical excellence in all our projects.",
+      // },
       {
         heading: "Our Commitment",
         description:
