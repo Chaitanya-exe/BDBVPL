@@ -1,10 +1,12 @@
 import { PrismaClient } from "@prisma/client";
+import { NextResponse } from "next/server";
 
 const userClient = new PrismaClient();
 
 async function handler(req){
     try {
         const body = await req.json();
+        console.log(body)
 
         const dbRes = await userClient.query.findFirst({
             where:{
@@ -18,7 +20,7 @@ async function handler(req){
                 },
                 data:{
                     query: {
-                        push: body.query
+                        push: body.userQuery
                     }
                 }
             });
@@ -30,7 +32,7 @@ async function handler(req){
                     phone_number: body.number,
                     email: body.email,
                     query: [body.userQuery],
-                    type: `${body.type.toUpperCase()}`
+                    type: body.type
                 }
             });
             return Response.json({response, success: true, msg:"query submitted"})

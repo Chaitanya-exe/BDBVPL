@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Conatiner from "../Conatiner";
 import { FaPhone, FaUser } from "react-icons/fa6";
@@ -16,6 +16,9 @@ const QuerySec = () => {
     userQuery: "",
   });
 
+  useEffect(()=>{
+    console.log(query);
+  },[query])
 
   const handleClick = async () => {
     try {
@@ -34,6 +37,14 @@ const QuerySec = () => {
       alert("some error occured, Try again later")
     }
   };
+
+  const handleChange = (e)=>{
+    let selectedValue = e.target.value;
+    selectedValue = `${selectedValue.toUpperCase()}`
+    setQuery((prev)=>{
+      return {...prev, type: selectedValue} 
+    })
+  }
   return (
     <div id="HomeQuery" className="relative flex justify-end lg:px-24  my-4">
       <Image
@@ -101,19 +112,16 @@ const QuerySec = () => {
 
           <div className="focus-within:border-text/50">
             <select
-              onChange={(e) => {
-                console.log(query)
-                setQuery({ ...query, type: e.target.value.toUpper() })
-              }}
+              onChange={handleChange}
               name="dropdown"
               defaultValue=""
               className="w-full capitalize bg-transparent p-2.5 h-full focus:outline-none"
             >
               <option
-                value={query.type}
+                value={""}
                 onChange={(e) => {
                   console.log(query)
-                  setQuery({ ...query, type: e.target.value.toUpper() })
+                  setQuery((prev)=> setQuery({...prev, type: `${e.target.value.toUpperCase()}`}))
                 }}
                 disabled
                 hidden
