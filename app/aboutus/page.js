@@ -301,14 +301,30 @@ const page = () => {
           className="absolute top-17 hidden md:block right-3 "
         />
 
-        <Conatiner
+        <div className={`flex flex-col lg:gap-2 gap-1 capitalize text-center `}>
+          <div className="flex mb-2 items-center gap-2 justify-center motion-preset-slide-left">
+            <span className="w-20 h-1 bg-solarYellow rounded-sm " />{" "}
+            <h3 className="text-solarYellow font-semibold md:text-2xl ">
+              {"Our Mission and Values"}
+            </h3>
+          </div>
+          <h1 className="h1Text md:h1TextLg motion-preset-slide-right text-white">
+            <span>Empowering Communities with Seamless Solar Solutions</span>
+          </h1>
+          <h2 className="h2Text md:h2TextLg text-opacity-80 motion-preset-shrink text-white ">
+            {
+              "Leading the Transition to Renewable Energy with Customized Solar Solutions for Homes and Industries."
+            }
+          </h2>
+        </div>
+        {/* <Conatiner
           title={"Our Mission and Values"}
           h1={<span>Empowering Communities with Seamless Solar Solutions</span>}
           h2={
             "Leading the Transition to Renewable Energy with Customized Solar Solutions for Homes and Industries."
           }
           textAllign={"text-center"}
-        />
+        /> */}
         {/* flex flex-wrap flex-col md:absolute md:mt-28 md:left-28 z-50 items-center justify-center md:flex-row  gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[260px] *:w-[300px] bg-cyan-100 md:bg-transparent */}
         {/* Values Section */}
         <div className="flex justify-center flex-wrap flex-col lg:absolute lg:left-[5%] md:mt-28 lg:z-50 items-center  md:flex-row gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[300px] *:w-[300px] bg-cyan-100 lg:bg-transparent">

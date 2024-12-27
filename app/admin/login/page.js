@@ -28,7 +28,7 @@ const page = () => {
       const result = data.ok;
       console.log(result);
       if (result === true) {
-        router.replace('/admin/dashboard');
+        router.replace("/admin/dashboard");
       } else {
         setError(true);
       }
@@ -42,7 +42,7 @@ const page = () => {
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-white">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <Image
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               width={60}
               height={60}
               alt="bdbvpl pvt ltd"
