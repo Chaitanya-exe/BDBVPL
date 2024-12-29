@@ -211,7 +211,7 @@ function Layout(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box
+      {/* <Box
         component="main"
         sx={{
           flexGrow: 1,
@@ -221,6 +221,18 @@ function Layout(props) {
       >
         <Toolbar />
         <main>{children}</main>
+      </Box> */}
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 0, // Remove padding from the main container
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+        }}
+      >
+        <Toolbar />
+        <main className="p-4 md:p-6">{children}</main>{" "}
+        {/* Add consistent padding */}
       </Box>
     </Box>
   );

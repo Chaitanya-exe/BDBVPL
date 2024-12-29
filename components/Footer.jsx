@@ -23,6 +23,20 @@ const Footer = () => {
         <p className="pt-3 text-white/80">
           Copyright © 2024 BDBVPL All rights reserved.
         </p>
+        <p className="pt-3 text-white/80 opacity-50">
+          Website developed by{" "}
+          <Link href={"http://www.itsolutionconsultancy.com/"}>
+            IT Solutions & Consultancy
+          </Link>
+          .
+        </p>
+        <p className="pt-3 text-white/80 opacity-50">
+          Copyright © 2024{" "}
+          <Link href={"http://www.itsolutionconsultancy.com/"}>
+            IT Solutions & Consultancy
+          </Link>{" "}
+          All Rights Reserved
+        </p>
       </div>
       <div>
         <h1 className="h1Text md:pb-2">Company links</h1>
@@ -37,7 +51,9 @@ const Footer = () => {
             <li className="pText md:pTextLg hover:text-white">Services</li>
           </Link>
           <Link href={"/#Client"}>
-            <li className="pText md:pTextLg hover:text-white">Client Companies</li>
+            <li className="pText md:pTextLg hover:text-white">
+              Client Companies
+            </li>
           </Link>
           <Link href={"/#Broshure"}>
             <li className="pText md:pTextLg hover:text-white">Catalogue</li>
@@ -48,8 +64,6 @@ const Footer = () => {
           <Link href={"/contactus"}>
             <li className="pText md:pTextLg hover:text-white">Contact us</li>
           </Link>
-        
-
         </ul>
       </div>
       <div>
