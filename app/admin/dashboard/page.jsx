@@ -7,7 +7,6 @@ import { Circle } from "rc-progress";
 import CountUp from "react-countup";
 import { useEffect, useState } from "react";
 const DashboardPanel = () => {
-  const [data, setData] = useState([]);
   const [counts, setCount] = useState({
     installation: 0,
     maintanence: 0,
@@ -26,7 +25,6 @@ const DashboardPanel = () => {
         }
 
         const res = await response.json();
-        setData(res.data);
 
         const categoryCount = res.data.reduce(
           (acc, item)=>{
@@ -47,7 +45,6 @@ const DashboardPanel = () => {
   }, [])
 
   const totalQueries = counts.installation + counts.consultation + counts.maintanence + counts.design;
-  console.log(data)
   const cardData = [
     { title: "Total Queries", count: totalQueries, percent: 100 },
     { title: "Installation Queries", count: counts.installation, percent: totalQueries ? (counts.installation / totalQueries) * 100 : 0 },
