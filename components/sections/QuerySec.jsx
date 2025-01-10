@@ -34,11 +34,11 @@ const QuerySec = () => {
     }
   };
 
-  const handleChange = (e)=>{
+  const handleChange = (e) => {
     let selectedValue = e.target.value;
     selectedValue = `${selectedValue.toUpperCase()}`
-    setQuery((prev)=>{
-      return {...prev, type: selectedValue} 
+    setQuery((prev) => {
+      return { ...prev, type: selectedValue }
     })
   }
   return (
