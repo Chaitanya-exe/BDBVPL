@@ -60,14 +60,14 @@ const PdfDownload = () => {
 
   return (
     <div className="flex justify-center items-center p-6" id="Broshure">
-      <div className="w-full max-w-4xl bg-white/80 backdrop-blur-lg shadow-lg rounded-lg p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 border border-gray-300">
+      <div className="w-full max-w-4xl bg-black opacity-90 backdrop-blur-lg shadow-lg rounded-lg p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 border border-gray-300">
         {/* Icon Section */}
         <div className="bg-solarYellow border-solarYellow border-2 rounded-full p-4 transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg hover:shadow-solarYellow/50">
-          <TextSnippetIcon fontSize="large" className="text-black" />
+          <TextSnippetIcon fontSize="large" className="text-white" />
         </div>
 
         {/* Text Section */}
-        <div className="text-center md:text-left text-black text-lg md:text-2xl font-semibold">
+        <div className="text-center md:text-left text-white text-lg md:text-2xl font-semibold">
           Download Our Company Catalogue from Here
         </div>
 
