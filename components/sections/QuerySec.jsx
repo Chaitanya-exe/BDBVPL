@@ -8,15 +8,17 @@ import { MdEmail } from "react-icons/md";
 import Button from "../Button";
 
 const QuerySec = () => {
+  const [loadin, setLoading] = useState(false);
   const [query, setQuery] = useState({
-    name: "",
-    number: "",
+    customer_name: "",
+    phone_number: "",
     email: "",
     type: "",
     userQuery: "",
   });
 
   const handleClick = async () => {
+    setLoading(true)
     try {
       const response = await fetch("/api/query/submit", {
         method: "POST",
@@ -25,9 +27,11 @@ const QuerySec = () => {
       });
       const data = await response.json();
       if (data.success) {
+        setLoading(false)
         alert(data.msg);
       }
     } catch (err) {
+      setLoading(false);
       alert("Some error occurred, please try again later.");
     }
   };
@@ -72,7 +76,7 @@ const QuerySec = () => {
             <FaUser className="text-gray-500 size-5 mr-2" />
             <input
               type="text"
-              name="name"
+              name="customer_name"
               value={query.name}
               onChange={handleChange}
               placeholder="Full Name"
@@ -83,7 +87,7 @@ const QuerySec = () => {
             <FaPhone className="text-gray-500 size-5 mr-2" />
             <input
               type="text"
-              name="number"
+              name="phone_number"
               value={query.number}
               onChange={handleChange}
               placeholder="Phone Number"
@@ -115,7 +119,6 @@ const QuerySec = () => {
               <option value="design">Design</option>
               <option value="maintenance">Maintenance</option>
               <option value="installation">Installation</option>
-              <option value="other">Other</option>
             </select>
           </div>
         </div>
@@ -142,6 +145,7 @@ const QuerySec = () => {
             }}
           />
         </div>
+        {loadin && <div>submitting...</div>}
       </form>
     </div>
   );
