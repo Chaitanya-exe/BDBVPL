@@ -13,7 +13,6 @@ function Querries() {
       try {
         const response = await fetch(`/api/query?date=${date}`,{method:"GET"});
         const resData = await response.json();
-        console.log(resData)
         setData(resData.data)
       } catch (err) {
         alert("Error fetching users")
@@ -21,7 +20,6 @@ function Querries() {
     }
     fetchData();
   },[])
-  console.log(data)
   return (
     <div>
       <Layout>

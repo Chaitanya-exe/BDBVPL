@@ -50,10 +50,10 @@ const DashboardPanel = () => {
   console.log(data)
   const cardData = [
     { title: "Total Queries", count: totalQueries, percent: 100 },
-    { title: "Installation Query", count: counts.installation, percent: totalQueries ? (counts.installation / totalQueries) * 100 : 0 },
-    { title: "Consultation Query", count: counts.consultation, percent: totalQueries ? (counts.consultation / totalQueries) * 100 : 0 },
-    { title: "Maintenance Query", count: counts.maintanence, percent: totalQueries ? (counts.maintanence / totalQueries) * 100 : 0 },
-    { title: "Design Query", count: counts.design, percent: totalQueries ? (counts.design / totalQueries) * 100 : 0 },
+    { title: "Installation Queries", count: counts.installation, percent: totalQueries ? (counts.installation / totalQueries) * 100 : 0 },
+    { title: "Consultation Queries", count: counts.consultation, percent: totalQueries ? (counts.consultation / totalQueries) * 100 : 0 },
+    { title: "Maintenance Queries", count: counts.maintanence, percent: totalQueries ? (counts.maintanence / totalQueries) * 100 : 0 },
+    { title: "Design Queries", count: counts.design, percent: totalQueries ? (counts.design / totalQueries) * 100 : 0 },
   ];
 
   return (

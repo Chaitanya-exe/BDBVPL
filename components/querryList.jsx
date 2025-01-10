@@ -60,13 +60,14 @@ export default function StickyHeadTable({ rows }) {
             {rows
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
+                const index = row.query.length - 1
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
                     <TableCell align="center">{row.customer_name}</TableCell>
                     <TableCell align="center">{row.phone_number}</TableCell>
                     <TableCell align="center">{row.email}</TableCell>
                     <TableCell align="center">{row.date}</TableCell>
-                    <TableCell align="center">{row.query.pop()}</TableCell>
+                    <TableCell align="center">{row.query[index]}</TableCell>
                   </TableRow>
                 );
               })}
