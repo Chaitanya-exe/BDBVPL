@@ -1,10 +1,18 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathName = usePathname();
+  const excludedPages = ['/admin'];
+  const isExcluded = excludedPages.some((path)=> pathName.startsWith(path))
+  if(isExcluded){
+    return (<div></div>)
+  }
   return (
     <div className="text-white *:max-w-[390px] md:flex-row md:justify-between flex-col flex gap-7  bg-deepTeal py-8 px-14 lg:p-24 relative overflow-hidden">
       <Image
