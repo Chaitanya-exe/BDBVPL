@@ -146,7 +146,7 @@ const page = () => {
               />
             </div>
           </div>
-          <div className="motion-translate-x-in-[-1%] motion-translate-y-in-[200%] rounded-3xl md:min-w-[630px] z-10 w-[300px] pText p-2 md:p-3 border-4 border-white bg-deepTeal text-white">
+          <div className="motion-translate-x-in-[-1%] motion-translate-y-in-[200%] rounded-3xl md:min-w-[630px] z-10 w-[300px] pText p-2 md:p-3 border-4 border-white bg-deepTeal opacity-90 text-white">
             <div>
               <h1 className="font-bold text-2xl text-white mb-4">
                 Leading Solar Solutions In Faridabad, Delhi NCR, And Palwal
@@ -156,7 +156,7 @@ const page = () => {
                   <h2 className="font-semibold text-xl text-solarYellow mb-2">
                     Founded In 2012
                   </h2>
-                  <p className="text-text/85 text-gray-100">
+                  <p className="text-gray-100">
                     BDB Ventures Pvt. Ltd. has been at the forefront of
                     providing innovative solar solutions to homes, industries,
                     and agricultural sectors.
@@ -166,7 +166,7 @@ const page = () => {
                   <h2 className="font-semibold text-xl text-solarYellow mb-2">
                     Our Expertise
                   </h2>
-                  <p className="text-text/85 text-gray-100">
+                  <p className=" text-gray-100">
                     We specialize in solar panel installations and solar-powered
                     irrigation systems.
                   </p>
@@ -175,7 +175,7 @@ const page = () => {
                   <h2 className="font-semibold text-xl text-solarYellow mb-2">
                     Our Commitment
                   </h2>
-                  <p className="text-text/85 text-gray-100">
+                  <p className=" text-gray-100">
                     By harnessing the power of the sun, we help our clients
                     reduce their carbon footprint, lower electricity bills, and
                     contribute to a greener future.
@@ -185,7 +185,7 @@ const page = () => {
                   <h2 className="font-semibold text-xl text-solarYellow mb-2">
                     Our Vision
                   </h2>
-                  <p className="text-text/85 text-gray-100">
+                  <p className=" text-gray-100">
                     With a passion for clean, eco-friendly energy, we aim to
                     create lasting positive impacts for generations to come.
                   </p>
@@ -194,7 +194,7 @@ const page = () => {
                   <h2 className="font-semibold text-xl text-solarYellow mb-2">
                     Join Us
                   </h2>
-                  <p className="text-text/85 text-gray-100">
+                  <p className=" text-gray-100">
                     Join us in switching to solar and taking the first step
                     towards a sustainable and energy-efficient tomorrow.
                   </p>
