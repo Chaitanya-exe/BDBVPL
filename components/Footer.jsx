@@ -7,8 +7,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Footer = () => {
-  const hostName = window.location.hostname;
-  const excludedPages = ['admin'];
+  const hostName = usePathname();
+  const excludedPages = ['/admin'];
   const isExcluded = excludedPages.some((path)=> hostName.startsWith(path))
   if(isExcluded){
     return (<div></div>)
