@@ -13,10 +13,10 @@ function Analytics() {
         <h1 className="text-3xl font-bold mb-10 text-center">
           Analytics Section
         </h1>
-        <div className="grid grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Section: Pie Chart and Line Chart */}
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-xl font-semibold mb-4">Query Distribution</h2>
+            <h2 className="text-xl font-semibold mb-4 mt-6">Query Distribution</h2>
             <PieChart />
 
           </div>
