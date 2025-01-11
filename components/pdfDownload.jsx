@@ -59,27 +59,26 @@ const PdfDownload = () => {
   };
 
   return (
-    <div className="flex justify-center items-center p-6" id="Broshure">
-      <div className="w-full max-w-4xl bg-black opacity-90 backdrop-blur-lg shadow-lg rounded-lg p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 border border-gray-300">
+    <div className="flex justify-center items-center py-4" id="Broshure">
+      <div className="w-full max-w-3xl bg-gray-800 backdrop-blur-md shadow-md rounded-md p-4 flex flex-col md:flex-row justify-between items-center gap-4 border border-gray-500">
         {/* Icon Section */}
-        <div className="bg-solarYellow border-solarYellow border-2 rounded-full p-4 transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg hover:shadow-solarYellow/50">
+        <div className="bg-solarYellow border-solarYellow border-2 rounded-full p-3 transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg hover:shadow-solarYellow/50">
           <TextSnippetIcon fontSize="large" className="text-white" />
         </div>
 
         {/* Text Section */}
-        <div className="text-center md:text-left text-white text-lg md:text-2xl font-semibold">
-          Download Our Company Catalogue from Here
+        <div className="text-center md:text-left text-white text-base md:text-lg font-medium">
+          Download Our Company Catalogue
         </div>
 
         {/* Download Button */}
         <div className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-solarYellow/50">
-          {/* <div className="bg-solarYellow text-black font-bold rounded-full p-4 flex justify-center items-center"></div> */}
           <button
             onClick={downloadPDF}
-            className="px-4 py-2 md:px-6 md:py-3 text-lg md:text-xl font-medium bg-solarYellow text-black rounded-lg transition-transform duration-300 ease-in-out hover:bg-green hover:text-white hover:scale-105"
+            className="px-4 py-2 text-sm md:text-base font-medium bg-solarYellow text-black rounded-md transition-transform duration-300 ease-in-out hover:bg-green hover:text-white hover:scale-105"
           >
             Download PDF
-            <DownloadIcon fontSize="large" />
+            <DownloadIcon fontSize="small" />
           </button>
         </div>
       </div>
