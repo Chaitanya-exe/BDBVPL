@@ -447,7 +447,7 @@ const page = () => {
                 className="group-hover:hidden"
               />
               <Image
-                src={"/icons/integrityWhite-icon.svg"}
+                src={"/icons/customer-centric-icon.svg"}
                 width={80}
                 height={80}
                 alt="Collaboration"
@@ -464,8 +464,9 @@ const page = () => {
           </div>
         </div>
       </section>
+      <div className="min-h-0 lg:min-h-[200px] bg-[f2f2f2] xl:hidden"></div>
 
-      <div className="min-h-0 lg:min-h-[200px] bg-gradient-to-r from-green to-teal-600"></div>
+      {/* <div className="min-h-0 lg:min-h-[200px] bg-gradient-to-r from-green to-teal-600"></div> */}
 
       {/* Why Choose Us Section */}
       <section

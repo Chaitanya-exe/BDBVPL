@@ -35,6 +35,8 @@ const Footer = () => {
           <Link href={"http://www.itsolutionconsultancy.com/"}>
             IT Solutions & Consultancy
           </Link>{" "}
+        </p>
+        <p className="pt-3 text-white/80 opacity-50">
           All Rights Reserved
         </p>
       </div>
