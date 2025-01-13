@@ -9,6 +9,12 @@ function Watermark() {
           <Link href={"http://www.itsolutionconsultancy.com/"}>
             IT Solutions & Consultancy
           </Link>
+          {" "}
+          and 
+          {" "}
+          <Link href={"https://www.linkedin.com/company/original-tertiary"}>
+            OGT
+          </Link>
         </p>
       </div>
     </div>
