@@ -18,6 +18,10 @@ export function middleware(req) {
         return NextResponse.next();
             
     }
+    if(process.env.NEXT_MAINTENECE_MODE === "true"){
+        url.pathname = '/maintanence'
+        return NextResponse.rewrite(url);
+    }
 
     return NextResponse.next();
 }
