@@ -8,7 +8,12 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
-  // State to manage the menu icon and visibility of the navbar list
+  const hostName = usePathname();
+  const excludedPages = ['/admin'];
+  const isExcluded = excludedPages.some((path) => hostName.startsWith(path))
+  if (isExcluded) {
+    return (<div></div>)
+  }
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathName = usePathname();
 
@@ -19,13 +24,11 @@ const Header = () => {
   return (
     <nav className="fixed top-0 w-full bg-[#FAFAFA] z-50 ">
       <section className="capitalize relative">
-       
-
-     <div className="md:flex py-1.5 px-2 lg:mx-20 md:items-center md:justify-between gap-1.5 md:gap-2.5">
+        <div className="md:flex py-1.5 px-2 lg:mx-20 md:items-center md:justify-between gap-1.5 md:gap-2.5">
           <div className="flex justify-between items-center ">
             <div className="flex flex-1">
               <Image
-                src={"/images/logo.jpg"}
+                src={"/images/logo.png"}
                 width={50}
                 height={45}
                 alt="logo"
@@ -57,14 +60,15 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-12">
             <ul
-              className={`*:capitalize md:flex md:items-center md:gap-4 lg:gap-9 z-[1] bg-[#FAFAFA] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-6 py-0 md:pl-0 pl-7 transition-all ease-in duration-500 md:opacity-100 ${
-                isMenuOpen ? "opacity-100 shadow top-[55px]" : "opacity-0 top-[-400px]"
-              }`}
+              className={`*:capitalize md:flex md:items-center md:gap-4 lg:gap-9 z-[1] bg-[#FAFAFA] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-6 py-0 md:pl-0 pl-7 transition-all ease-in duration-500 md:opacity-100 ${isMenuOpen
+                  ? "opacity-100 shadow top-[55px]"
+                  : "opacity-0 top-[-400px]"
+                }`}
             >
               <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px]  pTex">
-              <Link href={"/"}>
-                Home
-              </Link>
+                <Link href={"/"}>
+                  Home
+                </Link>
               </li>
               <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex ">
                 <Link href={"aboutus"}>About us</Link>
@@ -75,7 +79,7 @@ const Header = () => {
                     <Link href={"#Services"}>Services</Link>
                   </li>
                   <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
-                    <Link href={"#Projects"}>Projects</Link>
+                    <Link href={"gallery"}>Gallery</Link>
                   </li>
                   <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
                     <Link href={"#HomeQuery"}>Query</Link>
@@ -91,15 +95,30 @@ const Header = () => {
                     <Link href={"#WhyUs"}>Why Us</Link>
                   </li>
                   <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
-                    <Link href={"#Query"}>Query</Link>
+                    <Link href={"/gallery"}>Gallery</Link>
+                  </li>
+                  <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
+                    <Link href={"#HomeQuery"}>Query</Link>
                   </li>
                 </>
               )}
               {pathName === "/contactus" && (
                 <>
-            
+                  <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
+                    <Link href={"/gallery"}>Gallery</Link>
+                  </li>
                   <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
                     <Link href={"#Query"}>Query</Link>
+                  </li>
+                </>
+              )}
+              {pathName === "/gallery" && (
+                <>
+                  <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
+                    <Link href={"/gallery"}>Gallery</Link>
+                  </li>
+                  <li className="my-6 md:my-0 hover:text-green duration-300 lg:text-[18px] hover:font-semibol pTex">
+                    <Link href={"contactus"}>Query</Link>
                   </li>
                 </>
               )}

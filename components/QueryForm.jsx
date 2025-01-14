@@ -16,10 +16,25 @@ const QueryForm = () => {
     type: "",
     userQuery: "",
   });
-  
+
   const pathName = usePathname();
-  const handleClick = async (request) => {
-    console.log(request);
+
+  const handleClick = async () => {
+    try {
+      const response = await fetch("api/query/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: { ...query }
+      });
+      const data = await response.json();
+      if (data.success) {
+        alert(data.msg)
+      }
+    } catch (err) {
+      alert("some error occured, Try again later")
+    }
   };
 
   return (
@@ -45,7 +60,7 @@ const QueryForm = () => {
               id="fullname"
               name="fullName"
               value={query.name}
-              onChange={(e) => setQuery({...query, name: e.target.value })}
+              onChange={(e) => setQuery({ ...query, name: e.target.value })}
               placeholder="Full Name"
               className="capitalize w-full outline-none bg-transparent px-2"
             />
@@ -131,13 +146,18 @@ const QueryForm = () => {
             <FiPhoneCall className="inline-flex size-5 md:size-6 mr-2" />
             <span className="text-lg">9312644140</span>
           </button>
-          <Button
-            text={"Send Query"}
-            handleClick={(e) => {
-              e.preventDefault();
-              handleClick(query);
-            }}
-          />
+          <button
+            className={`${variant === "sec"
+                ? "text-solarYellow px-3 hover:font-bold active:motion-preset-pop"
+                : "bg-gradient-to-r from-green/90 px-5 text-white  to-softgreen shadow shadow-text/20 hover:bg-gradient-to-r hover:from-green hover:to-softgreen/90 hover:shadow-lg hover:shadow-text/30 active:motion-preset-pop "
+              } capitalize  py-2 rounded `}
+            onClick={handleClick}
+          >
+            <span className=" text-[16px] lg:text-[18px] ">
+              Send Query
+            </span>
+            {icon && icon}
+          </button>
         </div>
       </form>
     </div>

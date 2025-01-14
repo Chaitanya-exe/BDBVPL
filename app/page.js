@@ -10,6 +10,7 @@ import Projects from "@/components/sections/Projects";
 import QuerySec from "@/components/sections/QuerySec";
 import Link from "next/link";
 import { ClientCarousel } from "@/components/clientCarousel";
+import PdfDownload from "@/components/pdfDownload";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
           width={900}
           height={800}
           alt="rect"
-          className="block min-h-[410px] max-h-[700px] w-screen"
+          className="block min-h-[410px] max-h-[700px] w-screen blur-sm opacity-95"
         />
 
         {/* try */}
@@ -66,12 +67,12 @@ export default function Home() {
             width={240}
             height={263}
             alt="img"
-            className="w-full h-fit "
+            className="w-full h-fit transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg  hover:shadow-text/50"
           />
           <div className="absolute -bottom-12 -right-8  bg-[#FAFAFA] rounded-full w-30 h-30 p-1 *:pt-4 capitalize text-wrap shadow text-center text-white">
-            <div className="bg-solarYellow rounded-full w-28 h-28">
-              <p className="font-bold text-4xl">3+</p>
-              <p className="text-sm">years experience</p>
+            <div className="transform transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg  hover:shadow-text/50 bg-solarYellow rounded-full w-28 h-28">
+              <p className="font-bold text-4xl">12+</p>
+              <p className="text-sm">years Experience</p>
             </div>
           </div>
           <div className="absolute -bottom-12 -left-20 w-[296px] lg:w-[400px] lg:h-[300px] h-[233px] bg-deepTeal/60 -z-10" />
@@ -89,6 +90,7 @@ export default function Home() {
           textAllign={"text-center md:mx-40"}
         />
         <ClientCarousel />
+        <PdfDownload />
         <ServicesSec />
         <WorkFlow />
         {/* <Testimonials />

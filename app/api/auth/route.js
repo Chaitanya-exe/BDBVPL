@@ -4,7 +4,6 @@ import { NextResponse } from "next/server";
 async function handler(req) {
   try {
     const { email, password } = await req.json();
-    console.log(`${email}_${password}`);
     if (
       email == process.env.ADMIN_EMAIL &&
       password == process.env.ADMIN_PASSWORD

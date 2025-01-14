@@ -17,6 +17,7 @@ import { useInView } from "react-intersection-observer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import QuerySec from "@/components/sections/QuerySec";
 
 const settings = {
   dots: true,
@@ -50,7 +51,7 @@ const page = () => {
         width={720}
         height={400}
         alt="img"
-        className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[550px]"
+        className="-z-30 absolute w-full -top-4 h-[380px] md:min-h-[550px] blur-sm opacity-95"
       />
 
       {/* upper divs */}
@@ -62,8 +63,10 @@ const page = () => {
 
       <div className="h-28 bg-[#FAFAFA] absolute -left-2 -right-5 z-10 top-[290px] md:top-[475px] -rotate-[4deg]" />
       <div className="flex flex-col pt-32 md:pt-56 justify-center items-center gap-4 md:gap-8">
-        <h1 className="h1Text md:h1TextLg text-solarYellow">About Us</h1>
-        <div className="flex divide-x-4 divide-solarYellow *:px-3 md:h2TextLg h2Text">
+        <h1 className="h1Text md:h1TextLg text-solarYellow motion-duration-2000">
+          About Us
+        </h1>
+        <div className="flex divide-x-4 divide-solarYellow *:px-3 md:h2TextLg h2Text motion-translate-x-in-[102%] motion-duration-2000">
           <Link href={"/"} className="text-white">
             Home
           </Link>
@@ -73,6 +76,136 @@ const page = () => {
 
       {/* About Information Section */}
       <div className="my-24 mt-32 md:mt-44 mb-20 mx-8 md:mx-20 lg:mx-32 z-20 *:py-6 relative">
+        <Image
+          src={"/images/bgspot.png"}
+          width={533}
+          height={430}
+          alt="img"
+          className="-z-30 absolute w-full max-h-[780px] md:-top-10 bottom-0 right-8"
+        />
+
+        <Conatiner
+          title={"About us"}
+          h1={
+            <span>
+              Switch to <span className="text-solarYellow"> Solar</span> Save
+              the <span className="text-green"> Planet</span>
+            </span>
+          }
+          h2={"Empowering your home with clean energy and long-term savings."}
+          textAllign={"text-center md:max-w-[700px] mx-auto"}
+        />
+
+        <div
+          style={{ backgroundImage: "url('/images/bgspot.png')" }}
+          className="flex flex-col items-center mx-auto md:-space-y-32 -space-y-12 md:my-2"
+        >
+          <div className="flex gap-1 items-start md:gap-2 relative">
+            <div className="motion-translate-x-in-[-164%] motion-translate-y-in-[-122%] absolute -top-5 -left-6 w-[320px] rounded-3xl hidden md:block pText p-2 md:p-5 border-8 border-white bg-green text-white">
+              <p>
+                1. Founded in{" "}
+                <span className="font-bold transition-transform duration-300 hover:scale-105 hover:text-solarYellow">
+                  2012
+                </span>{" "}
+                .
+                <br />
+                2. We offer{" "}
+                <span className="font-bold transition-transform duration-300 hover:scale-105  hover:text-solarYellow">
+                  customized solar energy solutions
+                </span>{" "}
+                that help homes and businesses reduce energy costs
+                <br />
+                3. Partnered with Leading Companies in the sector like{" "}
+                <span className="font-bold transition-transform duration-300 hover:scale-105  hover:text-solarYellow">
+                  Oswal Pumps Ltd. Shakti Pumps Ltd. CRI Pumps Ltd and Crompton
+                  Pumps
+                </span>
+              </p>
+            </div>
+            <Image
+              src={"/images/apic1.png"}
+              width={175}
+              height={220}
+              alt="img"
+              className="h-[220px] lg:min-w-[550px] md:h-[400px]"
+            />
+            <div className="flex flex-col md:gap-2 gap-1">
+              <Image
+                src={"/images/apic2.png"}
+                width={175}
+                height={110}
+                alt="img"
+                className="motion-translate-x-in-[133%] motion-translate-y-in-[-25%] lg:min-w-[400px] md:h-[200px] h-[110px]"
+              />
+              <Image
+                src={"/images/apic3.png"}
+                width={175}
+                height={110}
+                alt="img"
+                className="motion-translate-x-in-[135%] motion-translate-y-in-[23%] lg:min-w-[400px] md:h-[200px] h-[110px]"
+              />
+            </div>
+          </div>
+          <div className="motion-translate-x-in-[-1%] motion-translate-y-in-[200%] rounded-3xl md:min-w-[630px] z-10 w-[300px] pText p-2 md:p-3 border-4 border-white bg-deepTeal opacity-90 text-white">
+            <div>
+              <h1 className="font-bold text-2xl text-white mb-4">
+                Leading Solar Solutions In Faridabad, Delhi NCR, And Palwal
+              </h1>
+              <ul className="mt-4">
+                <li className="mb-4">
+                  <h2 className="font-semibold text-xl text-solarYellow mb-2">
+                    Founded In 2012
+                  </h2>
+                  <p className="text-gray-100">
+                    BDB Ventures Pvt. Ltd. has been at the forefront of
+                    providing innovative solar solutions to homes, industries,
+                    and agricultural sectors.
+                  </p>
+                </li>
+                <li className="mb-4">
+                  <h2 className="font-semibold text-xl text-solarYellow mb-2">
+                    Our Expertise
+                  </h2>
+                  <p className=" text-gray-100">
+                    We specialize in solar panel installations and solar-powered
+                    irrigation systems.
+                  </p>
+                </li>
+                <li className="mb-4">
+                  <h2 className="font-semibold text-xl text-solarYellow mb-2">
+                    Our Commitment
+                  </h2>
+                  <p className=" text-gray-100">
+                    By harnessing the power of the sun, we help our clients
+                    reduce their carbon footprint, lower electricity bills, and
+                    contribute to a greener future.
+                  </p>
+                </li>
+                <li className="mb-4">
+                  <h2 className="font-semibold text-xl text-solarYellow mb-2">
+                    Our Vision
+                  </h2>
+                  <p className=" text-gray-100">
+                    With a passion for clean, eco-friendly energy, we aim to
+                    create lasting positive impacts for generations to come.
+                  </p>
+                </li>
+                <li>
+                  <h2 className="font-semibold text-xl text-solarYellow mb-2">
+                    Join Us
+                  </h2>
+                  <p className=" text-gray-100">
+                    Join us in switching to solar and taking the first step
+                    towards a sustainable and energy-efficient tomorrow.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="my-24 mt-32 md:mt-44 mb-20 mx-8 md:mx-20 lg:mx-32 z-20 *:py-6 relative">
         <Image
           src={"/images/bgspot.png"}
           width={533}
@@ -148,7 +281,7 @@ const page = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Mission And Values Section */}
       {/* Content */}
@@ -168,14 +301,30 @@ const page = () => {
           className="absolute top-17 hidden md:block right-3 "
         />
 
-        <Conatiner
+        <div className={`flex flex-col lg:gap-2 gap-1 capitalize text-center `}>
+          <div className="flex mb-2 items-center gap-2 justify-center motion-preset-slide-left">
+            <span className="w-20 h-1 bg-solarYellow rounded-sm " />{" "}
+            <h3 className="text-solarYellow font-semibold md:text-2xl ">
+              {"Our Mission and Values"}
+            </h3>
+          </div>
+          <h1 className="h1Text md:h1TextLg motion-preset-slide-right text-white">
+            <span>Empowering Communities with Seamless Solar Solutions</span>
+          </h1>
+          <h2 className="h2Text md:h2TextLg text-opacity-80 motion-preset-shrink text-white ">
+            {
+              "Leading the Transition to Renewable Energy with Customized Solar Solutions for Homes and Industries."
+            }
+          </h2>
+        </div>
+        {/* <Conatiner
           title={"Our Mission and Values"}
           h1={<span>Empowering Communities with Seamless Solar Solutions</span>}
           h2={
             "Leading the Transition to Renewable Energy with Customized Solar Solutions for Homes and Industries."
           }
           textAllign={"text-center"}
-        />
+        /> */}
         {/* flex flex-wrap flex-col md:absolute md:mt-28 md:left-28 z-50 items-center justify-center md:flex-row  gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[260px] *:w-[300px] bg-cyan-100 md:bg-transparent */}
         {/* Values Section */}
         <div className="flex justify-center flex-wrap flex-col lg:absolute lg:left-[5%] md:mt-28 lg:z-50 items-center  md:flex-row gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[300px] *:w-[300px] bg-cyan-100 lg:bg-transparent">
@@ -298,7 +447,7 @@ const page = () => {
                 className="group-hover:hidden"
               />
               <Image
-                src={"/icons/integrityWhite-icon.svg"}
+                src={"/icons/customer-centric-icon.svg"}
                 width={80}
                 height={80}
                 alt="Collaboration"
@@ -315,8 +464,9 @@ const page = () => {
           </div>
         </div>
       </section>
+      <div className="min-h-0 lg:min-h-[200px] bg-[f2f2f2] xl:hidden"></div>
 
-      <div className="min-h-0 lg:min-h-[200px] bg-gradient-to-r from-green to-teal-600"></div>
+      {/* <div className="min-h-0 lg:min-h-[200px] bg-gradient-to-r from-green to-teal-600"></div> */}
 
       {/* Why Choose Us Section */}
       <section
@@ -333,69 +483,114 @@ const page = () => {
           h2={"Discover How We Stand Out In The World Of Renewable Energy"}
           textAllign={"text-center "}
         />
+
+        {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
+
         <div className="slider-container">
-          <Slider className="py-10" {...settings}>
+          <Slider
+            className="py-10"
+            {...settings}
+            responsive={[
+              {
+                breakpoint: 1024, // For smaller laptops
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                },
+              },
+              {
+                breakpoint: 768, // For tablets
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: true,
+                },
+              },
+            ]}
+          >
             {/* Card 1 */}
-            <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[260px]">
-              <div className="flex justify-center mb-4">
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[280px]">
+              <div className="flex justify-center mb-3 sm:mb-4">
                 <Image
                   src={"/icons/Group.png"}
-                  width={100}
-                  height={100}
-                  alt="Integrity"
-                  className="w-[100px] h-[100px] "
+                  width={80}
+                  height={80}
+                  alt="Customizable Solar Plans"
+                  className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]"
                 />
               </div>
-              <h3 className="text-base sm:text-xl font-bold mb-2">
+              <h3 className="text-sm sm:text-lg font-bold mb-2 text-center">
                 100% Customizable Solar Plans
               </h3>
-              <p className="text-sm sm:text-base text-gray-600 ">
-                Tailored Solutions Designed To Meet Your Energy Needs, Ensuring
-                Maximum Efficiency
+              <p className="text-xs sm:text-sm text-gray-600 text-center leading-tight sm:leading-normal">
+                Tailored solutions to meet your energy needs, ensuring maximum
+                efficiency.
               </p>
             </div>
 
             {/* Card 2 */}
-            <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[260px]">
-              <div className="flex justify-center mb-4">
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[280px]">
+              <div className="flex justify-center mb-3 sm:mb-4">
                 <Image
                   src={"/icons/Group (1).png"}
-                  width={100}
-                  height={100}
-                  alt="Integrity"
-                  className="w-[100px] h-[100px] "
+                  width={80}
+                  height={80}
+                  alt="Certified Solar Experts"
+                  className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]"
                 />
               </div>
-              <h3 className="text-base sm:text-xl font-bold mb-2">
+              <h3 className="text-sm sm:text-lg font-bold mb-2 text-center">
                 Certified Solar Experts
               </h3>
-              <p className="text-sm sm:text-base text-gray-600">
-                Our Team Comprises Experienced And Accredited Professionals
-                Dedicated To Excellence.
+              <p className="text-xs sm:text-sm text-gray-600 text-center leading-tight sm:leading-normal">
+                Experienced and accredited professionals committed to
+                excellence.
               </p>
             </div>
 
             {/* Card 3 */}
-            <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[260px]">
-              <div className="flex justify-center mb-4">
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[280px]">
+              <div className="flex justify-center mb-3 sm:mb-4">
                 <Image
                   src={"/icons/Group (2).png"}
-                  width={100}
-                  height={100}
-                  alt="Integrity"
-                  className="w-[100px] h-[100px] "
+                  width={80}
+                  height={80}
+                  alt="24/7 Customer Support"
+                  className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]"
                 />
               </div>
-              <h3 className="text-base sm:text-xl font-bold mb-2">
+              <h3 className="text-sm sm:text-lg font-bold mb-2 text-center">
                 24/7 Customer Support
               </h3>
-              <p className="text-sm sm:text-base text-gray-600">
-                We're Here To Assist You Anytime, Ensuring A smooth And
-                Hassle-Free Experience.
+              <p className="text-xs sm:text-sm text-gray-600 text-center leading-tight sm:leading-normal">
+                Always available to assist you for a hassle-free experience.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="border-green border-2 bg-[#FAFAFA] text-black p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[80px] h-[280px]">
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <Image
+                  src={"/icons/experience.svg"}
+                  width={80}
+                  height={80}
+                  alt="Industry Experience"
+                  className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]"
+                />
+              </div>
+              <h3 className="text-sm sm:text-lg font-bold mb-2 text-center">
+                12+ Years of Industry Experience
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600 text-center leading-tight sm:leading-normal">
+                Proven expertise in delivering reliable solar solutions.
               </p>
             </div>
           </Slider>
         </div>
+
+        {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
+
         {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-10 mx-[50px] lg:px-[50px] min-h-[200px]"> */}
         {/* Card 1 */}
         {/* <div className="border-green border-2 bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 min-w-[100px] min-h-[150px]">
@@ -466,6 +661,43 @@ const page = () => {
           h1={"The People Powering Renewable Energy"}
           textAllign={"text-center md:px-36"}
         />
+        <div className="group flex flex-col justify-center items-center">
+          {/* Fixed size container to avoid layout shifting */}
+          <div className="mt-10 relative flex items-center justify-center w-[250px] h-[250px] border rounded-full border-deepTeal group-hover:bg-deepTeal bg-skyBlue p-1 overflow-hidden">
+            {/* Animated Image */}
+            <motion.div
+              className="rounded-full overflow-hidden"
+              initial={{ width: 200, height: 200 }}
+              whileHover={{ width: 185, height: 198 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Image
+                src={"/images/VivekKumarSuhasaria.jpg"}
+                width={215}
+                height={215}
+                alt="user"
+                className="rounded-full"
+              />
+            </motion.div>
+
+            {/* Animated Icon Div */}
+            <motion.div
+              className="absolute right-2 space-y-7 text-white hidden group-hover:block"
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <FaFacebook className="-ml-1 size-6" />
+              <FaFacebook className="ml-3 size-6" />
+              <FaFacebook className="-ml-1 size-6" />
+            </motion.div>
+          </div>
+          <div className="text-center mt-2">
+            <h5 className="font-bold">Mr. Vivek Kumar Suhasaria</h5>
+            <h6 className="font-thin">Managing Director</h6>
+          </div>
+        </div>
         <div className="flex flex-col md:flex-row items-center justify-center gap-8  md:gap-28 my-16">
           <div className="group flex flex-col justify-center items-center">
             {/* Fixed size container to avoid layout shifting */}
@@ -500,7 +732,7 @@ const page = () => {
               </motion.div>
             </div>
             <div className="text-center mt-2">
-              <h5 className="font-semibold">Mr. Sumit</h5>
+              <h5 className="font-bold">Mr. Sumit</h5>
               <h6 className="font-thin">District Sales Manager</h6>
             </div>
           </div>
@@ -515,7 +747,7 @@ const page = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Image
-                  src={"/images/VivekKumarSuhasaria.jpg"}
+                  src={"/images/NIRMOHIT.png"}
                   width={215}
                   height={215}
                   alt="user"
@@ -537,8 +769,8 @@ const page = () => {
               </motion.div>
             </div>
             <div className="text-center mt-2">
-              <h5 className="font-bold">Mr. Vivek Kumar Suhasaria</h5>
-              <h6 className="font-thin">Managing Director</h6>
+              <h5 className="font-bold">Mr. Nirmohit</h5>
+              <h6 className="font-thin">Resource Manager</h6>
             </div>
           </div>
           <div className="group flex flex-col justify-center items-center">
@@ -552,7 +784,7 @@ const page = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Image
-                  src={"/images/mohit.jpeg"}
+                  src={"/images/budhram1.jpg"}
                   width={215}
                   height={215}
                   alt="user"
@@ -574,8 +806,8 @@ const page = () => {
               </motion.div>
             </div>
             <div className="text-center mt-2">
-              <h5 className="font-semibold">Mr. Mohit</h5>
-              <h6 className="font-thin">Resource Manager</h6>
+              <h5 className="font-bold">Mr. Budhram</h5>
+              <h6 className="font-thin">Site Engineer</h6>
             </div>
           </div>
         </div>
@@ -677,7 +909,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <QueryForm />
+      <QuerySec />
     </div>
   );
 };
