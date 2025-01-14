@@ -9,14 +9,22 @@ export function middleware(req) {
         return NextResponse.next();
     }
 
-    if (host === 'admin') {
-        const token = req.headers.get('cookie')?.split("%20")[1];
-        if (!token) {
-            url.pathname = '/admin/login'
-            return NextResponse.rewrite(url);
+    try {
+        if (host == 'admin') {
+            const token = req.headers.get('cookie')?.split(" ")[1];
+            console.log(token)
+            if (!token) {
+                url.pathname = '/admin/login'
+                return NextResponse.rewrite(url);
+            } else {
+                const verified = jwt.verify(token, process.env.JWT_SECRET);
+                console.log(verified)
+                url.pathname = '/admin/dashboard'
+                return NextResponse.rewrite(url);
+            }
         }
-        return NextResponse.next();
-            
+    } catch (err) {
+        console.log(err)
     }
 
     return NextResponse.next();

@@ -1,6 +1,5 @@
 import Conatiner from "@/components/Conatiner";
 import QueryForm from "@/components/QueryForm";
-import QuerySec from "@/components/sections/QuerySec";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -97,7 +96,7 @@ const ContactUs = () => {
           </span>
         </div>
       </div>
-      <QuerySec />
+      <QueryForm />
     </div>
   );
 }

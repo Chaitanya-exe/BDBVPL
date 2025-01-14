@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Conatiner from "../Conatiner";
 import { FaPhone, FaUser } from "react-icons/fa6";
@@ -16,35 +16,10 @@ const QuerySec = () => {
     userQuery: "",
   });
 
-  useEffect(()=>{
-    console.log(query);
-  },[query])
 
-  const handleClick = async () => {
-    try {
-      const response = await fetch("api/query/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ ...query })
-      });
-      const data = await response.json();
-      if (data.success) {
-        alert(data.msg)
-      }
-    } catch (err) {
-      alert("some error occured, Try again later")
-    }
+  const handleClick = async (request) => {
+    console.log(request);
   };
-
-  const handleChange = (e)=>{
-    let selectedValue = e.target.value;
-    selectedValue = `${selectedValue.toUpperCase()}`
-    setQuery((prev)=>{
-      return {...prev, type: selectedValue} 
-    })
-  }
   return (
     <div id="HomeQuery" className="relative flex justify-end lg:px-24  my-4">
       <Image
@@ -118,11 +93,10 @@ const QuerySec = () => {
               className="w-full capitalize bg-transparent p-2.5 h-full focus:outline-none"
             >
               <option
-                value={""}
-                onChange={(e) => {
-                  console.log(query)
-                  setQuery((prev)=> setQuery({...prev, type: `${e.target.value.toUpperCase()}`}))
-                }}
+                value={query.type}
+                onChange={(e) =>
+                  setQuery({ ...query, type: e.target.value.toUpper() })
+                }
                 disabled
                 hidden
               >
@@ -153,6 +127,7 @@ const QuerySec = () => {
             name="query"
             value={query.userQuery}
             onChange={(e) => {
+              console.log(query);
               setQuery({ ...query, userQuery: e.target.value });
             }}
             placeholder="Tell us more about your needs or questions.."
@@ -164,7 +139,7 @@ const QuerySec = () => {
             text={"Send Query"}
             handleClick={(e) => {
               e.preventDefault();
-              handleClick();
+              handleClick(query);
             }}
           />
         </div>

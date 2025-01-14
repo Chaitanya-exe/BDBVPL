@@ -26,19 +26,14 @@ body {
   scroll-behavior: smooth;
 }
 
-a{
-  /* font-weight: 720; */
-  @apply font-bold hover:underline
-}
-
 
 
 .slick-slide > div {
     margin: 0 10px;
-  }
+}
 
 
-  .slick-slider .slick-arrow {
+.slick-slider .slick-arrow {
     scale: 1.7;
     /* margin: 5px; */
     color: #0bf3ef;
@@ -47,8 +42,8 @@ a{
   }
 .slick-slider .slick-arrow:hover {
    
-  background-color: #121010;
-}
+    background-color: #121010;
+  }
 
 @layer utilities{
   

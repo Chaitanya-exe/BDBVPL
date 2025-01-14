@@ -1,40 +1,40 @@
 export const services = [
   {
     id: 1,
-    name: "Solar Pump Installation",
-    src: "/images/s1Img.png",
-    desc: "Efficient solar-powered irrigation systems designed for farmers, ensuring reliable water supply while reducing dependence on conventional energy sources.",
+    name: "Free Consultation",
+    src: "/images/workers.png",
+    desc: "Our experts will evaluate your property to design the most efficient solar solution.",
     hoverText: "",
   },
   {
     id: 2,
-    name: "Grid-Connected Rooftop Solar Systems",
-    src: "/images/s2Img.png",
-    desc: "Cost-effective rooftop solar installations for homes and industries, helping cut electricity costs, lower carbon footprints, and ensure a steady renewable energy supply.",
+    name: "Custom Solar Panel Design",
+    src: "/images/workers.png",
+    desc: "We create tailored solar energy systems that maximize energy production and match your budget.",
     hoverText: "",
   },
   {
     id: 3,
-    name: "Solar Panel Maintenance",
+    name: "Professional Installation",
 
-    src: "/images/s3Img.png",
-    desc: "Reliable solar panel maintenance services to ensure optimal performance, maximize efficiency, and extend the lifespan of your solar systems.",
+    src: "/images/workers.png",
+    desc: "Regular maintenance to keep your solar panels operating at peak performance.",
     hoverText: "",
   },
   {
     id: 4,
-    name: "Customized Solar Solutions",
+    name: "Panel Maintenance",
 
-    src: "/images/s4Img.png",
-    desc: "Personalized solar energy systems tailored to meet the unique power needs of households and businesses, ensuring maximum energy savings.",
+    src: "/images/workers.png",
+    desc: "Store excess solar energy with our advanced battery systems, ensuring power even during outages.",
     hoverText: "",
   },
   {
     id: 5,
-    name: "Solar Project Consultancy",
+    name: "Panel Maintenance and Support",
 
-    src: "/images/s5Img.png",
-    desc: "Professional guidance on solar project design and feasibility, ensuring smooth implementation and the best return on investment for our clients.",
+    src: "/images/workers.png",
+    desc: "Certified technicians ensure a seamless installation process with minimal disruption to your daily life.",
     hoverText: "",
   },
 ];
