@@ -327,7 +327,7 @@ const page = () => {
         /> */}
         {/* flex flex-wrap flex-col md:absolute md:mt-28 md:left-28 z-50 items-center justify-center md:flex-row  gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[260px] *:w-[300px] bg-cyan-100 md:bg-transparent */}
         {/* Values Section */}
-        <div className="flex justify-center flex-wrap flex-col lg:absolute lg:left-[5%] md:mt-28 lg:z-50 items-center  md:flex-row gap-4 md:gap-8 mx-auto py-10 my-[60px] *:h-[300px] *:w-[300px] bg-cyan-100 lg:bg-transparent">
+        <div className="flex justify-center flex-wrap flex-col lg:absolute lg:left-[5%] md:mt-28 lg:z-50 items-center  md:flex-row gap-4 md:gap-5 mx-auto py-10 my-[60px] *:h-[300px] *:w-[290px] bg-cyan-100 lg:bg-transparent">
           {/* Card 1 */}
           <div className="group lg:motion-preset-oscillate motion-duration-2000   hover:bg-green hover:text-white bg-[#FAFAFA] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105">
             <div className="flex justify-center mb-4">
