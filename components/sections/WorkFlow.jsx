@@ -152,7 +152,7 @@ const WorkFlow = () => {
           viewport={{ once: true }}
           initial={{ x: "-100%" }}
           transition={{ duration: 0.8, type: "spring", damping: 20 }}
-          className="flex flex-col gap-6 sm:gap-8"
+          className="flex flex-col gap-6 sm:gap-8 "
         >
           {workFlowStep.slice(0, 2).map((step) => (
             <StepCard step={step} key={step.id} />
@@ -167,7 +167,7 @@ const WorkFlow = () => {
               width={355}
               height={390}
               alt="Workflow"
-              className="hidden md:block object-cover"
+              className="hidden md:block object-cover md:w-[200] md:h-[250]"
             />
             <Image
               src={"/images/services.png"}

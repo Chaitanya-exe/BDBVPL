@@ -99,7 +99,7 @@ const images = [
       "Revolutionizing agriculture with sustainable energy: Solar panels seamlessly powering fertile farmlands while maintaining the harmony of nature's beauty.",
   },
   {
-    src: "/images/1.jpg",
+    src: "/images/download.jpeg",
     alt: "Image 17",
     description:
       "Solar panels efficiently energizing lush farmlands, blending seamlessly with the natural landscape to promote sustainability.",
