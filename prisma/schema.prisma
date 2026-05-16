@@ -14,11 +14,12 @@ datasource db {
 }
 
 model Query {
-  id            String @id @default(uuid())
+  id            String   @id @default(uuid())
   customer_name String
-  phone_number  String @unique
-  email         String @unique
+  phone_number  String   @unique
+  email         String   @unique
   query         String[]
+  date          DateTime @default(now())
   type          Type
 }
 

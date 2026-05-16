@@ -1,44 +1,47 @@
 import { PrismaClient } from "@prisma/client";
+import { NextResponse } from "next/server";
 
-const userClient = new PrismaClient();
+const userClient = new PrismaClient({
+    log:['error','info']
+});
 
 async function handler(req){
     try {
         const body = await req.json();
+        console.log(body)
 
-        const dbRes = await userClient.query.findFirst({
+        const dbRes = await userClient.query.findUnique({
             where:{
-                phone_number: body.number
+                phone_number: body.phone_number
             }
         });
-        console.log(dbRes);
         if(dbRes){
             const response = await userClient.query.update({
                 where:{
-                    phone_number: body.number
+                    phone_number: body.phone_number
                 },
                 data:{
                     query: {
-                        push: body.query
+                        push: body.userQuery
                     }
                 }
             });
-            return Response.json({response, success:true, msg:"query submitted"},{status:201});
+            return NextResponse.json({response, success:true, msg:"query submitted"},{status:201});
         } else{
             const response = await userClient.query.create({
                 data:{
-                    customer_name: body.name,
-                    phone_number: body.number,
+                    customer_name: body.customer_name,
+                    phone_number: body.phone_number,
                     email: body.email,
-                    query: [body.query],
-                    type: body.type
+                    query: [body.userQuery],
+                    type: body.type.toUpperCase()
                 }
             });
-            return Response.json({response, success: true, msg:"query submitted"})
+            return NextResponse.json({response, success: true, msg:"query submitted"})
         }
     } catch (err) {
         console.log(`Error occured: ${err}`);
-        return Response.json({error: "Some error occured"},{status:500});
+        return NextResponse.json({error: "Some error occured"},{status:500});
     } finally{
         await userClient.$disconnect();
     }

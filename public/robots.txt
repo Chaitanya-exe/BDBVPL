@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Host
+Host: https://bdbvpl.com
+
+# Sitemaps
+Sitemap: https://bdbvpl.com/sitemap.xml
