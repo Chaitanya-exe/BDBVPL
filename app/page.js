@@ -21,52 +21,30 @@ export default function Home() {
           width={900}
           height={800}
           alt="rect"
-<<<<<<< HEAD
-          className="block min-h-[410px] max-h-[700px] w-screen"
-        />
-
-        {/* try */}
-       
-        <div className="absolute lg:-top-[78px] -top-[120px]  -left-6 -right-5 z-10">
-=======
           className="block min-h-[410px] max-h-[700px] w-screen blur-sm opacity-95"
         />
 
         {/* try */}
 
         <div className="absolute md:-top-[57px] -top-[120px]  -left-6 -right-5 z-10">
->>>>>>> AdityaSolanki2018
           <div className="bg-[#FAFAFA] relative h-52 -rotate-[3deg] min-w-[500px]">
             <div className="bg-[#FAFAFA] absolute lg:bottom-0 lg:left-24 bottom-1 rotate-[42deg] h-28 lg:w-56 w-36 rounded-xl -z-10" />
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-      <div className="text-white max-w-[650px] my-24 md:my-56 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
-=======
       <div className="text-white max-w-[780px] my-24 md:my-56 mx-8 md:mx-20 lg:mx-32 border-l-4 pl-2 md:pl-5 border-solarYellow">
->>>>>>> AdityaSolanki2018
         <h1 className="h1Text  md:h1TextLg motion-preset-slide-left">
           Harness the Sun, {""}
           <br />
           <span className="text-solarYellow hover:motion-preset-pop motion-duration-2000">
             Power{" "}
           </span>
-<<<<<<< HEAD
-          Your Home,
-          <span className="text-solarYellow hover:motion-preset-pop motion-duration-2000">
-            {" "}
-            Empower{" "}
-          </span>
-          the planet.
-=======
           Your
           <span className="text-solarYellow hover:motion-preset-pop motion-duration-2000">
             {" "}
             Future!{" "}
           </span>
->>>>>>> AdityaSolanki2018
         </h1>
         <h2 className="h2Text md:h2TextLg mt-1 motion-preset-blur-right motion-duration-2000">
           Let the Sun Work for You <br className="hidden md:block" />
@@ -115,14 +93,8 @@ export default function Home() {
         <PdfDownload />
         <ServicesSec />
         <WorkFlow />
-<<<<<<< HEAD
-        <Testimonials/>
-        <Projects/>
-        <QuerySec/>
-=======
         {/* <Testimonials />
         <Projects /> */}
->>>>>>> AdityaSolanki2018
       </div>
       <QuerySec />
     </section>
